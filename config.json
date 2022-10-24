@@ -23,7 +23,16 @@
   },
   "exercises": {
     "concept": [],
-    "practice": []
+    "practice": [
+      {
+        "uuid": "1ec54f68-8050-41a8-b6ce-fab024d20ef4",
+        "slug": "hello-world",
+        "name": "Hello World",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
   },
   "concepts": [],
   "key_features": [],
