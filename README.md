@@ -39,3 +39,18 @@ Basic linting finished successfully:
 - Required track docs are present
 - Required shared exercise docs are present
 ```
+
+
+## Decision Records
+(putting these here for now until someone tells me a better place or I find a better place)
+
+### How to handle module naming
+See solution #3 in (this excellent repo](https://github.com/petertseng/exercism-v#readme)
+
+### Name of sample solutions
+`example.v`
+
+### Name of testing script for each solution
+`run_test.v`
+
+["All test functions have to be inside a test file whose name ends in _test.v."](https://github.com/vlang/v/blob/master/doc/docs.md#test-files)
