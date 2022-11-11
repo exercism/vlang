@@ -27,7 +27,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
       - name: Checkout repository
@@ -40,4 +40,5 @@ jobs:
       #   run: <install dependencies>
 
       - name: Run tests for all exercises
+        shell: bash
         run: bin/test
