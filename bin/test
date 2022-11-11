@@ -41,6 +41,6 @@ for practice_exercise_dir in ./exercises/practice/*/; do
         # run tests in tmp directory
         v run temp/run_test.v
         # clear tmp directory
-        rm -rf temp
+        rm -rf ./temp
     fi
 done
