@@ -47,6 +47,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
+        "slug": "space-age",
+        "name": "Space Age",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
