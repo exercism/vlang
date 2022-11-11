@@ -2,7 +2,7 @@
   "authors": ["1ethanhansen"],
   "files": {
     "solution": ["space-age.v"],
-    "test": ["run-test.v"],
+    "test": ["run_test.v"],
     "example": [".meta/example.v"]
   },
   "blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.",
