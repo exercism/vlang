@@ -29,7 +29,7 @@ done
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
-        stub=$(echo $(basename $practice_exercise_dir) | tr - _)
+        stub="$(basename "${practice_exercise_dir}" | tr - _)"
         echo "Checking ${stub} exercise..."
         # TODO: run command to verify that the example solution passes the tests
         # create new tmp directory
