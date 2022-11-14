@@ -29,7 +29,18 @@ done
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
-        echo "Checking $(basename "${practice_exercise_dir}") exercise..."
+        stub="$(basename "${practice_exercise_dir}" | tr - _)"
+        echo "Checking ${stub} exercise..."
         # TODO: run command to verify that the example solution passes the tests
+        # create new tmp directory
+        mkdir temp
+        # copy and rename example.v file
+        cp "${practice_exercise_dir}.meta/example.v" "temp/${stub}.v"
+        # copy test v file
+        cp "${practice_exercise_dir}run_test.v" "temp/run_test.v"
+        # run tests in tmp directory
+        v run temp/run_test.v
+        # clear tmp directory
+        rm -rf ./temp
     fi
 done

@@ -13,7 +13,7 @@
 # Requires scripts:
 # - bin/test
 
-name: <track> / Test
+name: V / Test
 
 on:
   push:
@@ -23,17 +23,22 @@ on:
 
 jobs:
   ci:
-    runs-on: <image-name>
+    name: V exercise test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Use <setup tooling>
-        uses: <action to setup tooling>
+      - name: Setup Vlang
+        uses: vlang/setup-v@f0b3323984699c80284901a9ffd8d3e2997f22b2
 
-      - name: Install project dependencies
-        run: <install dependencies>
+      # - name: Install project dependencies
+      #   run: <install dependencies>
 
       - name: Run tests for all exercises
+        shell: bash
         run: bin/test
