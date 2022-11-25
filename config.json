@@ -63,6 +63,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "uuid": "e9a9d0d1-1756-4be5-8fc8-bd2d2d52611c",
+        "slug": "grains",
+        "name": "Grains",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
