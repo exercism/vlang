@@ -79,6 +79,38 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+       },
+       {
+        "uuid": "df360057-385e-4166-96e1-ed0629c02ca3",
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+       },
+       {
+        "uuid": "a9000aca-c372-4ddc-a5d9-cd6afa9e2535",
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+       },
+       {
+        "uuid": "24f0d852-3581-4e99-b488-d367d16ff1e7",
+        "slug": "grade-school",
+        "name": "Grade School",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+       },
+       {
+        "uuid": "27d24b09-71dc-462c-b80d-8408b62c69a1",
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
