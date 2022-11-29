@@ -73,6 +73,14 @@
         "difficulty": 1
       },
       {
+        "uuid": "b3872608-a0fc-4315-a051-cb9d377109d8",
+        "slug": "pangram",
+        "name": "Pangram",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+       },
+       {
         "uuid": "df360057-385e-4166-96e1-ed0629c02ca3",
         "slug": "two-fer",
         "name": "Two Fer",
