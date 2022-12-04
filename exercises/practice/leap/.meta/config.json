@@ -1,9 +1,17 @@
 {
-  "authors": ["1ethanhansen"],
+  "authors": [
+    "1ethanhansen"
+  ],
   "files": {
-    "solution": ["leap.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "leap.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Given a year, report if it is a leap year.",
   "source": "CodeRanch Cattle Drive, Assignment 3",
