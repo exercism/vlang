@@ -2,7 +2,7 @@
   "authors": ["1ethanhansen"],
   "files": {
     "solution": ["sieve.v"],
-    "test": ["run-test.v"],
+    "test": ["run_test.v"],
     "example": [".meta/example.v"]
   },
   "blurb": "Use the Sieve of Eratosthenes to find all the primes from 2 up to a given number.",
