@@ -127,6 +127,30 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "uuid": "2f6e7c12-46f5-44aa-a448-b0126769eee7",
+        "slug": "sieve",
+        "name": "Sieve",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "uuid": "d229850d-421a-47bc-a8ff-df73a4c3b72b",
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
