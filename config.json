@@ -119,6 +119,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "uuid": "c5e6a688-b7bc-44f2-a26e-92fb612a7c8f",
+        "slug": "robot-name",
+        "name": "Robot Name",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
