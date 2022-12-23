@@ -121,6 +121,14 @@
         "difficulty": 2
       },
       {
+        "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "uuid": "2f6e7c12-46f5-44aa-a448-b0126769eee7",
         "slug": "sieve",
         "name": "Sieve",
