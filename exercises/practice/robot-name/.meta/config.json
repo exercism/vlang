@@ -1,0 +1,10 @@
+{
+  "authors": ["1ethanhansen"],
+  "files": {
+    "solution": ["robot-name.v"],
+    "test": ["run_test.v"],
+    "example": [".meta/example.v"]
+  },
+  "blurb": "Manage robot factory settings.",
+  "source": "A debugging session with Paul Blackwell at gSchool."
+}
