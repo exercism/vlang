@@ -1,14 +1,11 @@
 # About
 
-<!-- TODO: write document
+[V](https://vlang.io/) is a simple language for building maintainable programs. The syntax is similar to Go, with performance as fast as C.
 
-  This document contains a short introduction to the language.
+V is still in beta development, but already very powerful.
 
-  The introduction should be relatively brief and touch upon what
-  makes the language interesting (and possibly unique). The goal
-  is to help students decide if they want to join this track.
+With many built-in safety features, V helps your code run no matter what you throw at it: bounds checking, no undefined values, immutable variables by default, Option/Result types and mandatory error checks, and no null.
 
-  The contents of this document are displayed on the track page,
-  provided the student has not joined the track.
+V is written in V and compiles itself in under a second, and can call C code with no costs. It also has built-in formatting, code profiling, testing, and docs generation.
 
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+The official website is [vlang.io](https://vlang.io/) and the docs are all in [this markdown file](https://github.com/vlang/v/blob/master/doc/docs.md).
