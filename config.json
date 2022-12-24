@@ -151,6 +151,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "uuid" : "622a3dba-8893-4f2d-9e05-8aedd68df7a9",
+        "slug": "hamming",
+        "name": "Hamming",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
