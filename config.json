@@ -168,7 +168,7 @@
     },
     {
       "title": "Documentation",
-      "content": "Use vdoc to get instant documentation generated directly from the module's source code. No need to keep and update separate documentation",
+      "content": "Use vdoc to get instant documentation generated directly from the module's source code",
       "icon": "documentation"
     },
     {
