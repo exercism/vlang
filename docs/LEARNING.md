@@ -1,13 +1,17 @@
 # Learning
 
-<!-- TODO: write document
+## Forums/chatrooms
+- [Official Github Discussions](https://github.com/vlang/v/discussions)
+- [Discord](https://discord.gg/vlang)
+- [Telegram](https://t.me/vlang_en)
+- [Matrix](https://matrix.to/#/#v-chat:matrix.org)
 
-  This document should link to learning resources.
+## Videos
+- [Intro V videos on Odysee](https://odysee.com/@coderlyfe:9?view=content)
+- [V youtube channel](https://www.youtube.com/c/VLang/videos)
 
-  Feel free to link to any good learning resources you know, whether they
-  be websites, blogs, books, videos or courses.
+## Books
+- [Getting Started with V](https://smile.amazon.com/Getting-Started-Programming-end-end-ebook/dp/B09FKK3JL7)
 
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/learning`.
-
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+## Social
+- [V Twitter](https://twitter.com/v_language)
