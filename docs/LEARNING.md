@@ -12,6 +12,3 @@
 
 ## Books
 - [Getting Started with V](https://smile.amazon.com/Getting-Started-Programming-end-end-ebook/dp/B09FKK3JL7)
-
-## Social
-- [V Twitter](https://twitter.com/v_language)
