@@ -155,7 +155,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Concurrency",
+      "content": "Use 'spawn' to run a function concurrently in a different thread",
+      "icon": "concurrency"
+    },
+    {
+      "title": "Cross Platform",
+      "content": "To cross compile your software simply run v -os windows. or v -os linux",
+      "icon": "cross-platform"
+    },
+    {
+      "title": "Documentation",
+      "content": "Use vdoc to get instant documentation generated directly from the module's source code. No need to keep and update separate documentation",
+      "icon": "documentation"
+    },
+    {
+      "title": "Fast",
+      "content": "V is written in V and compiles itself in under a second",
+      "icon": "fast"
+    },
+    {
+      "title": "Safe",
+      "content": "No null, no undefined values, no undefined behavior, immutable by default, and more",
+      "icon": "safe"
+    },
+    {
+      "title": "Small",
+      "content": "Compare the space requirement to compile with Rust (30 GB) and Go (525 MB) to V (<10 MB)",
+      "icon": "small"
+    }
+  ],
   "tags": [
     "paradigm/imperative",
     "paradigm/procedural",
