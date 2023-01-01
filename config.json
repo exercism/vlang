@@ -158,17 +158,17 @@
   "key_features": [
     {
       "title": "Concurrency",
-      "content": "Use 'spawn' to run a function concurrently in a different thread",
+      "content": "V can run concurrently using `spawn` to start a new thread",
       "icon": "concurrency"
     },
     {
       "title": "Cross Platform",
-      "content": "To cross compile your software simply run v -os windows. or v -os linux",
+      "content": "V is cross-compiled with v -os windows or v -os linux",
       "icon": "cross-platform"
     },
     {
       "title": "Documentation",
-      "content": "Use vdoc to get instant documentation generated directly from the module's source code",
+      "content": "V includes vdoc to get instant documentation generated from the module's source code",
       "icon": "documentation"
     },
     {
@@ -178,12 +178,12 @@
     },
     {
       "title": "Safe",
-      "content": "No null, no undefined values, no undefined behavior, immutable by default, and more",
+      "content": "No null, no undefined values, no undefined behavior, immutable by default",
       "icon": "safe"
     },
     {
-      "title": "Small",
-      "content": "Compare the space requirement to compile with Rust (30 GB) and Go (525 MB) to V (<10 MB)",
+      "title": "Tiny",
+      "content": "V has a space requirement to compile of <10MB, Rust is 30 GB and Go is 525 MB",
       "icon": "small"
     }
   ],
