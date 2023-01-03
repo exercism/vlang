@@ -39,7 +39,7 @@ for practice_exercise_dir in ./exercises/practice/*/; do
         # copy test v file
         cp "${practice_exercise_dir}run_test.v" "temp/run_test.v"
         # run tests in tmp directory
-        v run temp/run_test.v
+        v -stats test temp/run_test.v
         # clear tmp directory
         rm -rf ./temp
     fi
