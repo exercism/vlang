@@ -151,6 +151,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
+        "slug": "clock",
+        "name": "Clock",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
