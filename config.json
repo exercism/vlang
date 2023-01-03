@@ -159,11 +159,58 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "uuid": "3e9f83c6-6425-44a6-a57a-88171f11c40e",
+        "slug": "meetup",
+        "name": "Meetup",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
+        "slug": "clock",
+        "name": "Clock",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
       }
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Concurrency",
+      "content": "V can run concurrently using `spawn` to start a new thread",
+      "icon": "concurrency"
+    },
+    {
+      "title": "Cross Platform",
+      "content": "V is cross-compiled with v -os windows or v -os linux",
+      "icon": "cross-platform"
+    },
+    {
+      "title": "Documentation",
+      "content": "V includes vdoc to get instant documentation generated from the module's source code",
+      "icon": "documentation"
+    },
+    {
+      "title": "Fast",
+      "content": "V is written in V and compiles itself in under a second",
+      "icon": "fast"
+    },
+    {
+      "title": "Safe",
+      "content": "No null, no undefined values, no undefined behavior, immutable by default",
+      "icon": "safe"
+    },
+    {
+      "title": "Tiny",
+      "content": "V has a space requirement to compile of <10MB, Rust is 30 GB and Go is 525 MB",
+      "icon": "small"
+    }
+  ],
   "tags": [
     "paradigm/imperative",
     "paradigm/procedural",
