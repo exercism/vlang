@@ -1,1 +1,8 @@
-TODO: add snippet
+module main
+
+fn main() {
+	names := ['learners', 'explorers', 'mentors', 'maintainers', 'contributors']
+	for name in names {
+		println('Hello, Exercism ${name}!')
+	}
+}

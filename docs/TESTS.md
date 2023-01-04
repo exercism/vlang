@@ -1,15 +1,11 @@
 # Tests
 
-<!-- TODO: write document
+## Running tests
+To run tests for a specific implementation of an exercise, here are the recommended steps:
 
-  This document should describe everything related to running tests in the track.
+1. create your implementation in `[SLUG].v`
+1. cd to the directory where `[SLUG].v` and `run_test.v` are located
+1. run `v -stats test run_test.v`
 
-  If your track uses skipped tests, this document can explain why thet is used and
-  how to unskip tests.
-
-  This document can also link to the testing framework documentation.
-
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/tests`.
-
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+## Testing in V
+For more information on testing in V, refer to the [official docs](https://github.com/vlang/v/blob/master/doc/docs.md#testing)
