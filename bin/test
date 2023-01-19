@@ -18,6 +18,8 @@
 # Example:
 # ./bin/test
 
+exit_code=0
+
 # Verify the Concept Exercises
 for concept_exercise_dir in ./exercises/concept/*/; do
     if [ -d $concept_exercise_dir ]; then
@@ -40,7 +42,14 @@ for practice_exercise_dir in ./exercises/practice/*/; do
         cp "${practice_exercise_dir}run_test.v" "temp/run_test.v"
         # run tests in tmp directory
         v -stats test temp/run_test.v
+
+        if [ $? != 0 ]; then
+            exit_code=1
+        fi
+
         # clear tmp directory
         rm -rf ./temp
     fi
 done
+
+exit ${exit_code}
