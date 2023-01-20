@@ -1,15 +1,7 @@
 # Tests
 
-<!-- TODO: write document
+To run the tests run the command `v test .` from within the exercise directory.
 
-  This document should contain instructions on how to run the exercise's tests.
+If you want to see all the tests that were run along with statistics on speed, use `v -stats test .`
 
-  The instructions should be short and to the point.
-
-  The docs/TESTS.md file can contain a more verbose description on how to run tests.
-
-  When a student downloads an exercise via the CLI, this file's contents are
-  included into the HELP.md file.
-
-  See https://exercism.org/docs/building/tracks/shared-files for more information.
--->
+For more information on testing in V, please see [the documentation](https://github.com/vlang/v/blob/master/doc/docs.md#testing).
