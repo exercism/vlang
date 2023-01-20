@@ -32,15 +32,24 @@ fn generate_unused_name(mut robots []bool) !string {
 	if false !in robots {
 		return error('no unused robot names')
 	}
-	mut new_name := rand.string(2).to_upper()
-	new_name += rand.intn(10)!.str()
-	new_name += rand.intn(10)!.str()
-	new_name += rand.intn(10)!.str()
+	mut new_name := generate_any_valid_name()
 
 	for robots[convert_name_to_index(new_name)] {
-		new_name = rand.string(2).to_upper()
+		new_name = generate_any_valid_name()
 	}
 	robots[convert_name_to_index(new_name)] = true
+
+	return new_name
+}
+
+fn generate_any_valid_name() string {
+	mut new_name := rand.string(2).to_upper()
+	d1 := rand.intn(10) or {0}
+	d2 := rand.intn(10) or {0}
+	d3 := rand.intn(10) or {0}
+	new_name += d1.str()
+	new_name += d2.str()
+	new_name += d3.str()
 
 	return new_name
 }
