@@ -92,8 +92,13 @@ A good place to start in the docs is to understand how the [Hello World](https:/
 8. Once all tests pass, make sure code is formatted properly with `v fmt -w [V_FILE]` on all the v files (example and test files)
 9. Copypaste everything in `[SLUG].v` into `.meta/example.v`
 10. Remove everything from `[SLUG].v` except the stub of the needed function, the `module main` at the top, and make a stub of a struct or two.
-11. Commit changes with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
-12. Make your PR and do a little happy dance
+11. Add needed info to the `...[SLUG]/.meta/config.json` file:
+  - Author's username
+  - solution file name (should be `[SLUG].v`)
+  - test file name (should be `run_test.v`)
+  - example solution file name (should be `.meta/example.v`)
+12. Commit changes with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+13. Make your PR and do a little happy dance
 
 ![](https://media3.giphy.com/media/ghVtt3BfMwYhi/giphy.gif?cid=790b7611a39608242e7ad1acf94c07788cdcada74ca02528&rid=giphy.gif&ct=g)
 
