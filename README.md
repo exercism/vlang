@@ -93,7 +93,7 @@ A good place to start in the docs is to understand how the [Hello World](https:/
 9. Copypaste everything in `[SLUG].v` into `.meta/example.v`
 10. Remove everything from `[SLUG].v` except the stub of the needed function, the `module main` at the top, and make a stub of a struct or two.
 11. Add needed info to the `...[SLUG]/.meta/config.json` file:
-  - Author's username
+  - Author's GitHub username
   - solution file name (should be `[SLUG].v`)
   - test file name (should be `run_test.v`)
   - example solution file name (should be `.meta/example.v`)
