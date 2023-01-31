@@ -57,7 +57,7 @@
         "name": "Space Age",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 4
       },
       {
         "uuid": "4af029c7-3154-4781-8c49-4269d84cadad",
@@ -105,7 +105,7 @@
         "name": "Grade School",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3
+        "difficulty": 5
        },
        {
         "uuid": "27d24b09-71dc-462c-b80d-8408b62c69a1",
@@ -121,7 +121,7 @@
         "name": "Nth Prime",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 4
       },
       {
         "uuid": "c5e6a688-b7bc-44f2-a26e-92fb612a7c8f",
@@ -129,7 +129,7 @@
         "name": "Robot Name",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3
+        "difficulty": 8
       },
       {
         "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
@@ -137,7 +137,7 @@
         "name": "Prime Factors",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 4
       },
       {
         "uuid": "2f6e7c12-46f5-44aa-a448-b0126769eee7",
@@ -145,7 +145,7 @@
         "name": "Sieve",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 4
       },
       {
         "uuid": "d229850d-421a-47bc-a8ff-df73a4c3b72b",
@@ -153,7 +153,7 @@
         "name": "Queen Attack",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3
+        "difficulty": 8
       },
       {
         "uuid" : "622a3dba-8893-4f2d-9e05-8aedd68df7a9",
@@ -185,7 +185,7 @@
         "name": "Meetup",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 3
+        "difficulty": 5
       },
       {
         "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
@@ -193,7 +193,7 @@
         "name": "Clock",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2
+        "difficulty": 4
       },
       {
         "uuid": "76b3c5ce-a2b2-4e75-bd2a-bb94e81c2701",
