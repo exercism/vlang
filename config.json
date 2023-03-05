@@ -204,30 +204,20 @@
         "difficulty": 4
       },
       {
+       "uuid": "021c6fbd-adac-43a3-b2b9-22bde0ae2968",
+       "slug": "secret-handshake",
+       "name": "Secret Handshake",
+       "practices": [],
+       "prerequisites": [],
+       "difficulty": 3
+      },
+      {
         "uuid": "76b3c5ce-a2b2-4e75-bd2a-bb94e81c2701",
         "slug": "accumulate",
         "name": "Accumulate",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
-      },
-      {
-        "uuid": "021c6fbd-adac-43a3-b2b9-22bde0ae2968",
-        "slug": "secret-handshake",
-        "name": "Secret Handshake",
-        "practices": [
-          "bitwise",
-          "enum"
-        ],
-        "prerequisites": [
-          "bitwise",
-          "enum",
-          "int",
-          "array",
-          "for",
-          "if"
-        ],
-        "difficulty": 3
       }
     ]
   },
