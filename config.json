@@ -212,6 +212,14 @@
        "difficulty": 3
       },
       {
+       "uuid": "18752af6-01a0-4125-9f45-e2be034b584c",
+       "slug": "binary-search",
+       "name": "Binary Search",
+       "practices": [],
+       "prerequisites": [],
+       "difficulty": 3
+      },
+      {
         "uuid": "76b3c5ce-a2b2-4e75-bd2a-bb94e81c2701",
         "slug": "accumulate",
         "name": "Accumulate",
