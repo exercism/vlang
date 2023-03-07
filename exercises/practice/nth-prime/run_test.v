@@ -23,9 +23,3 @@ fn test_zeroth_prime() {
 		assert err.msg() == 'n must be greater than 0'
 	}
 }
-
-fn test_print() {
-	for i in 1 .. 10 {
-		println(nth_prime(i)!)
-	}
-}
