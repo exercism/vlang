@@ -48,7 +48,7 @@ fn (mut list LinkedList) pop() ?int {
 	return head_data
 }
 
-fn (mut list LinkedList) peek() ?int {
+fn (list LinkedList) peek() ?int {
 	if list.len == 0 {
 		return none
 	}
@@ -56,11 +56,12 @@ fn (mut list LinkedList) peek() ?int {
 	return list.head.data
 }
 
-fn (mut list LinkedList) to_array() []int {
+fn (list LinkedList) to_array() []int {
 	mut array := []int{}
+	mut aux_list := list
 
-	for list.len > 0 {
-		if data := list.pop() {
+	for aux_list.len > 0 {
+		if data := aux_list.pop() {
 			array << data
 		}
 	}
@@ -68,6 +69,6 @@ fn (mut list LinkedList) to_array() []int {
 	return array.reverse()
 }
 
-fn (mut list LinkedList) reverse() LinkedList {
+fn (list LinkedList) reverse() LinkedList {
 	return from_array(list.to_array().reverse())
 }

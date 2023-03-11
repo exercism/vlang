@@ -24,14 +24,14 @@ fn (mut list LinkedList) pop() ?int {
 
 }
 
-fn (mut list LinkedList) peek() ?int {
+fn (list LinkedList) peek() ?int {
 
 }
 
-fn (mut list LinkedList) to_array() []int {
+fn (list LinkedList) to_array() []int {
 
 }
 
-fn (mut list LinkedList) reverse() LinkedList {
+fn (list LinkedList) reverse() LinkedList {
 
 }

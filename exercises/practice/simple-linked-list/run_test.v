@@ -60,7 +60,7 @@ fn test_peek_returns_the_head_element_without_removing_it() {
 	list.push(1)
 	assert list.peek()! == 1
 	assert list.peek()! == 1
-	assert list.pop()! == 1
+	assert list.len == 1
 }
 
 fn test_peek_returns_nothing_if_list_is_empty() {
@@ -102,9 +102,21 @@ fn test_to_array() {
 	assert list.to_array() == [1, 2]
 }
 
+fn test_to_array_does_not_mutate_the_list() {
+	list := from_array([1, 2, 3])
+	list.to_array()
+	assert list.len == 3
+}
+
 fn test_reverse() {
 	mut list := from_array([1, 2, 3])
 	mut reversed_list := list.reverse()
 
 	assert reversed_list.to_array() == [3, 2, 1]
+}
+
+fn test_reverse_does_not_mutate_the_list() {
+	list := from_array([1, 2, 3])
+	list.reverse()
+	assert list.len == 3
 }
