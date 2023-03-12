@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "hraftery"
+  ],
+  "files": {
+    "solution": [
+      "linked-list.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
+  },
+  "blurb": "Implement a doubly linked list.",
+  "source": "Classic computer science topic"
+}
