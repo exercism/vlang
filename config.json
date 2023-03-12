@@ -226,6 +226,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "simple-linked-list",
+        "name": "Simple Linked List",
+        "uuid": "42b638fb-3ad1-4a0f-a26b-096ad583c997",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
