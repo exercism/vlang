@@ -240,6 +240,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
+        "slug": "rna-transcription",
+        "name": "RNA Transcription",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
