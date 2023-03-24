@@ -72,6 +72,8 @@ A good place to start in the docs is to understand how the [Hello World](https:/
 
 #### How to implement a new exercise from start to finish
 
+There are two ways to implement a practice exercise. You can follow all the 13 steps listed below from start to finish, or you can run `./bin/bootstrap_practice_exercise.sh [SLUG]` to create all the files and folders you'll need. This will allow you to skip a few steps and jump right into writing your example solution, but you'll need [bash](https://www.gnu.org/software/bash/) and [jq](https://stedolan.github.io/jq/) to run the script.
+
 1. Pick an exercise from the [problem-specifications](https://github.com/exercism/problem-specifications/tree/main/exercises) repo.
 2. Create a new entry for the exercise in [config.json](./config.json). Include
   - a new UUID for the exercise (generated with `bin/configlet uuid`)
