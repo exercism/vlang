@@ -2,6 +2,8 @@ module main
 
 struct LinkedList {
 	// define your data structure here
+mut:
+	len int // maintain the number of elements in the list in this field
 }
 
 fn new() LinkedList {
