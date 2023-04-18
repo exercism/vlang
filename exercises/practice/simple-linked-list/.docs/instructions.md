@@ -1,4 +1,4 @@
-# Description
+# Instructions
 
 Write a simple linked list implementation that uses Elements and a List.
 
