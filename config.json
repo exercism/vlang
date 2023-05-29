@@ -178,6 +178,14 @@
         "difficulty": 1
       },
       {
+        "uuid": "04f4d226-b7b9-4635-9fbf-db7809690889",
+        "slug": "bob",
+        "name": "Bob",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "uuid": "dc522fc7-94e5-4527-ac6e-e713ac4a5ec2",
         "slug": "isogram",
         "name": "Isogram",
