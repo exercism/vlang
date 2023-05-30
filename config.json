@@ -138,6 +138,14 @@
         "difficulty": 4
       },
       {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "880dd926-37fd-411b-9537-921bcc3583ba",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "uuid": "c5e6a688-b7bc-44f2-a26e-92fb612a7c8f",
         "slug": "robot-name",
         "name": "Robot Name",
