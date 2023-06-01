@@ -82,6 +82,14 @@
         "difficulty": 1
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "67965836-804d-4a48-93f4-0064ae712d24",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "uuid": "e9a9d0d1-1756-4be5-8fc8-bd2d2d52611c",
         "slug": "grains",
         "name": "Grains",
