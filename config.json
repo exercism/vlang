@@ -274,6 +274,14 @@
         "difficulty": 5
       },
       {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "5bf69277-40cf-455d-8408-c8dd780b104d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
         "slug": "rna-transcription",
         "name": "RNA Transcription",
