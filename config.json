@@ -298,6 +298,14 @@
         "difficulty": 3
       },
       {
+        "slug": "etl",
+        "name": "ETL",
+        "uuid": "3d66d6f5-5d74-4d29-872e-e92154df5dd6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "uuid": "79f48b51-3e4a-4bac-961a-2d41e2b17215",
         "slug": "linked-list",
         "name": "Linked List",
