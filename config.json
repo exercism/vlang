@@ -328,6 +328,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
+      },
+      {
+        "slug": "rectangles",
+        "name": "Rectangles",
+        "uuid": "7f78f9da-93cf-4934-a50f-c93f6bf5a0cd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
