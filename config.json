@@ -122,6 +122,14 @@
         "difficulty": 1
       },
       {
+        "slug": "variable-length-quantity",
+        "name": "Variable Length Quantity",
+        "uuid": "7c0a8cb0-22dc-4a2f-bb9f-872716f47cf2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "uuid": "24f0d852-3581-4e99-b488-d367d16ff1e7",
         "slug": "grade-school",
         "name": "Grade School",
