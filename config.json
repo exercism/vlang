@@ -178,6 +178,14 @@
         "difficulty": 8
       },
       {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "823e4266-237b-45e5-94e5-1d21163ce38f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
         "slug": "prime-factors",
         "name": "Prime Factors",
