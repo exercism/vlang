@@ -202,6 +202,14 @@
         "difficulty": 4
       },
       {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "0a23399d-b212-4453-b4b8-9c7b57d46e37",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "uuid": "d229850d-421a-47bc-a8ff-df73a4c3b72b",
         "slug": "queen-attack",
         "name": "Queen Attack",
