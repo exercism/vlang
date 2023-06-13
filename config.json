@@ -154,6 +154,14 @@
         "difficulty": 4
       },
       {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "693d0b18-a7a3-463b-bd53-f74b2adf373e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "880dd926-37fd-411b-9537-921bcc3583ba",
