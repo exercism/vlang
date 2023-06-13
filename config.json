@@ -74,6 +74,14 @@
         "difficulty": 2
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "06e88843-e280-4022-8c66-f449303f419d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
         "slug": "space-age",
         "name": "Space Age",
