@@ -40,6 +40,7 @@ fn test_age_on_neptune() {
 
 fn test_age_on_sun() {
 	if res := age(680804807, 'Sun') {
+		assert false, 'trying to find age on the sun should return an error'
 	} else {
 		assert typeof(err).name == 'IError'
 	}
