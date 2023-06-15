@@ -290,6 +290,14 @@
         "difficulty": 5
       },
       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "6f955919-1478-4296-ae5c-8c3caf06d614",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
         "slug": "clock",
         "name": "Clock",
