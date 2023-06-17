@@ -74,6 +74,14 @@
         "difficulty": 2
       },
       {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "12515229-c74e-4943-afcf-8f8b37f8e89c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "06e88843-e280-4022-8c66-f449303f419d",
