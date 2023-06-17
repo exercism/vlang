@@ -70,8 +70,8 @@ fn say3(num int, units ?string, mut builder strings.Builder) {
 	}
 	say2(num % 100, mut builder)
 
-	if units != none {
-		builder.write_string(units)
+	if suffix := units {
+		builder.write_string(suffix)
 	}
 }
 
