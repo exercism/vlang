@@ -322,6 +322,14 @@
         "difficulty": 3
       },
       {
+        "slug": "two-bucket",
+        "name": "Two Bucket",
+        "uuid": "8793305d-820f-4ae6-92e0-43cb6d9cfbd8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "change",
         "name": "Change",
         "uuid": "6a8d5dd8-a7f0-453b-97cd-a12e505cac32",
