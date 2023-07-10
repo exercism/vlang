@@ -330,6 +330,14 @@
         "difficulty": 3
       },
       {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "cd1d7cc3-2c8a-439c-a604-d1b971611556",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "8793305d-820f-4ae6-92e0-43cb6d9cfbd8",
