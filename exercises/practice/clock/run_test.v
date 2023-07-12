@@ -91,8 +91,8 @@ fn test_negative_60_minutes_previous_hour() {
 }
 
 fn test_negative_hour_and_minute_roll_over() {
-	c := new_clock(2, -60)
-	assert c.string() == '01:00'
+	c := new_clock(-25, -160)
+	assert c.string() == '20:20'
 }
 
 fn test_negative_hour_and_minute_roll_over_continuously() {
