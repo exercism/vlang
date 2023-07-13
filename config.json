@@ -346,6 +346,14 @@
         "difficulty": 6
       },
       {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "80c52bdc-1d57-49b0-b72d-a890faf3c4b2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "connect",
         "name": "Connect",
         "uuid": "3bbc3fc9-2bbe-4eec-ac5f-8736a0bf257d",
