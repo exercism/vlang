@@ -362,6 +362,14 @@
         "difficulty": 4
       },
       {
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "uuid": "3dd0d34b-1584-4960-bf82-beb2f4ca4e48",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "connect",
         "name": "Connect",
         "uuid": "3bbc3fc9-2bbe-4eec-ac5f-8736a0bf257d",
