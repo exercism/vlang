@@ -266,6 +266,14 @@
         "difficulty": 1
       },
       {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "39431693-b130-4e1a-a4c1-781eb0226e39",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "uuid": "dc522fc7-94e5-4527-ac6e-e713ac4a5ec2",
         "slug": "isogram",
         "name": "Isogram",
