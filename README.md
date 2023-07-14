@@ -109,7 +109,7 @@ There are two ways to implement a practice exercise. You can follow all the 13 s
 (putting these here for now until someone tells me a better place or I find a better place)
 
 ### How to handle module naming
-See solution #3 in (this excellent repo](https://github.com/petertseng/exercism-v#readme)
+See solution #3 in [this excellent repo](https://github.com/petertseng/exercism-v#readme)
 
 ### Name of sample solutions
 `example.v`
