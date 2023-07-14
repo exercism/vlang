@@ -402,6 +402,14 @@
         "difficulty": 5
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "a657c97b-a2a8-4b57-a68d-6971fa7bb85f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "minesweeper",
         "name": "Minesweeper",
         "uuid": "5bf69277-40cf-455d-8408-c8dd780b104d",
