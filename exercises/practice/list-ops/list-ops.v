@@ -10,7 +10,6 @@ pub fn foldl[T, U](array []T, initial U, folder fn (acc U, e T) U) U {
 }
 
 pub fn foldr[T, U](array []T, initial U, folder fn (acc U, e T) U) U {
-	return foldl(reverse(array), initial, folder)
 }
 
 pub fn length[T](array []T) int {
