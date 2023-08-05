@@ -1,0 +1,9 @@
+{
+  "authors": ["m-charlton"],
+  "files": {
+    "solution": ["list-ops.v"],
+    "test": ["run_test.v"],
+    "example": [".meta/example.v"]
+  },
+  "blurb": "Implement basic list operations."
+}
