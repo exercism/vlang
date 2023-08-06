@@ -122,6 +122,14 @@
         "difficulty": 6
       },
       {
+        "uuid": "c0a26fda-7ce7-43f0-8da1-cb5b5d5e434f",
+        "slug": "isbn-verifier",
+        "name": "ISBN Verifier",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "uuid": "e9a9d0d1-1756-4be5-8fc8-bd2d2d52611c",
         "slug": "grains",
         "name": "Grains",
