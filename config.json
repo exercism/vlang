@@ -146,6 +146,14 @@
         "difficulty": 1
       },
       {
+        "uuid": "5cf96f11-1313-45e7-8f1b-2d9eaa6fa017",
+        "slug": "rational-numbers",
+        "name": "Rational Numbers",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "uuid": "df360057-385e-4166-96e1-ed0629c02ca3",
         "slug": "two-fer",
         "name": "Two Fer",

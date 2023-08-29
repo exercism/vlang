@@ -1,0 +1,11 @@
+{
+  "authors": ["m-charlton"],
+  "files": {
+    "solution": ["rational-numbers.v"],
+    "test": ["run_test.v"],
+    "example": [".meta/example.v"]
+  },
+  "blurb": "Implement rational numbers.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Rational_number"
+}
