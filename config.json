@@ -154,6 +154,14 @@
         "difficulty": 4
       },
       {
+        "uuid": "26f834d8-6182-4f41-aa4f-a376e0c83def",
+        "slug": "complex-numbers",
+        "name": "Complex Numbers",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "uuid": "df360057-385e-4166-96e1-ed0629c02ca3",
         "slug": "two-fer",
         "name": "Two Fer",
