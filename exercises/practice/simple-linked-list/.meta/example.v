@@ -12,7 +12,7 @@ struct Node {
 }
 
 fn new() LinkedList {
-	return LinkedList{}
+	return LinkedList{head: unsafe { nil }, len: 0}
 }
 
 fn from_array(array []int) LinkedList {
