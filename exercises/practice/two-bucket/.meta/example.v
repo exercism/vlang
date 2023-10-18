@@ -46,7 +46,7 @@ fn (search Search) id_for_state(contents_one int, contents_two int) int {
 		return capacity_one + 2 * capacity_two - contents_two
 	}
 	if contents_two == 0 {
-		return 2 * (capacity_one + capacity_two) - contents_one
+		return 2 * combined_capacity - contents_one
 	}
 	panic('invalid state')
 }
