@@ -90,6 +90,14 @@
         "difficulty": 1
       },
       {
+        "slug": "pop-count",
+        "name": "Pop Count",
+        "uuid": "3f07d979-1bc1-4102-8490-c451ad988fb6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
         "slug": "space-age",
         "name": "Space Age",
