@@ -114,6 +114,14 @@
         "difficulty": 3
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "632e459c-2a85-4efc-a981-91f52b7f4b6c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "uuid": "4af029c7-3154-4781-8c49-4269d84cadad",
         "slug": "triangle",
         "name": "Triangle",
