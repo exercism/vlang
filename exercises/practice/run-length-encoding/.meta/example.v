@@ -1,34 +1,37 @@
 module main
 
 fn encode(str string) string {
-  mut buffer := []u8{}
-  mut number := 0
-  mut last := ` `
-  for ch in str {
-    if number == 0 || ch == last {
-      number++
-    } else {
-      if number > 1 {
-        digits := '${number}'
-        for digit in digits {
-          buffer << digit
-        }
-      }
-      buffer << last
-      number = 1
+  // We populate `buffer` from the back.
+  mut buffer := []u8{len: str.len}
+  mut offset := str.len
+
+  // Characters in `str` from `end` onwards have already been encoded.
+  mut end := str.len
+
+  for end > 0 {
+    ch := str[end - 1]
+    mut begin := end - 1
+    for (begin > 0) && (str[begin - 1] == ch) {
+      begin--
     }
-    last = ch
-  }
-  if number != 0 {
+
+    // Run-length encode the run from `begin` (inclusive) to `end` (exclusive)
+    // of the character `ch`
+    offset--
+    buffer[offset] = ch
+    mut number := end - begin
     if number > 1 {
-      digits := '${number}'
-      for digit in digits {
-        buffer << digit
+      for number > 0 {
+        offset--
+        buffer[offset] = u8(`0` + (number % 10))
+        number = number / 10
       }
     }
-    buffer << last
+
+    end = begin
   }
-  return buffer.bytestr()
+
+  return buffer[offset..(str.len)].bytestr()
 }
 
 fn decode(str string) string {
