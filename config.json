@@ -410,6 +410,14 @@
         "difficulty": 3
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run Length Encoding",
+        "uuid": "c0c0c0a8-8cf8-400c-a42f-2e9283a46e5b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "cd1d7cc3-2c8a-439c-a604-d1b971611556",
