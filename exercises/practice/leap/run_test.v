@@ -16,7 +16,7 @@ fn test_divisible_by_4_and_5() {
 	assert is_leap_year(1960)
 }
 
-fn test_divisible_by_100_not_by_400(){
+fn test_divisible_by_100_not_by_400() {
 	assert !is_leap_year(2100)
 }
 

@@ -5,7 +5,6 @@ import rand
 
 // define the Robot struct here
 struct Robot {
-
 }
 
 // we need a place to store all these robots!

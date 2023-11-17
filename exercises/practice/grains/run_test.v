@@ -30,25 +30,25 @@ fn test_grains_sq_64() {
 
 fn test_error_0() {
 	if res := grains_on_square(0) {
-		assert false, "invalid square number should return error"
+		assert false, 'invalid square number should return error'
 	} else {
-		assert err.msg() == "square must be between 1 and 64" 
+		assert err.msg() == 'square must be between 1 and 64'
 	}
 }
 
 fn test_error_1() {
 	if res := grains_on_square(-1) {
-		assert false, "invalid square number should return error"
+		assert false, 'invalid square number should return error'
 	} else {
-		assert err.msg() == "square must be between 1 and 64" 
+		assert err.msg() == 'square must be between 1 and 64'
 	}
 }
 
 fn test_error_65() {
 	if res := grains_on_square(65) {
-		assert false, "invalid square number should return error"
+		assert false, 'invalid square number should return error'
 	} else {
-		assert err.msg() == "square must be between 1 and 64" 
+		assert err.msg() == 'square must be between 1 and 64'
 	}
 }
 

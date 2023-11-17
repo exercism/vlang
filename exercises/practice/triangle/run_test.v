@@ -17,7 +17,6 @@ fn test_true_eq_float_triangle() {
 	assert is_equilateral(0.5, 0.5, 0.5)
 }
 
-
 // ISOSCELES TRIANGLES
 fn test_true_iso_last_two_equal() {
 	assert is_isosceles(3, 4, 4)
