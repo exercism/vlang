@@ -98,6 +98,14 @@
         "difficulty": 1
       },
       {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "915e4694-fb02-496e-9860-001d2aae70cd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "pop-count",
         "name": "Eliud's Eggs",
         "uuid": "3f07d979-1bc1-4102-8490-c451ad988fb6",
