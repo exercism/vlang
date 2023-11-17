@@ -1,3 +1,4 @@
 module main
 
-fn triplets_with_sum(n int) [][]int
+fn triplets_with_sum(n int) [][]int {
+}

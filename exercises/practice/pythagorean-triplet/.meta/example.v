@@ -1,7 +1,7 @@
 module main
 
 fn triplets_with_sum(n int) [][]int {
-	mut result := [][]int {}
+	mut result := [][]int{}
 	if n < 2 {
 		return result
 	}
