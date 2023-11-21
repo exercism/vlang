@@ -1,11 +1,18 @@
 {
-  "authors": ["1ethanhanse"],
+  "authors": [
+    "1ethanhansen"
+  ],
   "files": {
-    "solution": ["clock.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "clock.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Implement a clock that handles times without dates.",
-  "source": "Pairing session with Erin Drummond",
-  "source_url": "https://twitter.com/ebdrummond"
+  "source": "Pairing session with Erin Drummond"
 }
