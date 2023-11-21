@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
 
       - name: Setup Vlang
         uses: vlang/setup-v@f0b3323984699c80284901a9ffd8d3e2997f22b2
