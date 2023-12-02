@@ -1,35 +1,29 @@
 module main
 
-struct HighScores {
-	scores []int
-}
+import arrays
+
+type HighScores = []int
 
 // build a new HighScores
 pub fn HighScores.new(scores []int) HighScores {
-	return HighScores{
-		scores: scores
-	}
+	return scores.clone()
 }
 
 pub fn (mut high_scores HighScores) scores() []int {
-	return high_scores.scores
+	return high_scores
 }
 
 pub fn (mut high_scores HighScores) latest() int {
-	return high_scores.scores.last()
+	return high_scores.last()
 }
 
 pub fn (mut high_scores HighScores) personal_best() int {
-	mut sorted := high_scores.scores.clone()
-	sorted.sort()
-	return sorted.last()
+	return arrays.max(high_scores) or { 0 }
 }
 
 pub fn (mut high_scores HighScores) personal_top_three() []int {
-	mut sorted := high_scores.scores.clone()
-	sorted.sort()
-	if sorted.len > 3 {
-		sorted.drop(sorted.len - 3)
-	}
-	return sorted.reverse()
+	mut result := high_scores
+	result = result.sorted(b < a)
+	result.trim(3)
+	return result
 }
