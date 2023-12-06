@@ -8,23 +8,18 @@ enum Relation {
 }
 
 fn is_sublist(list_one []int, list_two []int) bool {
-	if list_two.len < list_one.len {
-		return false
-	} else if list_one == list_two[0..list_one.len] {
-		return true
-	} else {
-		return is_sublist(list_one, list_two[1..])
+	return match true {
+		list_two.len < list_one.len { false }
+		list_one == list_two[0..list_one.len] { true }
+		else { is_sublist(list_one, list_two[1..]) }
 	}
 }
 
 fn compare(list_one []int, list_two []int) Relation {
-	if list_one == list_two {
-		return .equal
-	} else if is_sublist(list_one, list_two) {
-		return .sublist
-	} else if is_sublist(list_two, list_one) {
-		return .superlist
-	} else {
-		return .unequal
+	return match true {
+		list_one == list_two { .equal }
+		is_sublist(list_one, list_two) { .sublist }
+		is_sublist(list_two, list_one) { .superlist }
+		else { .unequal }
 	}
 }
