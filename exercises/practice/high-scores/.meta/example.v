@@ -22,8 +22,7 @@ pub fn (mut high_scores HighScores) personal_best() int {
 }
 
 pub fn (mut high_scores HighScores) personal_top_three() []int {
-	mut result := high_scores
-	result = result.sorted(b < a)
+	mut result := high_scores.sorted(b < a)
 	result.trim(3)
 	return result
 }

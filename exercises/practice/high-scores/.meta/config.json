@@ -2,6 +2,9 @@
   "authors": [
     "keiravillekode"
   ],
+  "contributors": [
+    "1ethanhansen"
+  ],
   "files": {
     "solution": [
       "high-scores.v"
