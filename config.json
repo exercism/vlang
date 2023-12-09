@@ -130,6 +130,14 @@
         "difficulty": 3
       },
       {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "61a1c85e-2137-4c11-9265-85a0ef9800ae",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "square-root",
         "name": "Square Root",
         "uuid": "632e459c-2a85-4efc-a981-91f52b7f4b6c",
