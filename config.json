@@ -146,6 +146,14 @@
         "difficulty": 3
       },
       {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "8af4128a-59c4-477f-9903-bec44f3e1555",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "uuid": "4af029c7-3154-4781-8c49-4269d84cadad",
         "slug": "triangle",
         "name": "Triangle",
