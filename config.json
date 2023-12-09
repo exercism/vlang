@@ -154,6 +154,14 @@
         "difficulty": 3
       },
       {
+        "slug": "bowling",
+        "name": "Bowling",
+        "uuid": "a62ffd58-12ae-414d-a5ba-fa970de81d02",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "uuid": "c7b387ae-3ea2-40d2-9792-5f83d14f316e",
         "slug": "list-ops",
         "name": "List Ops",
