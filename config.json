@@ -602,6 +602,14 @@
         "difficulty": 4
       },
       {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "b389b48c-fa60-41f6-8e5e-491b4ca7a346",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "200a6e9a-cdec-4a24-a32c-7f3c5d671d5e",
