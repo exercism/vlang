@@ -1,5 +1,6 @@
 {
   "authors": ["m-charlton"],
+  "contributors": ["keiravillekode"],
   "files": {
     "solution": ["rational-numbers.v"],
     "test": ["run_test.v"],
