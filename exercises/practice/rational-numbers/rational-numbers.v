@@ -4,7 +4,7 @@ struct Rational {
 }
 
 // build a new Rational number
-pub fn Rational.new(denominator i64, numerator i64) Rational {
+pub fn Rational.new(numerator i64, denominator i64) Rational {
 }
 
 pub fn (r Rational) abs() Rational {
