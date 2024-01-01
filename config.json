@@ -186,6 +186,14 @@
         "difficulty": 6
       },
       {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "a8449f36-4860-4934-9b32-8ce38faac5de",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "uuid": "c0a26fda-7ce7-43f0-8da1-cb5b5d5e434f",
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
