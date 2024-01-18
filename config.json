@@ -578,6 +578,14 @@
         "difficulty": 3
       },
       {
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "eeab8f00-e9ac-4696-ba1d-d1c418199d5d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "3d66d6f5-5d74-4d29-872e-e92154df5dd6",
