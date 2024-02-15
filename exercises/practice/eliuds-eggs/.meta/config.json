@@ -4,7 +4,7 @@
   ],
   "files": {
     "solution": [
-      "pop-count.v"
+      "eliuds-eggs.v"
     ],
     "test": [
       "run_test.v"
