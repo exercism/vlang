@@ -19,7 +19,7 @@ fn test_can_read_an_item_just_written() {
 	}
 }
 
-fn test_each_item_may_only_be_read_onces() {
+fn test_each_item_may_only_be_read_once() {
 	mut buffer := create_buffer[int](1)
 	buffer.write(1) or { assert false, 'buffer.write(1) should succeed, not fail with an error' }
 
