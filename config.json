@@ -88,6 +88,14 @@
         "difficulty": 2
       },
       {
+        "slug": "micro-blog",
+        "name": "Micro Blog",
+        "uuid": "133c5fb4-7a0d-4fe9-be69-58f248af9046",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "06e88843-e280-4022-8c66-f449303f419d",
@@ -179,6 +187,14 @@
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "c7b387ae-3ea2-40d2-9792-5f83d14f316e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "wordy",
+        "name": "Wordy",
+        "uuid": "a8449f36-4860-4934-9b32-8ce38faac5de",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
@@ -539,6 +555,14 @@
         "slug": "word-search",
         "name": "Word Search",
         "uuid": "d805019c-2497-4dae-84c6-1123fc6cb1e2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "e78129ce-83a8-4df6-89c0-48f3ab2a1d00",
         "practices": [],
         "prerequisites": [],
         "difficulty": 7
