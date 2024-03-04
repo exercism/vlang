@@ -554,6 +554,14 @@
         "difficulty": 7
       },
       {
+        "slug": "book-store",
+        "name": "Book Store",
+        "uuid": "e78129ce-83a8-4df6-89c0-48f3ab2a1d00",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "simple-linked-list",
         "name": "Simple Linked List",
         "uuid": "42b638fb-3ad1-4a0f-a26b-096ad583c997",
