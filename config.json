@@ -27,40 +27,38 @@
     ],
     "example": [
       ".meta/example.v"
-    ],
-    "exemplar": []
+    ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
-        "uuid": "1ec54f68-8050-41a8-b6ce-fab024d20ef4",
         "slug": "hello-world",
         "name": "Hello World",
+        "uuid": "1ec54f68-8050-41a8-b6ce-fab024d20ef4",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
       {
-        "uuid": "9dc292bc-75c2-4d98-968a-960f478b9aae",
         "slug": "leap",
         "name": "Leap",
+        "uuid": "9dc292bc-75c2-4d98-968a-960f478b9aae",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
       {
-        "uuid": "4fb3cf4f-c509-4fd9-8a99-6a7223c94c48",
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
+        "uuid": "4fb3cf4f-c509-4fd9-8a99-6a7223c94c48",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
       },
       {
-        "uuid": "b2162ec1-1dd1-4ac9-92b0-4d047d6cd0c5",
         "slug": "reverse-string",
         "name": "Reverse String",
+        "uuid": "b2162ec1-1dd1-4ac9-92b0-4d047d6cd0c5",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
@@ -114,17 +112,17 @@
         "difficulty": 3
       },
       {
-        "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
         "slug": "space-age",
         "name": "Space Age",
+        "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
       },
       {
-        "uuid": "c5376614-8e7f-4ef2-9a00-f61363556719",
         "slug": "pascals-triangle",
         "name": "Pascals Triangle",
+        "uuid": "c5376614-8e7f-4ef2-9a00-f61363556719",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
@@ -154,9 +152,9 @@
         "difficulty": 3
       },
       {
-        "uuid": "4af029c7-3154-4781-8c49-4269d84cadad",
         "slug": "triangle",
         "name": "Triangle",
+        "uuid": "4af029c7-3154-4781-8c49-4269d84cadad",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
@@ -178,73 +176,73 @@
         "difficulty": 6
       },
       {
-        "uuid": "c7b387ae-3ea2-40d2-9792-5f83d14f316e",
         "slug": "list-ops",
         "name": "List Ops",
+        "uuid": "c7b387ae-3ea2-40d2-9792-5f83d14f316e",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
       },
       {
-        "uuid": "c0a26fda-7ce7-43f0-8da1-cb5b5d5e434f",
         "slug": "isbn-verifier",
         "name": "ISBN Verifier",
+        "uuid": "c0a26fda-7ce7-43f0-8da1-cb5b5d5e434f",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
       },
       {
-        "uuid": "7a75f29b-77a4-491f-84dd-bff01269a6b3",
         "slug": "custom-set",
         "name": "Custom Set",
+        "uuid": "7a75f29b-77a4-491f-84dd-bff01269a6b3",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
       },
       {
-        "uuid": "e9a9d0d1-1756-4be5-8fc8-bd2d2d52611c",
         "slug": "grains",
         "name": "Grains",
+        "uuid": "e9a9d0d1-1756-4be5-8fc8-bd2d2d52611c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
       {
-        "uuid": "b3872608-a0fc-4315-a051-cb9d377109d8",
         "slug": "pangram",
         "name": "Pangram",
+        "uuid": "b3872608-a0fc-4315-a051-cb9d377109d8",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
       {
-        "uuid": "5cf96f11-1313-45e7-8f1b-2d9eaa6fa017",
         "slug": "rational-numbers",
         "name": "Rational Numbers",
+        "uuid": "5cf96f11-1313-45e7-8f1b-2d9eaa6fa017",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
       },
       {
-        "uuid": "26f834d8-6182-4f41-aa4f-a376e0c83def",
         "slug": "complex-numbers",
         "name": "Complex Numbers",
+        "uuid": "26f834d8-6182-4f41-aa4f-a376e0c83def",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
       },
       {
-        "uuid": "df360057-385e-4166-96e1-ed0629c02ca3",
         "slug": "two-fer",
         "name": "Two Fer",
+        "uuid": "df360057-385e-4166-96e1-ed0629c02ca3",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
       {
-        "uuid": "a9000aca-c372-4ddc-a5d9-cd6afa9e2535",
         "slug": "raindrops",
         "name": "Raindrops",
+        "uuid": "a9000aca-c372-4ddc-a5d9-cd6afa9e2535",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
@@ -258,17 +256,17 @@
         "difficulty": 5
       },
       {
-        "uuid": "24f0d852-3581-4e99-b488-d367d16ff1e7",
         "slug": "grade-school",
         "name": "Grade School",
+        "uuid": "24f0d852-3581-4e99-b488-d367d16ff1e7",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
       },
       {
-        "uuid": "27d24b09-71dc-462c-b80d-8408b62c69a1",
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
+        "uuid": "27d24b09-71dc-462c-b80d-8408b62c69a1",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
@@ -282,9 +280,9 @@
         "difficulty": 4
       },
       {
-        "uuid": "d62b3878-ff3d-42f9-aef9-a469cb6f812c",
         "slug": "nth-prime",
         "name": "Nth Prime",
+        "uuid": "d62b3878-ff3d-42f9-aef9-a469cb6f812c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
@@ -306,9 +304,9 @@
         "difficulty": 4
       },
       {
-        "uuid": "c5e6a688-b7bc-44f2-a26e-92fb612a7c8f",
         "slug": "robot-name",
         "name": "Robot Name",
+        "uuid": "c5e6a688-b7bc-44f2-a26e-92fb612a7c8f",
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
@@ -322,17 +320,17 @@
         "difficulty": 4
       },
       {
-        "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
         "slug": "prime-factors",
         "name": "Prime Factors",
+        "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
       },
       {
-        "uuid": "2f6e7c12-46f5-44aa-a448-b0126769eee7",
         "slug": "sieve",
         "name": "Sieve",
+        "uuid": "2f6e7c12-46f5-44aa-a448-b0126769eee7",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
@@ -346,25 +344,25 @@
         "difficulty": 2
       },
       {
-        "uuid": "d229850d-421a-47bc-a8ff-df73a4c3b72b",
         "slug": "queen-attack",
         "name": "Queen Attack",
+        "uuid": "d229850d-421a-47bc-a8ff-df73a4c3b72b",
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
       },
       {
-        "uuid": "622a3dba-8893-4f2d-9e05-8aedd68df7a9",
         "slug": "hamming",
         "name": "Hamming",
+        "uuid": "622a3dba-8893-4f2d-9e05-8aedd68df7a9",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
       {
-        "uuid": "04f4d226-b7b9-4635-9fbf-db7809690889",
         "slug": "bob",
         "name": "Bob",
+        "uuid": "04f4d226-b7b9-4635-9fbf-db7809690889",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
@@ -378,17 +376,17 @@
         "difficulty": 4
       },
       {
-        "uuid": "dc522fc7-94e5-4527-ac6e-e713ac4a5ec2",
         "slug": "isogram",
         "name": "Isogram",
+        "uuid": "dc522fc7-94e5-4527-ac6e-e713ac4a5ec2",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
       },
       {
-        "uuid": "dc44cbd5-13f0-4473-a06d-8e6a1dc364bc",
         "slug": "scrabble-score",
         "name": "Scrabble Score",
+        "uuid": "dc44cbd5-13f0-4473-a06d-8e6a1dc364bc",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
@@ -402,9 +400,9 @@
         "difficulty": 4
       },
       {
-        "uuid": "3e9f83c6-6425-44a6-a57a-88171f11c40e",
         "slug": "meetup",
         "name": "Meetup",
+        "uuid": "3e9f83c6-6425-44a6-a57a-88171f11c40e",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
@@ -426,17 +424,17 @@
         "difficulty": 2
       },
       {
-        "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
         "slug": "clock",
         "name": "Clock",
+        "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
       },
       {
-        "uuid": "021c6fbd-adac-43a3-b2b9-22bde0ae2968",
         "slug": "secret-handshake",
         "name": "Secret Handshake",
+        "uuid": "021c6fbd-adac-43a3-b2b9-22bde0ae2968",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
@@ -522,17 +520,17 @@
         "difficulty": 2
       },
       {
-        "uuid": "18752af6-01a0-4125-9f45-e2be034b584c",
         "slug": "binary-search",
         "name": "Binary Search",
+        "uuid": "18752af6-01a0-4125-9f45-e2be034b584c",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
       },
       {
-        "uuid": "76b3c5ce-a2b2-4e75-bd2a-bb94e81c2701",
         "slug": "accumulate",
         "name": "Accumulate",
+        "uuid": "76b3c5ce-a2b2-4e75-bd2a-bb94e81c2701",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
@@ -570,9 +568,9 @@
         "difficulty": 4
       },
       {
-        "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
         "slug": "rna-transcription",
         "name": "RNA Transcription",
+        "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
@@ -586,9 +584,9 @@
         "difficulty": 2
       },
       {
-        "uuid": "79f48b51-3e4a-4bac-961a-2d41e2b17215",
         "slug": "linked-list",
         "name": "Linked List",
+        "uuid": "79f48b51-3e4a-4bac-961a-2d41e2b17215",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
@@ -648,10 +646,17 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "ba0df82d-6c45-4ac4-854e-a6dcf476203b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
-  "concepts": [],
   "key_features": [
     {
       "title": "Concurrency",
@@ -685,15 +690,15 @@
     }
   ],
   "tags": [
+    "execution_mode/compiled",
     "paradigm/imperative",
     "paradigm/procedural",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
+    "runtime/standalone_executable",
     "typing/static",
     "typing/strong",
-    "execution_mode/compiled",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
-    "runtime/standalone_executable",
     "used_for/backends",
     "used_for/cross_platform_development",
     "used_for/guis",
