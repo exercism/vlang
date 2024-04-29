@@ -600,6 +600,14 @@
         "difficulty": 4
       },
       {
+        "slug": "game-of-life",
+        "name": "Game Of Life",
+        "uuid": "41df8c1c-ca5f-467b-aa09-1b6be0342a38",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
