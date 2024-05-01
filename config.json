@@ -56,6 +56,14 @@
         "difficulty": 2
       },
       {
+        "slug": "sum-of-multiples",
+        "name": "Sum Of Multiples",
+        "uuid": "18b7fc26-c45b-41a0-a1b4-4dc82766d2df",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "b2162ec1-1dd1-4ac9-92b0-4d047d6cd0c5",
