@@ -632,6 +632,14 @@
         "difficulty": 3
       },
       {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "a0477a3c-547e-4cde-a23e-a917fa408284",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "3d66d6f5-5d74-4d29-872e-e92154df5dd6",
