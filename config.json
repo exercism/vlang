@@ -512,6 +512,14 @@
         "difficulty": 4
       },
       {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "ced95ca8-5145-472e-aaf8-a5998883dbe6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "3dd0d34b-1584-4960-bf82-beb2f4ca4e48",
