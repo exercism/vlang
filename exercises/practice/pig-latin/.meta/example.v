@@ -36,8 +36,11 @@ fn translate(phrase string) string {
 	mut builder := strings.new_builder(phrase.len + 2 * words.len)
 	for word in words {
 		mut index := 0
-		rule1 := word.len > 1 && if vowel[word[0] - `a`] { word[0] != `y`
-			|| word[0..2] == 'yt' } else { word[0..2] == 'xr' }
+		rule1 := if vowel[word[0] - `a`] {
+			word[0] != `y` || (word.len > 1 && word[0..2] == 'yt')
+		} else {
+			word.len > 1 && word[0..2] == 'xr'
+		}
 
 		if !rule1 {
 			index++
