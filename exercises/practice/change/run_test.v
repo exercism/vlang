@@ -33,6 +33,10 @@ fn test_another_possible_change_without_unit_coins_available() {
 	assert find_fewest_coins([4, 5], 27)! == [4, 4, 4, 5, 5, 5]
 }
 
+fn test_a_greedy_approach_is_not_optimal() {
+	assert find_fewest_coins([1, 10, 11], 20)! == [10, 10]
+}
+
 fn test_no_coins_make_0_change() {
 	assert find_fewest_coins([1, 5, 10, 21, 25], 0)! == []
 }
