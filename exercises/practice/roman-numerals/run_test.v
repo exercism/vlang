@@ -100,6 +100,10 @@ fn test_3001_is_mmmi() {
 	assert roman(3001) == 'MMMI'
 }
 
+fn test_3888_is_mmmdccclxxxviii() {
+	assert roman(3888) == 'MMMDCCCLXXXVIII'
+}
+
 fn test_3999_is_mmmcmxcix() {
 	assert roman(3999) == 'MMMCMXCIX'
 }
