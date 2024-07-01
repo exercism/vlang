@@ -440,6 +440,14 @@
         "difficulty": 4
       },
       {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "694ade58-8851-4050-afa0-81fad339e21f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "6f955919-1478-4296-ae5c-8c3caf06d614",
