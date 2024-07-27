@@ -16,21 +16,12 @@ exercise_dir="exercises/practice/${SLUG}"
 echo "Fetching latest version of configlet..."
 ./bin/fetch-configlet
 
-# Preparing config.json
-echo "Adding instructions and configuration files..."
-NAME=$(echo $SLUG | sed -e 's/-/ /g' -e 's/\b\(.\)/\u\1/g' )
-UUID=$(bin/configlet uuid)
-jq --arg slug "$SLUG" --arg name "$NAME" --arg uuid "$UUID" \
-    '.exercises.practice += [{slug: $slug, name: $name, uuid: $uuid, practices: [], prerequisites: [], difficulty: 5}]' \
-    config.json > config.json.tmp
-# jq always rounds whole numbers, but average_run_time needs to be a float
-sed -i 's/"average_run_time": \([[:digit:]]\+\)$/"average_run_time": \1.0/' config.json.tmp
-mv config.json.tmp config.json
+if [[ -z $author ]]; then
+    echo
+    read -rp "What's your github username? " author
+fi
 
-# Create instructions and config files
-./bin/configlet sync --update --yes --docs --metadata --exercise "$SLUG"
-./bin/configlet sync --update --yes --filepaths --exercise "$SLUG"
-./bin/configlet sync --update --tests include --exercise "$SLUG"
+bin/configlet create --practice-exercise $SLUG --author "${author}" --difficulty 5
 
 # Create V files
 touch $exercise_dir/.meta/example.v
