@@ -36,7 +36,7 @@ enum Property as u8 {
 	// Nationalities
 	englishman
 	spaniard
-	ukranian
+	ukrainian
 	norwegian
 	japanese
 	// Pets
@@ -58,8 +58,8 @@ fn solve() [][]u8 {
 	constraints.same_house(Property.dog, Property.spaniard)
 	constraints.same_house(Property.coffee, Property.green)
 	constraints.same_house(Property.green, Property.coffee)
-	constraints.same_house(Property.ukranian, Property.tea)
-	constraints.same_house(Property.tea, Property.ukranian)
+	constraints.same_house(Property.ukrainian, Property.tea)
+	constraints.same_house(Property.tea, Property.ukrainian)
 	constraints.is_next_to(Property.green, Property.ivory, 1)
 	constraints.is_next_to(Property.ivory, Property.green, -1)
 	constraints.same_house(Property.old_gold, Property.snails)
@@ -89,7 +89,7 @@ fn solve() [][]u8 {
 		Property.orange_juice, Property.water])
 
 	constraints.add_mutually_exclusive_constraints([Property.englishman, Property.spaniard,
-		Property.ukranian, Property.norwegian, Property.japanese])
+		Property.ukrainian, Property.norwegian, Property.japanese])
 
 	constraints.add_mutually_exclusive_constraints([Property.dog, Property.fox, Property.horse,
 		Property.zebra, Property.snails])
@@ -254,7 +254,7 @@ fn find_who(possible_values [][]u8, property Property) string {
 	return match value {
 		possible_values[int(Property.englishman)] { 'Englishman' }
 		possible_values[int(Property.spaniard)] { 'Spaniard' }
-		possible_values[int(Property.ukranian)] { 'Ukranian' }
+		possible_values[int(Property.ukrainian)] { 'Ukrainian' }
 		possible_values[int(Property.norwegian)] { 'Norwegian' }
 		possible_values[int(Property.japanese)] { 'Japanese' }
 		else { panic('Something has gone wrong, could not match house') }
