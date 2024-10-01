@@ -36,7 +36,7 @@ fn score(category Category, rolls []u8) int {
 
 fn score_yacht(rolls []u8) int {
 	unique := arrays.uniq(rolls)
-	if (unique.len > 1) {
+	if unique.len > 1 {
 		return 0
 	}
 	return 50

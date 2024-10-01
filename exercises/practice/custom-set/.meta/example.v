@@ -15,7 +15,7 @@ mut:
 	items map[T]u8
 }
 
-[inline]
+@[inline]
 fn (s CustomSet[T]) items() []T {
 	return s.items.keys()
 }
