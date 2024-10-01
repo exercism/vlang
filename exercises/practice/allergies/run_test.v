@@ -194,7 +194,7 @@ fn test_list_everything() {
 		Allergen.strawberries, Allergen.tomatoes, Allergen.chocolate, Allergen.pollen, Allergen.cats])
 }
 
-fn compare(left voidptr, right voidptr) int {
+fn compare(left &Allergen, right &Allergen) int {
 	return int(left) - int(right)
 }
 

@@ -3,10 +3,9 @@ module main
 import arrays { group, sum }
 import regex { regex_opt }
 
-const (
-	isbn_len = 10
+const isbn_len = 10
 
-	/*
+/*
 	Using a regular expression, I now have two problems:
 
 	https://blog.codinghorror.com/regular-expressions-now-you-have-two-problems/
@@ -15,10 +14,10 @@ const (
 	- length check
 	- character validation
 	*/
-	isbn_re  = regex_opt(r'^\d{9}(\d|X)$') or { panic('Invalid ISBN-10 regular expression') }
-	weights  = []int{len: isbn_len, init: isbn_len - index} // [10, 9, 8, ..., 1]
-	zero     = int(`0`)
-)
+const isbn_re = regex_opt(r'^\d{9}(\d|X)$') or { panic('Invalid ISBN-10 regular expression') }
+const weights = []int{len: isbn_len, init: isbn_len - index} // [10, 9, 8, ..., 1]
+
+const zero = int(`0`)
 
 // convert single digit (`0`...`9`) to its integer equivalent.
 fn digit_to_int(d u8) int {
