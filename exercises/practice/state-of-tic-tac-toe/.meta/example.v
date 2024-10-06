@@ -6,6 +6,27 @@ enum State as u8 {
 	win
 }
 
+fn is_win(bitset int) bool {
+	lines := [
+		0x007,
+		0x070,
+		0x700,
+		0x111,
+		0x222,
+		0x444,
+		0x124,
+		0x421,
+	]
+
+	for line in lines {
+		if (bitset & line) == line {
+			return true
+		}
+	}
+
+	return false
+}
+
 fn gamestate(board []string) !State {
 	mut count_x := 0
 	mut count_o := 0
@@ -33,29 +54,8 @@ fn gamestate(board []string) !State {
 		return error('Wrong turn order: X went twice')
 	}
 
-	mut win_x := false
-	mut win_o := false
-
-	lines := [
-		0x007,
-		0x070,
-		0x700,
-		0x111,
-		0x222,
-		0x444,
-		0x124,
-		0x421,
-	]
-
-	for line in lines {
-		if (bitset_x & line) == line {
-			win_x = true
-		}
-
-		if (bitset_o & line) == line {
-			win_o = true
-		}
-	}
+	mut win_x := is_win(bitset_x)
+	mut win_o := is_win(bitset_o)
 
 	if win_x || win_o {
 		if win_x && win_o {
