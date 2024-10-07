@@ -15,7 +15,7 @@ mut:
 	items map[T]u8
 }
 
-[inline]
+@[inline]
 fn (s CustomSet[T]) items() []T {
 	return s.items.keys()
 }
@@ -74,4 +74,3 @@ pub fn (s CustomSet[T]) is_subset[T](other CustomSet[T]) bool {
 pub fn (s CustomSet[T]) is_disjoint[T](other CustomSet[T]) bool {
 	return s.intersection(other).is_empty()
 }
-

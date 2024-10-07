@@ -1,10 +1,8 @@
 module main
 
-const (
-	empty         = CustomSet.new([]int{})
-	another_empty = CustomSet.new([]int{})
-	non_empty     = CustomSet.new([1])
-)
+const empty = CustomSet.new([]int{})
+const another_empty = CustomSet.new([]int{})
+const non_empty = CustomSet.new([1])
 
 // is_empty
 
