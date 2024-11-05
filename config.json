@@ -744,6 +744,14 @@
         "difficulty": 7
       },
       {
+        "slug": "dominoes",
+        "name": "Dominoes",
+        "uuid": "62072c25-d963-467a-8bea-36b209a861e6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "word-search",
         "name": "Word Search",
         "uuid": "d805019c-2497-4dae-84c6-1123fc6cb1e2",
