@@ -31,7 +31,7 @@ fn test_concat_list_of_lists() {
 }
 
 fn test_concat_list_of_nested_lists() {
-	assert concat[[]int]([[[1], [2]], [[3]], [[]], [[4, 5, 6]]]) == [
+	assert concat[[]int]([[[1], [2]], [[3]], [[]int{}], [[4, 5, 6]]]) == [
 		[1],
 		[2],
 		[3],
