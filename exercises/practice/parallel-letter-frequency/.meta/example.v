@@ -6,7 +6,7 @@ fn count_letters(word string) map[rune]int {
 	mut result := map[rune]int{}
 	lower := utf8.to_lower(word)
 	for r in 0 .. utf8.len(lower) {
-		c := utf8.get_uchar(lower, r)
+		c := utf8.get_rune(lower, r)
 		if utf8.is_letter(rune(c)) {
 			result[c]++
 		}
