@@ -80,10 +80,6 @@ fn test_alternate_silence() {
 	assert response('\t\t\t\t\t\t\t\t\t\t') == 'Fine. Be that way!'
 }
 
-fn test_multiple_line_question() {
-	assert response('\nDoes this cryogenic chamber make me look fat?\nNo.') == 'Whatever.'
-}
-
 fn test_starting_with_whitespace() {
 	assert response('         hmmmmmmm...') == 'Whatever.'
 }
@@ -98,4 +94,8 @@ fn test_other_whitespace() {
 
 fn test_non_question_ending_with_whitespace() {
 	assert response('This is a statement ending with whitespace      ') == 'Whatever.'
+}
+
+fn test_multiple_line_question() {
+	assert response('\nDoes this cryogenic chamber make\n me look fat?') == 'Sure.'
 }
