@@ -40,6 +40,10 @@ fn test_first_letter_and_ay_are_moved_to_the_end_of_words_that_start_with_conson
 	assert translate('qat') == 'atqay'
 }
 
+fn test_first_letter_and_ay_are_moved_to_the_end_of_words_that_start_with_consonants__word_beginning_with_consonant_and_vowel_containing_qu() {
+	assert translate('liquid') == 'iquidlay'
+}
+
 fn test_some_letter_clusters_are_treated_like_a_single_consonant__word_beginning_with_ch() {
 	assert translate('chair') == 'airchay'
 }
