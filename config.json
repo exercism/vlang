@@ -464,6 +464,14 @@
         "difficulty": 4
       },
       {
+        "slug": "house",
+        "name": "House",
+        "uuid": "d20845f7-bd86-4b0a-8101-8644388ac312",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "killer-sudoku-helper",
         "name": "Killer Sudoku Helper",
         "uuid": "a657c97b-a2a8-4b57-a68d-6971fa7bb85f",
