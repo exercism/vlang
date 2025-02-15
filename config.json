@@ -328,6 +328,14 @@
         "difficulty": 3
       },
       {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "d521aafa-57a9-4a2f-a32a-8e3efaf6f896",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "915e4694-fb02-496e-9860-001d2aae70cd",
