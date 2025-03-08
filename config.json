@@ -137,7 +137,7 @@
       },
       {
         "slug": "two-fer",
-        "name": "Two Fer",
+        "name": "Two-Fer",
         "uuid": "df360057-385e-4166-96e1-ed0629c02ca3",
         "practices": [],
         "prerequisites": [],
@@ -249,7 +249,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "18b7fc26-c45b-41a0-a1b4-4dc82766d2df",
         "practices": [],
         "prerequisites": [],
@@ -361,7 +361,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "c0c0c0a8-8cf8-400c-a42f-2e9283a46e5b",
         "practices": [],
         "prerequisites": [],
@@ -481,7 +481,7 @@
       },
       {
         "slug": "game-of-life",
-        "name": "Game Of Life",
+        "name": "Conway's Game of Life",
         "uuid": "41df8c1c-ca5f-467b-aa09-1b6be0342a38",
         "practices": [],
         "prerequisites": [],
