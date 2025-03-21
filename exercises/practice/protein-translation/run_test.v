@@ -104,12 +104,8 @@ fn test_translation_stops_if_stop_codon_in_middle_of_six_codon_sequence() {
 	assert proteins('UGGUGUUAUUAAUGGUUU')! == ['Tryptophan', 'Cysteine', 'Tyrosine']
 }
 
-fn test_non_existing_codon_cant_translate() {
-	if res := proteins('AAA') {
-		assert false, "Non-existing codon can't translate should return an error"
-	} else {
-		assert err.msg() == 'Invalid codon'
-	}
+fn test_sequence_of_two_non_stop_codons_does_not_translate_to_a_stop_codon() {
+	assert proteins('AUGAUG')! == ['Methionine', 'Methionine']
 }
 
 fn test_unknown_amino_acids_not_part_of_a_codon_cant_translate() {
