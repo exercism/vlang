@@ -134,6 +134,13 @@ fn test_set_is_not_equal_to_larger_set_with_same_elements() {
 	assert !a_set.equal(b_set)
 }
 
+fn test_set_is_equal_to_a_set_constructed_from_an_array_with_duplicates() {
+	a_set := CustomSet.new([1])
+	b_set := CustomSet.new([1, 1])
+
+	assert a_set.equal(b_set)
+}
+
 // add
 
 fn test_add_to_empty_set() {
@@ -224,6 +231,14 @@ fn test_difference_of_two_non_empty_sets_is_a_set_of_elements_that_are_only_in_t
 	a_set := CustomSet.new([3, 2, 1])
 	b_set := CustomSet.new([2, 4])
 	expected := CustomSet.new([1, 3])
+
+	assert a_set.difference(b_set).equal(expected)
+}
+
+fn test_difference_removes_all_duplicates_in_the_first_set() {
+	a_set := CustomSet.new([1, 1])
+	b_set := CustomSet.new([1])
+	expected := CustomSet.new([]int{})
 
 	assert a_set.difference(b_set).equal(expected)
 }
