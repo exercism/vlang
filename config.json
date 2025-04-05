@@ -104,14 +104,6 @@
         "difficulty": 1
       },
       {
-        "slug": "resistor-color",
-        "name": "Resistor Color",
-        "uuid": "06e88843-e280-4022-8c66-f449303f419d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
-      },
-      {
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "b2162ec1-1dd1-4ac9-92b0-4d047d6cd0c5",
@@ -240,9 +232,25 @@
         "difficulty": 2
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "06e88843-e280-4022-8c66-f449303f419d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "resistor-color-duo",
         "name": "Resistor Color Duo",
         "uuid": "6f955919-1478-4296-ae5c-8c3caf06d614",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "1eae864e-ecb8-4ccd-8b58-2a4092c0410f",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
