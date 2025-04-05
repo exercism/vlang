@@ -1,15 +1,16 @@
 {
-  "authors": ["natanaelsirqueira"],
-  "contributors": [],
+  "authors": [
+    "natanaelsirqueira"
+  ],
   "files": {
-    "example": [
-      ".meta/example.v"
-    ],
     "solution": [
       "binary-search.v"
     ],
     "test": [
       "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
     ]
   },
   "blurb": "Implement a binary search algorithm.",

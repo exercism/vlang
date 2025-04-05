@@ -1,9 +1,17 @@
 {
-  "authors": ["1ethanhansen"],
+  "authors": [
+    "1ethanhansen"
+  ],
   "files": {
-    "solution": ["isogram.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "isogram.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Determine if a word or phrase is an isogram.",
   "source": "Wikipedia",

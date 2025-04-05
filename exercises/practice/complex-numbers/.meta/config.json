@@ -1,9 +1,17 @@
 {
-  "authors": ["m-charlton"],
+  "authors": [
+    "m-charlton"
+  ],
   "files": {
-    "solution": ["complex-numbers.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "complex-numbers.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Implement complex numbers.",
   "source": "Wikipedia",

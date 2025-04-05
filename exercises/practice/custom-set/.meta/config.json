@@ -1,9 +1,17 @@
 {
-  "authors": ["m-charlton"],
+  "authors": [
+    "m-charlton"
+  ],
   "files": {
-    "solution": ["custom-set.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "custom-set.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Create a custom set type."
 }

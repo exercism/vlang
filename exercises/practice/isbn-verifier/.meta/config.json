@@ -1,9 +1,17 @@
 {
-  "authors": ["m-charlton"],
+  "authors": [
+    "m-charlton"
+  ],
   "files": {
-    "solution": ["isbn-verifier.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "isbn-verifier.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Check if a given string is a valid ISBN-10 number.",
   "source": "Converting a string into a number and some basic processing utilizing a relatable real world example.",
