@@ -104,6 +104,14 @@
         "difficulty": 1
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "06e88843-e280-4022-8c66-f449303f419d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "b2162ec1-1dd1-4ac9-92b0-4d047d6cd0c5",
@@ -232,57 +240,9 @@
         "difficulty": 2
       },
       {
-        "slug": "rna-transcription",
-        "name": "RNA Transcription",
-        "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "secret-handshake",
-        "name": "Secret Handshake",
-        "uuid": "021c6fbd-adac-43a3-b2b9-22bde0ae2968",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "series",
-        "name": "Series",
-        "uuid": "a0477a3c-547e-4cde-a23e-a917fa408284",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "space-age",
-        "name": "Space Age",
-        "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "square-root",
-        "name": "Square Root",
-        "uuid": "632e459c-2a85-4efc-a981-91f52b7f4b6c",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "strain",
-        "name": "Strain",
-        "uuid": "2da79b0f-d182-46c7-a4e4-f0246a0fad65",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "sublist",
-        "name": "Sublist",
-        "uuid": "61a1c85e-2137-4c11-9265-85a0ef9800ae",
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "6f955919-1478-4296-ae5c-8c3caf06d614",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
@@ -291,14 +251,6 @@
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "18b7fc26-c45b-41a0-a1b4-4dc82766d2df",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
-      },
-      {
-        "slug": "twelve-days",
-        "name": "Twelve Days",
-        "uuid": "6c366848-a77a-478a-8925-7a8947a14260",
         "practices": [],
         "prerequisites": [],
         "difficulty": 2
@@ -392,20 +344,228 @@
         "difficulty": 3
       },
       {
-        "slug": "resistor-color",
-        "name": "Resistor Color",
-        "uuid": "06e88843-e280-4022-8c66-f449303f419d",
+        "slug": "rna-transcription",
+        "name": "RNA Transcription",
+        "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
       },
       {
-        "slug": "resistor-color-duo",
-        "name": "Resistor Color Duo",
-        "uuid": "6f955919-1478-4296-ae5c-8c3caf06d614",
+        "slug": "roman-numerals",
+        "name": "Roman Numerals",
+        "uuid": "eeab8f00-e9ac-4696-ba1d-d1c418199d5d",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "c0c0c0a8-8cf8-400c-a42f-2e9283a46e5b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "secret-handshake",
+        "name": "Secret Handshake",
+        "uuid": "021c6fbd-adac-43a3-b2b9-22bde0ae2968",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "a0477a3c-547e-4cde-a23e-a917fa408284",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "632e459c-2a85-4efc-a981-91f52b7f4b6c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "2da79b0f-d182-46c7-a4e4-f0246a0fad65",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "sublist",
+        "name": "Sublist",
+        "uuid": "61a1c85e-2137-4c11-9265-85a0ef9800ae",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "6c366848-a77a-478a-8925-7a8947a14260",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "affine-cipher",
+        "name": "Affine Cipher",
+        "uuid": "80c52bdc-1d57-49b0-b72d-a890faf3c4b2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "fe3ed5cb-e38c-47f3-b167-a54b5ebd1a8d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "53e57ac4-f709-4a4b-ba87-cb3e561e191b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "92fd7655-0e70-4f6d-9485-dbfbdce89dba",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "circular-buffer",
+        "name": "Circular Buffer",
+        "uuid": "ba0df82d-6c45-4ac4-854e-a6dcf476203b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "39431693-b130-4e1a-a4c1-781eb0226e39",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "823e4266-237b-45e5-94e5-1d21163ce38f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "41df8c1c-ca5f-467b-aa09-1b6be0342a38",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "house",
+        "name": "House",
+        "uuid": "d20845f7-bd86-4b0a-8101-8644388ac312",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "a657c97b-a2a8-4b57-a68d-6971fa7bb85f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "5942108c-94f6-4f36-9c2e-2189e75791b9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "880dd926-37fd-411b-9537-921bcc3583ba",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "b389b48c-fa60-41f6-8e5e-491b4ca7a346",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "5bf69277-40cf-455d-8408-c8dd780b104d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "d62b3878-ff3d-42f9-aef9-a469cb6f812c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "pig-latin",
+        "name": "Pig Latin",
+        "uuid": "351ee590-6869-460e-815e-ae8644c8ed9e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "rational-numbers",
+        "name": "Rational Numbers",
+        "uuid": "5cf96f11-1313-45e7-8f1b-2d9eaa6fa017",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       },
       {
         "slug": "resistor-color-trio",
@@ -416,25 +576,9 @@
         "difficulty": 4
       },
       {
-        "slug": "roman-numerals",
-        "name": "Roman Numerals",
-        "uuid": "eeab8f00-e9ac-4696-ba1d-d1c418199d5d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4
-      },
-      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "95aab10c-925c-4ffe-a063-c0b7d915020d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4
-      },
-      {
-        "slug": "run-length-encoding",
-        "name": "Run-Length Encoding",
-        "uuid": "c0c0c0a8-8cf8-400c-a42f-2e9283a46e5b",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
@@ -456,6 +600,14 @@
         "difficulty": 4
       },
       {
+        "slug": "space-age",
+        "name": "Space Age",
+        "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "2fd887a4-bf2d-4cbe-8293-d195f7947f9e",
@@ -472,65 +624,9 @@
         "difficulty": 4
       },
       {
-        "slug": "affine-cipher",
-        "name": "Affine Cipher",
-        "uuid": "80c52bdc-1d57-49b0-b72d-a890faf3c4b2",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "all-your-base",
-        "name": "All Your Base",
-        "uuid": "fe3ed5cb-e38c-47f3-b167-a54b5ebd1a8d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "atbash-cipher",
-        "name": "Atbash Cipher",
-        "uuid": "53e57ac4-f709-4a4b-ba87-cb3e561e191b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "bottle-song",
-        "name": "Bottle Song",
-        "uuid": "92fd7655-0e70-4f6d-9485-dbfbdce89dba",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "circular-buffer",
-        "name": "Circular Buffer",
-        "uuid": "ba0df82d-6c45-4ac4-854e-a6dcf476203b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "clock",
-        "name": "Clock",
-        "uuid": "0a1673d3-a5b2-4a82-aa96-2e2070b1e5e2",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "complex-numbers",
         "name": "Complex Numbers",
         "uuid": "26f834d8-6182-4f41-aa4f-a376e0c83def",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "crypto-square",
-        "name": "Crypto Square",
-        "uuid": "39431693-b130-4e1a-a4c1-781eb0226e39",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
@@ -544,25 +640,9 @@
         "difficulty": 5
       },
       {
-        "slug": "diamond",
-        "name": "Diamond",
-        "uuid": "823e4266-237b-45e5-94e5-1d21163ce38f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "food-chain",
         "name": "Food Chain",
         "uuid": "66524c69-1ab9-445f-99f3-ebfdb1b39613",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "game-of-life",
-        "name": "Conway's Game of Life",
-        "uuid": "41df8c1c-ca5f-467b-aa09-1b6be0342a38",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
@@ -576,49 +656,9 @@
         "difficulty": 5
       },
       {
-        "slug": "house",
-        "name": "House",
-        "uuid": "d20845f7-bd86-4b0a-8101-8644388ac312",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "killer-sudoku-helper",
-        "name": "Killer Sudoku Helper",
-        "uuid": "a657c97b-a2a8-4b57-a68d-6971fa7bb85f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "cd1d7cc3-2c8a-439c-a604-d1b971611556",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "largest-series-product",
-        "name": "Largest Series Product",
-        "uuid": "5942108c-94f6-4f36-9c2e-2189e75791b9",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "matching-brackets",
-        "name": "Matching Brackets",
-        "uuid": "880dd926-37fd-411b-9537-921bcc3583ba",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "matrix",
-        "name": "Matrix",
-        "uuid": "b389b48c-fa60-41f6-8e5e-491b4ca7a346",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
@@ -632,22 +672,6 @@
         "difficulty": 5
       },
       {
-        "slug": "minesweeper",
-        "name": "Minesweeper",
-        "uuid": "5bf69277-40cf-455d-8408-c8dd780b104d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "nth-prime",
-        "name": "Nth Prime",
-        "uuid": "d62b3878-ff3d-42f9-aef9-a469cb6f812c",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "parallel-letter-frequency",
         "name": "Parallel Letter Frequency",
         "uuid": "61b5fc26-dccd-4ed2-a15e-723273632d5d",
@@ -656,33 +680,9 @@
         "difficulty": 5
       },
       {
-        "slug": "pig-latin",
-        "name": "Pig Latin",
-        "uuid": "351ee590-6869-460e-815e-ae8644c8ed9e",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "prime-factors",
-        "name": "Prime Factors",
-        "uuid": "e6122f44-a632-44ac-8683-68b167870cd5",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
         "slug": "rail-fence-cipher",
         "name": "Rail Fence Cipher",
         "uuid": "7fbfaabf-a231-4e5c-a005-b4ea5299be63",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "rational-numbers",
-        "name": "Rational Numbers",
-        "uuid": "5cf96f11-1313-45e7-8f1b-2d9eaa6fa017",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
