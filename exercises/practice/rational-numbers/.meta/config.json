@@ -1,10 +1,20 @@
 {
-  "authors": ["m-charlton"],
-  "contributors": ["keiravillekode"],
+  "authors": [
+    "m-charlton"
+  ],
+  "contributors": [
+    "keiravillekode"
+  ],
   "files": {
-    "solution": ["rational-numbers.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "rational-numbers.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Implement rational numbers.",
   "source": "Wikipedia",

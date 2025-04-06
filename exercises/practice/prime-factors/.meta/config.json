@@ -1,9 +1,17 @@
 {
-  "authors": ["1ethanhansen"],
+  "authors": [
+    "1ethanhansen"
+  ],
   "files": {
-    "solution": ["prime-factors.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "prime-factors.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Compute the prime factors of a given natural number.",
   "source": "The Prime Factors Kata by Uncle Bob",

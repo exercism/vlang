@@ -1,9 +1,17 @@
 {
-  "authors": ["1ethanhansen"],
+  "authors": [
+    "1ethanhansen"
+  ],
   "files": {
-    "solution": ["nth-prime.v"],
-    "test": ["run_test.v"],
-    "example": [".meta/example.v"]
+    "solution": [
+      "nth-prime.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
   },
   "blurb": "Given a number n, determine what the nth prime is.",
   "source": "A variation on Problem 7 at Project Euler",
