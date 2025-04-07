@@ -568,6 +568,14 @@
         "difficulty": 4
       },
       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "1eae864e-ecb8-4ccd-8b58-2a4092c0410f",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "rotational-cipher",
         "name": "Rotational Cipher",
         "uuid": "95aab10c-925c-4ffe-a063-c0b7d915020d",
