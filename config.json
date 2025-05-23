@@ -854,6 +854,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
+      },
+      {
+        "slug": "piecing-it-together",
+        "name": "Piecing It Together",
+        "uuid": "2706fd53-6c70-4b82-af9b-31b1325c5b7d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
