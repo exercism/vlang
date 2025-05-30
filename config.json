@@ -760,6 +760,14 @@
         "difficulty": 6
       },
       {
+        "slug": "intergalactic-transmission",
+        "name": "Intergalactic Transmission",
+        "uuid": "7e785412-a9ce-469b-9a31-1ae560f928c9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "linked-list",
         "name": "Linked List",
         "uuid": "79f48b51-3e4a-4bac-961a-2d41e2b17215",
