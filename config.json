@@ -496,6 +496,14 @@
         "difficulty": 4
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "cb4c2b7d-0200-4744-bc16-a3ce6d78b36b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "house",
         "name": "House",
         "uuid": "d20845f7-bd86-4b0a-8101-8644388ac312",
@@ -541,7 +549,8 @@
         "uuid": "5bf69277-40cf-455d-8408-c8dd780b104d",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 4
+        "difficulty": 4,
+        "status": "deprecated"
       },
       {
         "slug": "nth-prime",
