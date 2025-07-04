@@ -5,9 +5,29 @@ fn test_just_a_number() {
 	assert answer(question)! == 5
 }
 
+fn test_just_a_zero() {
+	question := 'What is 0?'
+	assert answer(question)! == 0
+}
+
+fn test_just_a_negative_number() {
+	question := 'What is -123?'
+	assert answer(question)! == -123
+}
+
 fn test_addition() {
 	question := 'What is 1 plus 1?'
 	assert answer(question)! == 2
+}
+
+fn test_addition_with_a_left_hand_zero() {
+	question := 'What is 0 plus 2?'
+	assert answer(question)! == 2
+}
+
+fn test_addition_with_a_right_hand_zero() {
+	question := 'What is 3 plus 0?'
+	assert answer(question)! == 3
 }
 
 fn test_more_addition() {
