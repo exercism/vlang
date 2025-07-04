@@ -12,6 +12,12 @@ fn test_arbitrary_single_byte() {
 	assert encode(integers) == expected
 }
 
+fn test_asymmetric_single_byte() {
+	integers := [u32(0x53)]
+	expected := [u8(0x53)]
+	assert encode(integers) == expected
+}
+
 fn test_largest_single_byte() {
 	integers := [u32(0x7f)]
 	expected := [u8(0x7f)]
@@ -27,6 +33,12 @@ fn test_smallest_double_byte() {
 fn test_arbitrary_double_byte() {
 	integers := [u32(0x2000)]
 	expected := [u8(0xc0), 0x0]
+	assert encode(integers) == expected
+}
+
+fn test_asymmetric_double_byte() {
+	integers := [u32(0xad)]
+	expected := [u8(0x81), 0x2d]
 	assert encode(integers) == expected
 }
 
@@ -48,6 +60,12 @@ fn test_arbitrary_triple_byte() {
 	assert encode(integers) == expected
 }
 
+fn test_asymmetric_triple_byte() {
+	integers := [u32(0x1d59c)]
+	expected := [u8(0x87), 0xab, 0x1c]
+	assert encode(integers) == expected
+}
+
 fn test_largest_triple_byte() {
 	integers := [u32(0x1fffff)]
 	expected := [u8(0xff), 0xff, 0x7f]
@@ -66,6 +84,12 @@ fn test_arbitrary_quadruple_byte() {
 	assert encode(integers) == expected
 }
 
+fn test_asymmetric_quadruple_byte() {
+	integers := [u32(0x357704)]
+	expected := [u8(0x81), 0xd5, 0xee, 0x4]
+	assert encode(integers) == expected
+}
+
 fn test_largest_quadruple_byte() {
 	integers := [u32(0xfffffff)]
 	expected := [u8(0xff), 0xff, 0xff, 0x7f]
@@ -81,6 +105,12 @@ fn test_smallest_quintuple_byte() {
 fn test_arbitrary_quintuple_byte() {
 	integers := [u32(0xff000000)]
 	expected := [u8(0x8f), 0xf8, 0x80, 0x80, 0x0]
+	assert encode(integers) == expected
+}
+
+fn test_asymmetric_quintuple_byte() {
+	integers := [u32(0x86656105)]
+	expected := [u8(0x88), 0xb3, 0x95, 0xc2, 0x5]
 	assert encode(integers) == expected
 }
 
