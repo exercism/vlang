@@ -1,7 +1,5 @@
 module main
 
-import arrays
-
 fn transpose(lines []string) []string {
 	mut max_line_len := 0
 	for line in lines {
