@@ -31,10 +31,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Setup Vlang
-        uses: vlang/setup-v@f0b3323984699c80284901a9ffd8d3e2997f22b2
+        uses: vlang/setup-v@51668e85beab02cce1907b99b6ad039e71d98994
 
       # - name: Install project dependencies
       #   run: <install dependencies>

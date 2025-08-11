@@ -31,7 +31,7 @@ This needs an explanation:
 // build a new CustomSet
 pub fn CustomSet.new[T](elements []T) CustomSet[T] {
 	return CustomSet[T]{
-		items: to_map[T, int, T, int](invert[T, int](from_array[T](elements)), fn [T](key T, _ int) (T, u8) {
+		items: to_map[T, int, T, u8](invert[int, T](from_array[T](elements)), fn [T](key T, _ int) (T, u8) {
 			return key, 1
 		})
 	}
