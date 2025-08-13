@@ -2,6 +2,9 @@
   "authors": [
     "m-charlton"
   ],
+  "contributors": [
+    "kahgoh"
+  ],
   "files": {
     "solution": [
       "custom-set.v"
