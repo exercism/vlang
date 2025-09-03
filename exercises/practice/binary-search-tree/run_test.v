@@ -11,14 +11,11 @@ fn test_insert_data_at_proper_node__smaller_number_at_left_node() {
 	mut root := Node.new(4)
 	root.insert(2)
 	assert root.data == 4
-	l := root.left
-	if l is Node {
-		assert l.data == 2
-		assert l.left is Empty
-		assert l.right is Empty
-	} else {
-		assert false, 'l should be Node'
-	}
+	assert root.left is Node
+	l := root.left as Node
+	assert l.data == 2
+	assert l.left is Empty
+	assert l.right is Empty
 	assert root.right is Empty
 }
 
@@ -26,14 +23,11 @@ fn test_insert_data_at_proper_node__same_number_at_left_node() {
 	mut root := Node.new(4)
 	root.insert(4)
 	assert root.data == 4
-	l := root.left
-	if l is Node {
-		assert l.data == 4
-		assert l.left is Empty
-		assert l.right is Empty
-	} else {
-		assert false, 'l should be Node'
-	}
+	assert root.left is Node
+	l := root.left as Node
+	assert l.data == 4
+	assert l.left is Empty
+	assert l.right is Empty
 	assert root.right is Empty
 }
 
@@ -42,14 +36,11 @@ fn test_insert_data_at_proper_node__greater_number_at_right_node() {
 	root.insert(5)
 	assert root.data == 4
 	assert root.left is Empty
-	r := root.right
-	if r is Node {
-		assert r.data == 5
-		assert r.left is Empty
-		assert r.right is Empty
-	} else {
-		assert false, 'r should be Node'
-	}
+	assert root.right is Node
+	r := root.right as Node
+	assert r.data == 5
+	assert r.left is Empty
+	assert r.right is Empty
 }
 
 fn test_can_create_complex_tree() {
@@ -61,50 +52,32 @@ fn test_can_create_complex_tree() {
 	root.insert(5)
 	root.insert(7)
 	assert root.data == 4
-	l := root.left
-	if l is Node {
-		assert l.data == 2
-		ll := l.left
-		if ll is Node {
-			assert ll.data == 1
-			assert ll.left is Empty
-			assert ll.right is Empty
-		} else {
-			assert false, 'll should be Node'
-		}
-		lr := l.right
-		if lr is Node {
-			assert lr.data == 3
-			assert lr.left is Empty
-			assert lr.right is Empty
-		} else {
-			assert false, 'lr should be Node'
-		}
-	} else {
-		assert false, 'l should be Node'
-	}
-	r := root.right
-	if r is Node {
-		assert r.data == 6
-		rl := r.left
-		if rl is Node {
-			assert rl.data == 5
-			assert rl.left is Empty
-			assert rl.right is Empty
-		} else {
-			assert false, 'rl should be Node'
-		}
-		rr := r.right
-		if rr is Node {
-			assert rr.data == 7
-			assert rr.left is Empty
-			assert rr.right is Empty
-		} else {
-			assert false, 'rr should be Node'
-		}
-	} else {
-		assert false, 'r should be Node'
-	}
+	assert root.left is Node
+	l := root.left as Node
+	assert l.data == 2
+	assert l.left is Node
+	ll := l.left as Node
+	assert ll.data == 1
+	assert ll.left is Empty
+	assert ll.right is Empty
+	assert l.right is Node
+	lr := l.right as Node
+	assert lr.data == 3
+	assert lr.left is Empty
+	assert lr.right is Empty
+	assert root.right is Node
+	r := root.right as Node
+	assert r.data == 6
+	assert r.left is Node
+	rl := r.left as Node
+	assert rl.data == 5
+	assert rl.left is Empty
+	assert rl.right is Empty
+	assert r.right is Node
+	rr := r.right as Node
+	assert rr.data == 7
+	assert rr.left is Empty
+	assert rr.right is Empty
 }
 
 fn test_can_sort_data__can_sort_single_number() {
