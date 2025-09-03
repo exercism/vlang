@@ -472,6 +472,14 @@
         "difficulty": 4
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "41df8c1c-ca5f-467b-aa09-1b6be0342a38",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "crypto-square",
         "name": "Crypto Square",
         "uuid": "39431693-b130-4e1a-a4c1-781eb0226e39",
@@ -483,14 +491,6 @@
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "823e4266-237b-45e5-94e5-1d21163ce38f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4
-      },
-      {
-        "slug": "game-of-life",
-        "name": "Conway's Game of Life",
-        "uuid": "41df8c1c-ca5f-467b-aa09-1b6be0342a38",
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
@@ -649,6 +649,14 @@
         "difficulty": 4
       },
       {
+        "slug": "binary-search-tree",
+        "name": "Binary Search Tree",
+        "uuid": "3d63421f-a752-4178-ab06-e0bdf27a6b05",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "complex-numbers",
         "name": "Complex Numbers",
         "uuid": "26f834d8-6182-4f41-aa4f-a376e0c83def",
@@ -801,6 +809,14 @@
         "difficulty": 6
       },
       {
+        "slug": "piecing-it-together",
+        "name": "Piecing It Together",
+        "uuid": "2706fd53-6c70-4b82-af9b-31b1325c5b7d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "say",
         "name": "Say",
         "uuid": "3e1efddd-c473-44d8-9e90-a80c52639d9a",
@@ -871,14 +887,6 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
-      },
-      {
-        "slug": "piecing-it-together",
-        "name": "Piecing It Together",
-        "uuid": "2706fd53-6c70-4b82-af9b-31b1325c5b7d",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 6
       }
     ]
   },
