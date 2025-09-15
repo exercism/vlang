@@ -2,8 +2,8 @@ module main
 
 fn test_measure_using_bucket_one_of_size_3_and_bucket_two_of_size_5___start_with_bucket_one() {
 	expected := Solution{
-		moves: 4
-		goal_bucket: BucketId.one
+		moves:        4
+		goal_bucket:  BucketId.one
 		other_bucket: 5
 	}
 	assert measure(3, 5, 1, BucketId.one)! == expected
@@ -11,8 +11,8 @@ fn test_measure_using_bucket_one_of_size_3_and_bucket_two_of_size_5___start_with
 
 fn test_measure_using_bucket_one_of_size_3_and_bucket_two_of_size_5___start_with_bucket_two() {
 	expected := Solution{
-		moves: 8
-		goal_bucket: BucketId.two
+		moves:        8
+		goal_bucket:  BucketId.two
 		other_bucket: 3
 	}
 	assert measure(3, 5, 1, BucketId.two)! == expected
@@ -20,8 +20,8 @@ fn test_measure_using_bucket_one_of_size_3_and_bucket_two_of_size_5___start_with
 
 fn test_measure_using_bucket_one_of_size_7_and_bucket_two_of_size_11___start_with_bucket_one() {
 	expected := Solution{
-		moves: 14
-		goal_bucket: BucketId.one
+		moves:        14
+		goal_bucket:  BucketId.one
 		other_bucket: 11
 	}
 	assert measure(7, 11, 2, BucketId.one)! == expected
@@ -29,8 +29,8 @@ fn test_measure_using_bucket_one_of_size_7_and_bucket_two_of_size_11___start_wit
 
 fn test_measure_using_bucket_one_of_size_7_and_bucket_two_of_size_11___start_with_bucket_two() {
 	expected := Solution{
-		moves: 18
-		goal_bucket: BucketId.two
+		moves:        18
+		goal_bucket:  BucketId.two
 		other_bucket: 7
 	}
 	assert measure(7, 11, 2, BucketId.two)! == expected
@@ -38,8 +38,8 @@ fn test_measure_using_bucket_one_of_size_7_and_bucket_two_of_size_11___start_wit
 
 fn test_measure_one_step_using_bucket_one_of_size_1_and_bucket_two_of_size_3___start_with_bucket_two() {
 	expected := Solution{
-		moves: 1
-		goal_bucket: BucketId.two
+		moves:        1
+		goal_bucket:  BucketId.two
 		other_bucket: 0
 	}
 	assert measure(1, 3, 3, BucketId.two)! == expected
@@ -47,11 +47,29 @@ fn test_measure_one_step_using_bucket_one_of_size_1_and_bucket_two_of_size_3___s
 
 fn test_measure_using_bucket_one_of_size_2_and_bucket_two_of_size_3___start_with_bucket_one_and_end_with_bucket_two() {
 	expected := Solution{
-		moves: 2
-		goal_bucket: BucketId.two
+		moves:        2
+		goal_bucket:  BucketId.two
 		other_bucket: 2
 	}
 	assert measure(2, 3, 3, BucketId.one)! == expected
+}
+
+fn test_measure_using_bucket_one_much_bigger_than_bucket_two() {
+	expected := Solution{
+		moves:        6
+		goal_bucket:  BucketId.one
+		other_bucket: 1
+	}
+	assert measure(5, 1, 2, BucketId.one)! == expected
+}
+
+fn test_measure_using_bucket_one_much_smaller_than_bucket_two() {
+	expected := Solution{
+		moves:        6
+		goal_bucket:  BucketId.two
+		other_bucket: 0
+	}
+	assert measure(3, 15, 9, BucketId.one)! == expected
 }
 
 fn test_not_possible_to_reach_the_goal() {
@@ -64,8 +82,8 @@ fn test_not_possible_to_reach_the_goal() {
 
 fn test_with_the_same_buckets_but_a_different_goal_then_it_is_possible() {
 	expected := Solution{
-		moves: 10
-		goal_bucket: BucketId.two
+		moves:        10
+		goal_bucket:  BucketId.two
 		other_bucket: 0
 	}
 	assert measure(6, 15, 9, BucketId.one)! == expected
