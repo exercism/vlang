@@ -1,0 +1,18 @@
+{
+  "authors": [
+    "keiravillekode"
+  ],
+  "files": {
+    "solution": [
+      "robot-simulator.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
+  },
+  "blurb": "Write a robot simulator.",
+  "source": "Inspired by an interview question at a famous company."
+}
