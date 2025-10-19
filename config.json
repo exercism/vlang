@@ -496,6 +496,14 @@
         "difficulty": 4
       },
       {
+        "slug": "flatten-array",
+        "name": "Flatten Array",
+        "uuid": "89db9aa8-83bd-4727-8eda-61de6b568690",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "flower-field",
         "name": "Flower Field",
         "uuid": "cb4c2b7d-0200-4744-bc16-a3ce6d78b36b",
