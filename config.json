@@ -919,6 +919,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
+      },
+      {
+        "slug": "satellite",
+        "name": "Satellite",
+        "uuid": "351dfb26-5fd4-447c-a89b-c8f201f6c6bc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 9
       }
     ]
   },
