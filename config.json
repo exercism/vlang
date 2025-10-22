@@ -785,6 +785,14 @@
         "difficulty": 5
       },
       {
+        "slug": "tournament",
+        "name": "Tournament",
+        "uuid": "50ee78fb-2aef-4f07-9ffa-bb5d704e8d6a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "8793305d-820f-4ae6-92e0-43cb6d9cfbd8",
