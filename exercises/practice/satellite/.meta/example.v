@@ -51,7 +51,7 @@ fn traverse(successor ?rune, mut preorder []rune, mut inorder []rune) !Tree {
 	}
 
 	value := preorder[0]
-	preorder = preorder[1..(preorder.len)]
+	preorder = preorder[1..(preorder.len)].clone()
 
 	left := traverse(value, mut preorder, mut inorder)!
 
@@ -59,7 +59,7 @@ fn traverse(successor ?rune, mut preorder []rune, mut inorder []rune) !Tree {
 		return error('traversals must have the same elements')
 	}
 
-	inorder = inorder[1..(inorder.len)]
+	inorder = inorder[1..(inorder.len)].clone()
 
 	right := traverse(successor, mut preorder, mut inorder)!
 
