@@ -1,6 +1,6 @@
 module main
 
-fn test_a_valid_isbn() {
+fn test_valid_isbn() {
 	assert is_valid('3-598-21508-8')
 }
 
@@ -26,6 +26,14 @@ fn test_invalid_character_in_isbn_is_not_treated_as_zero() {
 
 fn test_x_is_only_valid_as_a_check_digit() {
 	assert !is_valid('3-598-2X507-9')
+}
+
+fn test_only_one_check_digit_is_allowed() {
+	assert !is_valid('3-598-21508-96')
+}
+
+fn test_x_is_not_substituted_by_the_value_10() {
+	assert !is_valid('3-598-2X507-5')
 }
 
 fn test_valid_isbn_without_separating_dashes() {
