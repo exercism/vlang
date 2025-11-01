@@ -165,3 +165,13 @@ fn test_large_garden() {
 	]
 	assert annotate(garden) == expected
 }
+
+fn test_multiple_adjacent_flowers() {
+	garden := [
+		' ** ',
+	]
+	expected := [
+		'1**1',
+	]
+	assert annotate(garden) == expected
+}
