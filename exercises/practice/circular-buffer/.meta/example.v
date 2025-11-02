@@ -17,7 +17,7 @@ pub fn (mut b CircularBuffer[T]) write(value T) ! {
 	if b.content.len >= b.capacity {
 		return error('Buffer is full')
 	}
-	b.content.prepend([value])
+	b.content.prepend(value)
 }
 
 pub fn (mut b CircularBuffer[T]) read() !T {
@@ -33,7 +33,7 @@ pub fn (mut b CircularBuffer[T]) overwrite(value T) {
 		b.content.pop()
 	}
 
-	b.content.prepend([value])
+	b.content.prepend(value)
 }
 
 pub fn (mut b CircularBuffer[T]) clear() {
