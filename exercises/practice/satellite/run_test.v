@@ -72,3 +72,78 @@ fn test_reject_traversals_with_repeated_items() {
 		assert err.msg() == 'traversals must contain unique items'
 	}
 }
+
+fn test_a_degenerate_binary_tree() {
+	preorder := 'abcd'
+	inorder := 'dcba'
+	expected := fn () Tree {
+		return Node{
+			left:  Node{
+				left:  Node{
+					left:  Node{
+						value: `d`
+					}
+					value: `c`
+				}
+				value: `b`
+			}
+			value: `a`
+		}
+	}
+	assert tree_from_traversals(preorder, inorder)! == expected()
+}
+
+fn test_another_degenerate_binary_tree() {
+	preorder := 'abcd'
+	inorder := 'abcd'
+	expected := fn () Tree {
+		return Node{
+			right: Node{
+				right: Node{
+					right: Node{
+						value: `d`
+					}
+					value: `c`
+				}
+				value: `b`
+			}
+			value: `a`
+		}
+	}
+	assert tree_from_traversals(preorder, inorder)! == expected()
+}
+
+fn test_tree_with_many_more_items() {
+	preorder := 'abdghcefi'
+	inorder := 'gdhbaecif'
+	expected := fn () Tree {
+		return Node{
+			left:  Node{
+				left:  Node{
+					left:  Node{
+						value: `g`
+					}
+					right: Node{
+						value: `h`
+					}
+					value: `d`
+				}
+				value: `b`
+			}
+			right: Node{
+				left:  Node{
+					value: `e`
+				}
+				right: Node{
+					left:  Node{
+						value: `i`
+					}
+					value: `f`
+				}
+				value: `c`
+			}
+			value: `a`
+		}
+	}
+	assert tree_from_traversals(preorder, inorder)! == expected()
+}
