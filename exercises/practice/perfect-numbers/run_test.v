@@ -24,6 +24,10 @@ fn test_large_abundant_number_is_classified_correctly() {
 	assert classify(33_550_335)! == .abundant
 }
 
+fn test_perfect_square_abundant_number_is_classified_correctly() {
+	assert classify(196)! == .abundant
+}
+
 fn test_smallest_prime_deficient_number_is_classified_correctly() {
 	assert classify(2)! == .deficient
 }
