@@ -9,8 +9,18 @@ fn test_push_adds_element_to_the_list() {
 	mut list := new()
 	list.push(1)
 	list.push(2)
-	assert list.pop()! == 2
-	assert list.pop()! == 1
+
+	if res := list.pop() {
+		assert res == 2
+	} else {
+		assert false, 'should return 2'
+	}
+
+	if res := list.pop() {
+		assert res == 1
+	} else {
+		assert false, 'should return 1'
+	}
 }
 
 fn test_push_increments_the_length() {
@@ -27,8 +37,19 @@ fn test_pop_returns_the_head_element_and_removes_it() {
 	mut list := new()
 	list.push(1)
 	list.push(2)
-	assert list.pop()! == 2
-	assert list.pop()! == 1
+
+	if res := list.pop() {
+		assert res == 2
+	} else {
+		assert false, 'should return 2'
+	}
+
+	if res := list.pop() {
+		assert res == 1
+	} else {
+		assert false, 'should return 1'
+	}
+
 	assert list.is_empty()
 }
 
@@ -58,8 +79,19 @@ fn test_pop_returns_nothing_if_the_list_is_empty() {
 fn test_peek_returns_the_head_element_without_removing_it() {
 	mut list := new()
 	list.push(1)
-	assert list.peek()! == 1
-	assert list.peek()! == 1
+
+	if res := list.peek() {
+		assert res == 1
+	} else {
+		assert false, 'should return 1'
+	}
+
+	if res := list.peek() {
+		assert res == 1
+	} else {
+		assert false, 'should return 1'
+	}
+
 	assert list.len == 1
 }
 
@@ -90,8 +122,18 @@ fn test_from_array() {
 	assert list.is_empty()
 
 	list = from_array([1, 2])
-	assert list.pop()! == 2
-	assert list.pop()! == 1
+
+	if res := list.pop() {
+		assert res == 2
+	} else {
+		assert false, 'should return 2'
+	}
+
+	if res := list.pop() {
+		assert res == 1
+	} else {
+		assert false, 'should return 1'
+	}
 }
 
 fn test_to_array() {

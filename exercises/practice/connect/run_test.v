@@ -9,7 +9,7 @@ fn test_an_empty_board_has_no_winner() {
 		'    . . . . .',
 	]
 	if _ := winner(board) {
-		assert false, 'should return nothing'
+		assert false, 'should return none'
 	} else {
 		assert true
 	}
@@ -19,14 +19,22 @@ fn test_x_can_win_on_a_1x1_board() {
 	board := [
 		'X',
 	]
-	assert winner(board)! == `X`
+	if res := winner(board) {
+		assert res == `X`
+	} else {
+		assert false, 'should return X'
+	}
 }
 
 fn test_o_can_win_on_a_1x1_board() {
 	board := [
 		'O',
 	]
-	assert winner(board)! == `O`
+	if res := winner(board) {
+		assert res == `O`
+	} else {
+		assert false, 'should return O'
+	}
 }
 
 fn test_only_edges_does_not_make_a_winner() {
@@ -37,7 +45,7 @@ fn test_only_edges_does_not_make_a_winner() {
 		'   X O O O',
 	]
 	if _ := winner(board) {
-		assert false, 'should return nothing'
+		assert false, 'should return none'
 	} else {
 		assert true
 	}
@@ -52,7 +60,7 @@ fn test_illegal_diagonal_does_not_make_a_winner() {
 		'    X X O O',
 	]
 	if _ := winner(board) {
-		assert false, 'should return nothing'
+		assert false, 'should return none'
 	} else {
 		assert true
 	}
@@ -67,7 +75,7 @@ fn test_nobody_wins_crossing_adjacent_angles() {
 		'    . . O .',
 	]
 	if _ := winner(board) {
-		assert false, 'should return nothing'
+		assert false, 'should return none'
 	} else {
 		assert true
 	}
@@ -81,7 +89,11 @@ fn test_x_wins_crossing_from_left_to_right() {
 		'   X X O X',
 		'    . O X .',
 	]
-	assert winner(board)! == `X`
+	if res := winner(board) {
+		assert res == `X`
+	} else {
+		assert false, 'should return X'
+	}
 }
 
 fn test_o_wins_crossing_from_top_to_bottom() {
@@ -92,7 +104,11 @@ fn test_o_wins_crossing_from_top_to_bottom() {
 		'   X X O X',
 		'    . O X .',
 	]
-	assert winner(board)! == `O`
+	if res := winner(board) {
+		assert res == `O`
+	} else {
+		assert false, 'should return O'
+	}
 }
 
 fn test_x_wins_using_a_convoluted_path() {
@@ -103,7 +119,11 @@ fn test_x_wins_using_a_convoluted_path() {
 		'   . X X . .',
 		'    O O O O O',
 	]
-	assert winner(board)! == `X`
+	if res := winner(board) {
+		assert res == `X`
+	} else {
+		assert false, 'should return X'
+	}
 }
 
 fn test_x_wins_using_a_spiral_path() {
@@ -118,5 +138,9 @@ fn test_x_wins_using_a_spiral_path() {
 		'       O O O O O O O X O',
 		'        X X X X X X X X O',
 	]
-	assert winner(board)! == `X`
+	if res := winner(board) {
+		assert res == `X`
+	} else {
+		assert false, 'should return X'
+	}
 }
