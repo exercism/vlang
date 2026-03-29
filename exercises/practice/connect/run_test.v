@@ -96,6 +96,34 @@ fn test_x_wins_crossing_from_left_to_right() {
 	}
 }
 
+fn test_x_wins_with_left_hand_dead_end_fork() {
+	board := [
+		'. . X .',
+		' X X . .',
+		'  . X X X',
+		'   O O O O',
+	]
+	if res := winner(board) {
+		assert res == `X`
+	} else {
+		assert false, 'should return X'
+	}
+}
+
+fn test_x_wins_with_right_hand_dead_end_fork() {
+	board := [
+		'. . X X',
+		' X X . .',
+		'  . X X .',
+		'   O O O O',
+	]
+	if res := winner(board) {
+		assert res == `X`
+	} else {
+		assert false, 'should return X'
+	}
+}
+
 fn test_o_wins_crossing_from_top_to_bottom() {
 	board := [
 		'. O . .',
