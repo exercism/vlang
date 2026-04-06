@@ -24,7 +24,7 @@ pub fn Rational.new(numerator i64, denominator i64) Rational {
 
 	cmn_div := gcd(numerator, denominator)
 
-	sign := if signi(numerator) == -1 || signi(denominator) == -1 {
+	sign := if numerator < 0 || denominator < 0 {
 		-1
 	} else {
 		1
@@ -53,15 +53,12 @@ pub fn (r Rational) exprational(n i64) Rational {
 	n_pos := math.abs(n)
 	result := Rational.new(powi(r.numerator, n_pos), powi(r.denominator, n_pos))
 
-	return match signi(n) {
-		1 { result }
-		else { result.invert() }
-	}
+	return if n > 0 { result } else { result.invert() }
 }
 
 // n^r
 pub fn (r Rational) expreal(n i64) f64 {
-	return pow(n, f64(r.numerator) / f64(r.denominator))
+	return pow(f64(n), f64(r.numerator) / f64(r.denominator))
 }
 
 pub fn (r Rational) mul(other Rational) Rational {
