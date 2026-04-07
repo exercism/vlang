@@ -9,6 +9,11 @@ fn add_student(roster map[int][]string, name string, grade int) map[int][]string
 		}
 	}
 
+	// Make sure that there is a list to append to
+	if grade !in new_roster {
+		new_roster[grade] = []
+	}
+
 	// append the new name and sort
 	new_roster[grade] << name
 	new_roster[grade].sort()
