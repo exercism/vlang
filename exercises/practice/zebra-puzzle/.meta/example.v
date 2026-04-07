@@ -21,12 +21,12 @@ enum Property {
 	ivory
 	yellow
 	blue
-	// Smokes
-	kools
-	old_gold
-	chesterfields
-	lucky_strike
-	parliament
+	// Activities
+	painting
+	dancing
+	reading
+	football
+	chess
 	// Drinks
 	coffee
 	tea
@@ -62,28 +62,28 @@ fn solve() [][]int {
 	constraints.same_house(Property.tea, Property.ukrainian)
 	constraints.is_next_to(Property.green, Property.ivory, 1)
 	constraints.is_next_to(Property.ivory, Property.green, -1)
-	constraints.same_house(Property.old_gold, Property.snails)
-	constraints.same_house(Property.snails, Property.old_gold)
-	constraints.same_house(Property.kools, Property.yellow)
-	constraints.same_house(Property.yellow, Property.kools)
+	constraints.same_house(Property.dancing, Property.snails)
+	constraints.same_house(Property.snails, Property.dancing)
+	constraints.same_house(Property.painting, Property.yellow)
+	constraints.same_house(Property.yellow, Property.painting)
 	constraints.at_house(Property.milk, 3)
 	constraints.at_house(Property.norwegian, 1)
-	constraints.is_either_side(Property.chesterfields, Property.fox)
-	constraints.is_either_side(Property.fox, Property.chesterfields)
-	constraints.is_either_side(Property.kools, Property.horse)
-	constraints.is_either_side(Property.horse, Property.kools)
-	constraints.same_house(Property.lucky_strike, Property.orange_juice)
-	constraints.same_house(Property.orange_juice, Property.lucky_strike)
-	constraints.same_house(Property.japanese, Property.parliament)
-	constraints.same_house(Property.parliament, Property.japanese)
+	constraints.is_either_side(Property.reading, Property.fox)
+	constraints.is_either_side(Property.fox, Property.reading)
+	constraints.is_either_side(Property.painting, Property.horse)
+	constraints.is_either_side(Property.horse, Property.painting)
+	constraints.same_house(Property.football, Property.orange_juice)
+	constraints.same_house(Property.orange_juice, Property.football)
+	constraints.same_house(Property.japanese, Property.chess)
+	constraints.same_house(Property.chess, Property.japanese)
 	constraints.is_either_side(Property.norwegian, Property.blue)
 	constraints.is_either_side(Property.blue, Property.norwegian)
 
 	constraints.add_mutually_exclusive_constraints([Property.red, Property.green, Property.ivory,
 		Property.yellow, Property.blue])
 
-	constraints.add_mutually_exclusive_constraints([Property.kools, Property.old_gold,
-		Property.chesterfields, Property.lucky_strike, Property.parliament])
+	constraints.add_mutually_exclusive_constraints([Property.painting, Property.dancing,
+		Property.reading, Property.football, Property.chess])
 
 	constraints.add_mutually_exclusive_constraints([Property.coffee, Property.tea, Property.milk,
 		Property.orange_juice, Property.water])
