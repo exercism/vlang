@@ -150,9 +150,9 @@ fn (mut c Constraints) add(constraint Constraint) {
 
 fn (mut c Constraints) at_house(property Property, house u8) {
 	c.add(Constraint{
-		updates: property
+		updates:    property
 		depends_on: []
-		checker: fn [house] (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn [house] (possible_values []u8, other_possible_values []u8) []u8 {
 			return [house]
 		}
 	})
@@ -160,9 +160,9 @@ fn (mut c Constraints) at_house(property Property, house u8) {
 
 fn (mut c Constraints) same_house(update_property Property, other_property Property) {
 	c.add(Constraint{
-		updates: update_property
+		updates:    update_property
 		depends_on: [other_property]
-		checker: fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
 			return possible_values.filter(it in other_possible_values)
 		}
 	})
@@ -170,9 +170,9 @@ fn (mut c Constraints) same_house(update_property Property, other_property Prope
 
 fn (mut c Constraints) is_next_to(update_property Property, other_property Property, offset int) {
 	c.add(Constraint{
-		updates: update_property
+		updates:    update_property
 		depends_on: [other_property]
-		checker: fn [offset] (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn [offset] (possible_values []u8, other_possible_values []u8) []u8 {
 			return possible_values.filter(u8(int(it) - offset) in other_possible_values)
 		}
 	})
@@ -180,9 +180,9 @@ fn (mut c Constraints) is_next_to(update_property Property, other_property Prope
 
 fn (mut c Constraints) is_either_side(update_property Property, other_property Property) {
 	c.add(Constraint{
-		updates: update_property
+		updates:    update_property
 		depends_on: [other_property]
-		checker: fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
 			return possible_values.filter((it + 1) in other_possible_values
 				|| (it - 1) in other_possible_values)
 		}
@@ -202,9 +202,9 @@ fn (mut c Constraints) add_mutually_exclusive_constraints(group []Property) {
 
 fn mutually_exclusive(update_property Property, other_property Property) Constraint {
 	return Constraint{
-		updates: update_property
+		updates:    update_property
 		depends_on: [other_property]
-		checker: fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
 			if other_possible_values.len == 1 {
 				return possible_values.filter(it != other_possible_values[0])
 			}
@@ -215,9 +215,9 @@ fn mutually_exclusive(update_property Property, other_property Property) Constra
 
 fn last_possible_house(update_property Property, other_properties []Property) Constraint {
 	return Constraint{
-		updates: update_property
+		updates:    update_property
 		depends_on: other_properties
-		checker: fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
 			exclusive := possible_values.filter(it !in other_possible_values)
 			if exclusive.len == 1 {
 				return exclusive
