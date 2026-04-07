@@ -5,7 +5,7 @@ import datatypes
 struct Constraint {
 	updates    Property
 	depends_on []Property
-	checker    fn (possible_values []u8, other_possible_values []u8) []u8 @[required]
+	checker    fn (possible_values []int, other_possible_values []int) []int @[required]
 }
 
 struct Constraints {
@@ -14,7 +14,7 @@ mut:
 	interests       map[int][]Constraint
 }
 
-enum Property as u8 {
+enum Property {
 	// Colors
 	red
 	green
@@ -48,8 +48,8 @@ enum Property as u8 {
 	end_property
 }
 
-fn solve() [][]u8 {
-	mut possible_values := [][]u8{len: int(Property.end_property), init: [u8(1), 2, 3, 4, 5]}
+fn solve() [][]int {
+	mut possible_values := [][]int{len: int(Property.end_property), init: [1, 2, 3, 4, 5]}
 	mut constraints := Constraints{}
 
 	constraints.same_house(Property.englishman, Property.red)
@@ -99,7 +99,7 @@ fn solve() [][]u8 {
 	to_test := get_unsolved(possible_values) or { panic('Unexpected error') }
 	for property, candidates in to_test {
 		for value in candidates {
-			if value in possible_values[int(property)] {
+			if value in possible_values[property] {
 				mut test_copy := possible_values.clone()
 				test_copy[property] = [value]
 				constraints.run(mut test_copy)
@@ -124,13 +124,13 @@ fn solve() [][]u8 {
 	return possible_values
 }
 
-fn get_unsolved(possible_values [][]u8) !map[int][]u8 {
-	mut unsolved := map[int][]u8{}
+fn get_unsolved(possible_values [][]int) !map[int][]int {
+	mut unsolved := map[int][]int{}
 	for property, values in possible_values {
 		if values.len == 0 {
 			return error('Empty possible values')
 		} else if values.len > 1 {
-			unsolved[int(property)] = values
+			unsolved[property] = values
 		}
 	}
 
@@ -148,11 +148,11 @@ fn (mut c Constraints) add(constraint Constraint) {
 	}
 }
 
-fn (mut c Constraints) at_house(property Property, house u8) {
+fn (mut c Constraints) at_house(property Property, house int) {
 	c.add(Constraint{
 		updates:    property
 		depends_on: []
-		checker:    fn [house] (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn [house] (possible_values []int, other_possible_values []int) []int {
 			return [house]
 		}
 	})
@@ -162,7 +162,7 @@ fn (mut c Constraints) same_house(update_property Property, other_property Prope
 	c.add(Constraint{
 		updates:    update_property
 		depends_on: [other_property]
-		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []int, other_possible_values []int) []int {
 			return possible_values.filter(it in other_possible_values)
 		}
 	})
@@ -172,8 +172,8 @@ fn (mut c Constraints) is_next_to(update_property Property, other_property Prope
 	c.add(Constraint{
 		updates:    update_property
 		depends_on: [other_property]
-		checker:    fn [offset] (possible_values []u8, other_possible_values []u8) []u8 {
-			return possible_values.filter(u8(int(it) - offset) in other_possible_values)
+		checker:    fn [offset] (possible_values []int, other_possible_values []int) []int {
+			return possible_values.filter((it - offset) in other_possible_values)
 		}
 	})
 }
@@ -182,7 +182,7 @@ fn (mut c Constraints) is_either_side(update_property Property, other_property P
 	c.add(Constraint{
 		updates:    update_property
 		depends_on: [other_property]
-		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []int, other_possible_values []int) []int {
 			return possible_values.filter((it + 1) in other_possible_values
 				|| (it - 1) in other_possible_values)
 		}
@@ -204,7 +204,7 @@ fn mutually_exclusive(update_property Property, other_property Property) Constra
 	return Constraint{
 		updates:    update_property
 		depends_on: [other_property]
-		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []int, other_possible_values []int) []int {
 			if other_possible_values.len == 1 {
 				return possible_values.filter(it != other_possible_values[0])
 			}
@@ -217,7 +217,7 @@ fn last_possible_house(update_property Property, other_properties []Property) Co
 	return Constraint{
 		updates:    update_property
 		depends_on: other_properties
-		checker:    fn (possible_values []u8, other_possible_values []u8) []u8 {
+		checker:    fn (possible_values []int, other_possible_values []int) []int {
 			exclusive := possible_values.filter(it !in other_possible_values)
 			if exclusive.len == 1 {
 				return exclusive
@@ -227,7 +227,7 @@ fn last_possible_house(update_property Property, other_properties []Property) Co
 	}
 }
 
-fn (c Constraints) run(mut possible_values [][]u8) {
+fn (c Constraints) run(mut possible_values [][]int) {
 	mut queue := datatypes.Queue[Constraint]{}
 	for constraint in c.all_constraints {
 		queue.push(constraint)
@@ -235,10 +235,10 @@ fn (c Constraints) run(mut possible_values [][]u8) {
 
 	for !queue.is_empty() {
 		next := queue.pop() or { return }
-		current_values := possible_values[int(next.updates)]
-		mut other_values := []u8{}
+		current_values := possible_values[next.updates]
+		mut other_values := []int{}
 		for other_property in next.depends_on {
-			other_values << possible_values[int(other_property)]
+			other_values << possible_values[other_property]
 		}
 
 		updated_values := next.checker(current_values, other_values)
@@ -253,14 +253,13 @@ fn (c Constraints) run(mut possible_values [][]u8) {
 	}
 }
 
-fn find_who(possible_values [][]u8, property Property) string {
-	value := possible_values[int(property)]
-	return match value {
-		possible_values[int(Property.englishman)] { 'Englishman' }
-		possible_values[int(Property.spaniard)] { 'Spaniard' }
-		possible_values[int(Property.ukrainian)] { 'Ukrainian' }
-		possible_values[int(Property.norwegian)] { 'Norwegian' }
-		possible_values[int(Property.japanese)] { 'Japanese' }
+fn find_who(possible_values [][]int, property Property) string {
+	return match possible_values[property] {
+		possible_values[Property.englishman] { 'Englishman' }
+		possible_values[Property.spaniard] { 'Spaniard' }
+		possible_values[Property.ukrainian] { 'Ukrainian' }
+		possible_values[Property.norwegian] { 'Norwegian' }
+		possible_values[Property.japanese] { 'Japanese' }
 		else { panic('Something has gone wrong, could not match house') }
 	}
 }
