@@ -140,7 +140,11 @@ fn get_unsolved(possible_values [][]u8) !map[int][]u8 {
 fn (mut c Constraints) add(constraint Constraint) {
 	c.all_constraints << constraint
 	for _, property_of_interest in constraint.depends_on {
-		c.interests[int(property_of_interest)] << constraint
+		property_key := int(property_of_interest)
+		if property_key !in c.interests {
+			c.interests[property_key] = []
+		}
+		c.interests[property_key] << constraint
 	}
 }
 
