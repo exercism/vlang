@@ -27,14 +27,16 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-24.04, windows-2022, macOS-latest]
+        os: [ubuntu-24.04, windows-2025, macOS-latest]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Setup Vlang
-        uses: vlang/setup-v@51668e85beab02cce1907b99b6ad039e71d98994
+        uses: vlang/setup-v@7ba18b437b1d46ae2ef44e153b7c1a373afc0378
+        with:
+          version: '0c3183c55b39534f9bb0d2f796bb575d39c9d229' # 0.5.1
 
       # - name: Install project dependencies
       #   run: <install dependencies>
