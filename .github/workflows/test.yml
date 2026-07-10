@@ -34,7 +34,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
       - name: Setup Vlang
-        uses: vlang/setup-v@51668e85beab02cce1907b99b6ad039e71d98994
+        uses: vlang/setup-v@663cc08827d1fc0532ee755b4dedbb183c11d06a # v1.7
 
       # - name: Install project dependencies
       #   run: <install dependencies>
