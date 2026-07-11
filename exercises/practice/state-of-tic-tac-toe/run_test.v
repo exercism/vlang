@@ -258,3 +258,29 @@ fn test_invalid_boards__invalid_board__players_kept_playing_after_a_win() {
 		assert err.msg() == 'Impossible board: game should have ended after the game was won'
 	}
 }
+
+fn test_invalid_boards__invalid_board__o_kept_playing_after_x_wins() {
+	board := [
+		'OO ',
+		'XXX',
+		' O ',
+	]
+	if res := gamestate(board) {
+		assert false, 'Invalid board: O kept playing after X wins should return an error'
+	} else {
+		assert err.msg() == 'Impossible board: game should have ended after the game was won'
+	}
+}
+
+fn test_invalid_boards__invalid_board__x_kept_playing_after_o_wins() {
+	board := [
+		'XX ',
+		'OOO',
+		' XX',
+	]
+	if res := gamestate(board) {
+		assert false, 'Invalid board: X kept playing after O wins should return an error'
+	} else {
+		assert err.msg() == 'Impossible board: game should have ended after the game was won'
+	}
+}

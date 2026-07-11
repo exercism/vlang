@@ -46,24 +46,27 @@ fn gamestate(board []string) !State {
 		}
 	}
 
-	if count_o > count_x {
-		return error('Wrong turn order: O started')
-	}
-
-	if count_x > count_o + 1 {
-		return error('Wrong turn order: X went twice')
-	}
-
 	mut win_x := is_win(bitset_x)
 	mut win_o := is_win(bitset_o)
 
-	if win_x || win_o {
-		if win_x && win_o {
-			return error('Impossible board: game should have ended after the game was won')
+	return match true {
+		count_o > count_x {
+			error('Wrong turn order: O started')
 		}
-
-		return .win
+		count_x > count_o + 1 {
+			error('Wrong turn order: X went twice')
+		}
+		(win_x && count_o == count_x) || (win_o && count_x == count_o + 1) || (win_x && win_o) {
+			error('Impossible board: game should have ended after the game was won')
+		}
+		win_x || win_o {
+			.win
+		}
+		count_x + count_o == 9 {
+			.draw
+		}
+		else {
+			.ongoing
+		}
 	}
-
-	return if count_x + count_o == 9 { .draw } else { .ongoing }
 }
