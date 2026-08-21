@@ -56,8 +56,28 @@ fn test_format_exceptional_ordinal_numeral_21() {
 	assert format('Washi', 21) == 'Washi, you are the 21st customer we serve today. Thank you!'
 }
 
+fn test_format_exceptional_ordinal_numeral_22_ending_in_nd_even_though_it_is_a_multiple_of_11() {
+	assert format('Ingrid', 22) == 'Ingrid, you are the 22nd customer we serve today. Thank you!'
+}
+
+fn test_format_exceptional_ordinal_numeral_33_ending_in_rd_even_though_it_is_a_multiple_of_11() {
+	assert format('Mario', 33) == 'Mario, you are the 33rd customer we serve today. Thank you!'
+}
+
+fn test_format_exceptional_ordinal_numeral_52_ending_in_nd_even_though_it_is_a_multiple_of_13() {
+	assert format('Quentin', 52) == 'Quentin, you are the 52nd customer we serve today. Thank you!'
+}
+
 fn test_format_exceptional_ordinal_numeral_62() {
 	assert format('Nayra', 62) == 'Nayra, you are the 62nd customer we serve today. Thank you!'
+}
+
+fn test_format_non_exceptional_ordinal_numeral_72_ending_in_nd_even_though_it_is_a_multiple_of_12() {
+	assert format('Ugo', 72) == 'Ugo, you are the 72nd customer we serve today. Thank you!'
+}
+
+fn test_format_exceptional_ordinal_numeral_91_ending_in_st_even_though_it_is_a_multiple_of_13() {
+	assert format('Boris', 91) == 'Boris, you are the 91st customer we serve today. Thank you!'
 }
 
 fn test_format_exceptional_ordinal_numeral_100() {
@@ -74,4 +94,8 @@ fn test_format_non_exceptional_ordinal_numeral_112() {
 
 fn test_format_exceptional_ordinal_numeral_123() {
 	assert format('Yma', 123) == 'Yma, you are the 123rd customer we serve today. Thank you!'
+}
+
+fn test_format_large_number_972_ending_in_nd_even_though_it_is_a_multiple_of_12() {
+	assert format('Elias', 972) == 'Elias, you are the 972nd customer we serve today. Thank you!'
 }
