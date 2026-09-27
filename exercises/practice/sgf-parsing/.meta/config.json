@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "metif12"
+  ],
+  "files": {
+    "solution": [
+      "sgf-parsing.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
+  },
+  "blurb": "Parsing a Smart Game Format string."
+}
