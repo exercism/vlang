@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "metif12"
+  ],
+  "files": {
+    "solution": [
+      "tree-building.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
+  },
+  "blurb": "Refactor a tree building algorithm."
+}
