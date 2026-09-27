@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "metif12"
+  ],
+  "files": {
+    "solution": [
+      "zipper.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
+  },
+  "blurb": "Creating a zipper for a binary tree."
+}
