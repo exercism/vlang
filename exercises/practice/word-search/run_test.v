@@ -24,11 +24,11 @@ fn test_should_locate_one_word_written_left_to_right() {
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 1
+				row:    1
 			}
 		}
 	}
@@ -46,11 +46,11 @@ fn test_should_locate_the_same_word_written_left_to_right_in_a_different_positio
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 3
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 9
-				row: 1
+				row:    1
 			}
 		}
 	}
@@ -68,11 +68,11 @@ fn test_should_locate_a_different_left_to_right_word() {
 		'coffee': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 1
+				row:    1
 			}
 		}
 	}
@@ -90,11 +90,11 @@ fn test_should_locate_that_different_left_to_right_word_in_a_different_position(
 		'coffee': ?WordLocation{
 			start: Pair{
 				column: 2
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 1
+				row:    1
 			}
 		}
 	}
@@ -113,11 +113,11 @@ fn test_should_locate_a_left_to_right_word_in_two_line_grid() {
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 2
-				row: 2
+				row:    2
 			}
-			end: Pair{
+			end:   Pair{
 				column: 8
-				row: 2
+				row:    2
 			}
 		}
 	}
@@ -137,11 +137,11 @@ fn test_should_locate_a_left_to_right_word_in_three_line_grid() {
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 3
+				row:    3
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 3
+				row:    3
 			}
 		}
 	}
@@ -168,11 +168,11 @@ fn test_should_locate_a_left_to_right_word_in_ten_line_grid() {
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 	}
@@ -199,11 +199,11 @@ fn test_should_locate_that_left_to_right_word_in_a_different_position_in_a_ten_l
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 9
+				row:    9
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 9
+				row:    9
 			}
 		}
 	}
@@ -230,11 +230,11 @@ fn test_should_locate_a_different_left_to_right_word_in_a_ten_line_grid() {
 		'fortran': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 7
+				row:    7
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 7
+				row:    7
 			}
 		}
 	}
@@ -262,21 +262,21 @@ fn test_should_locate_multiple_words() {
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'fortran': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 7
+				row:    7
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 7
+				row:    7
 			}
 		}
 	}
@@ -294,11 +294,11 @@ fn test_should_locate_a_single_word_written_right_to_left() {
 		'elixir': ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
 		}
 	}
@@ -326,21 +326,21 @@ fn test_should_locate_multiple_words_written_in_different_horizontal_directions(
 		'clojure': ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':  ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 	}
@@ -369,31 +369,31 @@ fn test_should_locate_words_written_top_to_bottom() {
 		'clojure':    ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':     ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 		'ecmascript': ?WordLocation{
 			start: Pair{
 				column: 10
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 10
-				row: 10
+				row:    10
 			}
 		}
 	}
@@ -423,41 +423,41 @@ fn test_should_locate_words_written_bottom_to_top() {
 		'clojure':    ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':     ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 		'ecmascript': ?WordLocation{
 			start: Pair{
 				column: 10
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 10
-				row: 10
+				row:    10
 			}
 		}
 		'rust':       ?WordLocation{
 			start: Pair{
 				column: 9
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 9
-				row: 2
+				row:    2
 			}
 		}
 	}
@@ -488,51 +488,51 @@ fn test_should_locate_words_written_top_left_to_bottom_right() {
 		'clojure':    ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':     ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 		'ecmascript': ?WordLocation{
 			start: Pair{
 				column: 10
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 10
-				row: 10
+				row:    10
 			}
 		}
 		'rust':       ?WordLocation{
 			start: Pair{
 				column: 9
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 9
-				row: 2
+				row:    2
 			}
 		}
 		'java':       ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 4
-				row: 4
+				row:    4
 			}
 		}
 	}
@@ -564,61 +564,61 @@ fn test_should_locate_words_written_bottom_right_to_top_left() {
 		'clojure':    ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':     ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 		'ecmascript': ?WordLocation{
 			start: Pair{
 				column: 10
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 10
-				row: 10
+				row:    10
 			}
 		}
 		'rust':       ?WordLocation{
 			start: Pair{
 				column: 9
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 9
-				row: 2
+				row:    2
 			}
 		}
 		'java':       ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 4
-				row: 4
+				row:    4
 			}
 		}
 		'lua':        ?WordLocation{
 			start: Pair{
 				column: 8
-				row: 9
+				row:    9
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 7
+				row:    7
 			}
 		}
 	}
@@ -651,71 +651,71 @@ fn test_should_locate_words_written_bottom_left_to_top_right() {
 		'clojure':    ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':     ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 		'ecmascript': ?WordLocation{
 			start: Pair{
 				column: 10
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 10
-				row: 10
+				row:    10
 			}
 		}
 		'rust':       ?WordLocation{
 			start: Pair{
 				column: 9
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 9
-				row: 2
+				row:    2
 			}
 		}
 		'java':       ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 4
-				row: 4
+				row:    4
 			}
 		}
 		'lua':        ?WordLocation{
 			start: Pair{
 				column: 8
-				row: 9
+				row:    9
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 7
+				row:    7
 			}
 		}
 		'lisp':       ?WordLocation{
 			start: Pair{
 				column: 3
-				row: 6
+				row:    6
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 3
+				row:    3
 			}
 		}
 	}
@@ -749,81 +749,81 @@ fn test_should_locate_words_written_top_right_to_bottom_left() {
 		'clojure':    ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':     ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 		'ecmascript': ?WordLocation{
 			start: Pair{
 				column: 10
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 10
-				row: 10
+				row:    10
 			}
 		}
 		'rust':       ?WordLocation{
 			start: Pair{
 				column: 9
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 9
-				row: 2
+				row:    2
 			}
 		}
 		'java':       ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 4
-				row: 4
+				row:    4
 			}
 		}
 		'lua':        ?WordLocation{
 			start: Pair{
 				column: 8
-				row: 9
+				row:    9
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 7
+				row:    7
 			}
 		}
 		'lisp':       ?WordLocation{
 			start: Pair{
 				column: 3
-				row: 6
+				row:    6
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 3
+				row:    3
 			}
 		}
 		'ruby':       ?WordLocation{
 			start: Pair{
 				column: 8
-				row: 6
+				row:    6
 			}
-			end: Pair{
+			end:   Pair{
 				column: 5
-				row: 9
+				row:    9
 			}
 		}
 	}
@@ -858,81 +858,81 @@ fn test_should_fail_to_locate_a_word_that_is_not_in_the_puzzle() {
 		'clojure':    ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 10
+				row:    10
 			}
-			end: Pair{
+			end:   Pair{
 				column: 7
-				row: 10
+				row:    10
 			}
 		}
 		'elixir':     ?WordLocation{
 			start: Pair{
 				column: 6
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 1
-				row: 5
+				row:    5
 			}
 		}
 		'ecmascript': ?WordLocation{
 			start: Pair{
 				column: 10
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 10
-				row: 10
+				row:    10
 			}
 		}
 		'rust':       ?WordLocation{
 			start: Pair{
 				column: 9
-				row: 5
+				row:    5
 			}
-			end: Pair{
+			end:   Pair{
 				column: 9
-				row: 2
+				row:    2
 			}
 		}
 		'java':       ?WordLocation{
 			start: Pair{
 				column: 1
-				row: 1
+				row:    1
 			}
-			end: Pair{
+			end:   Pair{
 				column: 4
-				row: 4
+				row:    4
 			}
 		}
 		'lua':        ?WordLocation{
 			start: Pair{
 				column: 8
-				row: 9
+				row:    9
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 7
+				row:    7
 			}
 		}
 		'lisp':       ?WordLocation{
 			start: Pair{
 				column: 3
-				row: 6
+				row:    6
 			}
-			end: Pair{
+			end:   Pair{
 				column: 6
-				row: 3
+				row:    3
 			}
 		}
 		'ruby':       ?WordLocation{
 			start: Pair{
 				column: 8
-				row: 6
+				row:    6
 			}
-			end: Pair{
+			end:   Pair{
 				column: 5
-				row: 9
+				row:    9
 			}
 		}
 		'haskell':    ?WordLocation(none)

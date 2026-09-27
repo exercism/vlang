@@ -38,11 +38,11 @@ fn search(grid []string, words_to_search_for []string) map[string]?WordLocation 
 						word_result = ?WordLocation{
 							start: Pair{
 								column: column + 1
-								row: row + 1
+								row:    row + 1
 							}
-							end: Pair{
+							end:   Pair{
 								column: column + 1 + last_char_index * delta_column
-								row: row + 1 + last_char_index * delta_row
+								row:    row + 1 + last_char_index * delta_row
 							}
 						}
 					}

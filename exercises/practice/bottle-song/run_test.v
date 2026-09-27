@@ -2,7 +2,7 @@ module main
 
 fn test_verse__single_verse__first_generic_verse() {
 	expected :=
-("Ten green bottles hanging on the wall,
+		("Ten green bottles hanging on the wall,
 Ten green bottles hanging on the wall,
 And if one green bottle should accidentally fall,
 There'll be nine green bottles hanging on the wall.")
@@ -11,7 +11,7 @@ There'll be nine green bottles hanging on the wall.")
 
 fn test_verse__single_verse__last_generic_verse() {
 	expected :=
-("Three green bottles hanging on the wall,
+		("Three green bottles hanging on the wall,
 Three green bottles hanging on the wall,
 And if one green bottle should accidentally fall,
 There'll be two green bottles hanging on the wall.")
@@ -20,7 +20,7 @@ There'll be two green bottles hanging on the wall.")
 
 fn test_verse__single_verse__verse_with_2_bottles() {
 	expected :=
-("Two green bottles hanging on the wall,
+		("Two green bottles hanging on the wall,
 Two green bottles hanging on the wall,
 And if one green bottle should accidentally fall,
 There'll be one green bottle hanging on the wall.")
@@ -29,7 +29,7 @@ There'll be one green bottle hanging on the wall.")
 
 fn test_verse__single_verse__verse_with_1_bottle() {
 	expected :=
-("One green bottle hanging on the wall,
+		("One green bottle hanging on the wall,
 One green bottle hanging on the wall,
 And if one green bottle should accidentally fall,
 There'll be no green bottles hanging on the wall.")
@@ -38,7 +38,7 @@ There'll be no green bottles hanging on the wall.")
 
 fn test_lyrics__multiple_verses__first_two_verses() {
 	expected :=
-("Ten green bottles hanging on the wall,
+		("Ten green bottles hanging on the wall,
 Ten green bottles hanging on the wall,
 And if one green bottle should accidentally fall,
 There'll be nine green bottles hanging on the wall.
@@ -52,7 +52,7 @@ There'll be eight green bottles hanging on the wall.")
 
 fn test_lyrics__multiple_verses__last_three_verses() {
 	expected :=
-("Three green bottles hanging on the wall,
+		("Three green bottles hanging on the wall,
 Three green bottles hanging on the wall,
 And if one green bottle should accidentally fall,
 There'll be two green bottles hanging on the wall.
@@ -71,7 +71,7 @@ There'll be no green bottles hanging on the wall.")
 
 fn test_lyrics__multiple_verses__all_verses() {
 	expected :=
-("Ten green bottles hanging on the wall,
+		("Ten green bottles hanging on the wall,
 Ten green bottles hanging on the wall,
 And if one green bottle should accidentally fall,
 There'll be nine green bottles hanging on the wall.

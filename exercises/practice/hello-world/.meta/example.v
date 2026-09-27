@@ -1,5 +1,5 @@
 module main
 
 fn hello() string {
-	return "Hello, World!"
+	return 'Hello, World!'
 }

@@ -22,27 +22,27 @@ struct Cell {
 // Each cell has 6 adjacent cells.
 const deltas = [
 	Cell{
-		row: 0
+		row:    0
 		column: -1
 	},
 	Cell{
-		row: 0
+		row:    0
 		column: 1
 	},
 	Cell{
-		row: -1
+		row:    -1
 		column: 0
 	},
 	Cell{
-		row: 1
+		row:    1
 		column: 0
 	},
 	Cell{
-		row: -1
+		row:    -1
 		column: 1
 	},
 	Cell{
-		row: 1
+		row:    1
 		column: -1
 	},
 ]
@@ -54,26 +54,26 @@ fn winner(board []string) ?rune {
 	mut pending := []Cell{cap: (row_count + 2) * (column_count + 2)}
 	for column in 0 .. column_count {
 		pending << Cell{
-			row: -1
+			row:    -1
 			column: column
-			side: side_top
+			side:   side_top
 		}
 		pending << Cell{
-			row: row_count
+			row:    row_count
 			column: column
-			side: side_bottom
+			side:   side_bottom
 		}
 	}
 	for row in 0 .. row_count {
 		pending << Cell{
-			row: row
+			row:    row
 			column: -1
-			side: side_left
+			side:   side_left
 		}
 		pending << Cell{
-			row: row
+			row:    row
 			column: column_count
-			side: side_right
+			side:   side_right
 		}
 	}
 
@@ -105,9 +105,9 @@ fn winner(board []string) ?rune {
 			if reached[row][column] == side_none {
 				reached[row][column] = current.side
 				pending << Cell{
-					row: row
+					row:    row
 					column: column
-					side: current.side
+					side:   current.side
 				}
 				continue
 			}

@@ -38,7 +38,7 @@ fn smallest(min int, max int) !Palindrome {
 		return Palindrome{}
 	}
 	return Palindrome{
-		value: value
+		value:   value
 		factors: factors
 	}
 }
@@ -73,7 +73,7 @@ fn largest(min int, max int) !Palindrome {
 		return Palindrome{}
 	}
 	return Palindrome{
-		value: value
+		value:   value
 		factors: factors.reverse()
 	}
 }
