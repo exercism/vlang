@@ -18,7 +18,7 @@ fn transmit_sequence(data []u8) []u8 {
 		}
 
 		shift_places := bits.trailing_zeros_8(upper_mask)
-		current := (carry << (8 - shift_places)) | (data[i] >>> shift_places)
+		current := u8((carry << (8 - shift_places)) | (data[i] >>> shift_places))
 		sequence << add_parity(current)
 
 		carry = data[i] & (~upper_mask)
@@ -26,7 +26,7 @@ fn transmit_sequence(data []u8) []u8 {
 	}
 
 	if upper_mask != initial_mask {
-		last_group := carry << bits.ones_count_8(upper_mask)
+		last_group := u8(carry << bits.ones_count_8(upper_mask))
 		sequence << add_parity(last_group)
 	}
 
