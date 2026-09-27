@@ -194,10 +194,10 @@ fn test_list_everything() {
 		Allergen.strawberries, Allergen.tomatoes, Allergen.chocolate, Allergen.pollen, Allergen.cats])
 }
 
-fn compare(left &Allergen, right &Allergen) int {
-	return int(left) - int(right)
+fn to_int(allergen Allergen) int {
+	return int(allergen)
 }
 
 fn same_in_any_order(left []Allergen, right []Allergen) bool {
-	return left.sorted_with_compare(compare) == right.sorted_with_compare(compare)
+	return left.map(to_int).sorted() == right.map(to_int).sorted()
 }
