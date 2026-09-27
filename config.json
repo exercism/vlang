@@ -248,6 +248,14 @@
         "difficulty": 2
       },
       {
+        "slug": "save-the-cow",
+        "name": "Save the Cow",
+        "uuid": "caa092c5-9690-4e42-8cce-50354f73ec70",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "18b7fc26-c45b-41a0-a1b4-4dc82766d2df",
@@ -339,6 +347,14 @@
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "915e4694-fb02-496e-9860-001d2aae70cd",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "04c78500-ba2a-44e1-a91a-0525fa4dd438",
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
@@ -488,6 +504,14 @@
         "difficulty": 4
       },
       {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "92743d10-00e6-48c9-9ed4-a70481fc2e82",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "823e4266-237b-45e5-94e5-1d21163ce38f",
@@ -593,6 +617,14 @@
         "difficulty": 4
       },
       {
+        "slug": "prism",
+        "name": "Prism",
+        "uuid": "2b971dbf-8084-4b0a-a349-f82bba3d55aa",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "rational-numbers",
         "name": "Rational Numbers",
         "uuid": "5cf96f11-1313-45e7-8f1b-2d9eaa6fa017",
@@ -641,6 +673,14 @@
         "difficulty": 4
       },
       {
+        "slug": "simple-cipher",
+        "name": "Simple Cipher",
+        "uuid": "3ee728ed-25dd-4597-87aa-1ca377174cf0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "space-age",
         "name": "Space Age",
         "uuid": "a0a7fe2a-e8bf-4951-a42b-cbec858c0e62",
@@ -671,6 +711,22 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
+      },
+      {
+        "slug": "zipper",
+        "name": "Zipper",
+        "uuid": "93ad4c89-6928-43d6-b6b2-5297ee7b9f10",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "d77bfeb5-8b04-4623-88d3-70def6737724",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       },
       {
         "slug": "binary-search-tree",
@@ -716,6 +772,14 @@
         "slug": "knapsack",
         "name": "Knapsack",
         "uuid": "cd1d7cc3-2c8a-439c-a604-d1b971611556",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "markdown",
+        "name": "Markdown",
+        "uuid": "40a54282-244f-4b1f-aa7f-827fe4e3913b",
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
@@ -793,6 +857,14 @@
         "difficulty": 5
       },
       {
+        "slug": "tree-building",
+        "name": "Tree Building",
+        "uuid": "d1e6acd0-d218-49bd-86a9-4027480dc60c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "8793305d-820f-4ae6-92e0-43cb6d9cfbd8",
@@ -807,6 +879,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "baffling-birthdays",
+        "name": "Baffling Birthdays",
+        "uuid": "f8a57c61-0fe1-4d72-84ae-01efaca62283",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       },
       {
         "slug": "bowling",
@@ -865,9 +945,25 @@
         "difficulty": 6
       },
       {
+        "slug": "react",
+        "name": "React",
+        "uuid": "ce90bd42-f7b9-4f64-9096-d6e3856d8fa8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "say",
         "name": "Say",
         "uuid": "3e1efddd-c473-44d8-9e90-a80c52639d9a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "a795ed22-71c1-4f3f-bc27-36f65a64e0c1",
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
@@ -879,6 +975,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 6
+      },
+      {
+        "slug": "alphametics",
+        "name": "Alphametics",
+        "uuid": "6bc81316-fcb8-4fa3-b77c-4b711b0e1fc0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
       },
       {
         "slug": "book-store",
@@ -908,6 +1012,22 @@
         "slug": "connect",
         "name": "Connect",
         "uuid": "3bbc3fc9-2bbe-4eec-ac5f-8736a0bf257d",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
+        "slug": "forth",
+        "name": "Forth",
+        "uuid": "9532108b-3b65-44ed-8d42-c746c4e5abda",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
+        "slug": "poker",
+        "name": "Poker",
+        "uuid": "ac2ef71d-d05e-4017-92f8-954212476a90",
         "practices": [],
         "prerequisites": [],
         "difficulty": 8
