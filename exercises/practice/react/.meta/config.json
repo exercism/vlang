@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "metif12"
+  ],
+  "files": {
+    "solution": [
+      "react.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
+  },
+  "blurb": "Implement a basic reactive system."
+}
