@@ -245,7 +245,8 @@ fn (c Constraints) run(mut possible_values [][]int) {
 		if updated_values != current_values {
 			possible_values[next.updates] = updated_values
 			for requeue in c.interests[int(next.updates)] {
-				if requeue !in queue.array() {
+				if !queue.array().any(it.updates == requeue.updates
+					&& it.depends_on == requeue.depends_on) {
 					queue.push(requeue)
 				}
 			}
