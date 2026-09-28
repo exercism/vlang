@@ -488,6 +488,14 @@
         "difficulty": 4
       },
       {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "92743d10-00e6-48c9-9ed4-a70481fc2e82",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "823e4266-237b-45e5-94e5-1d21163ce38f",
