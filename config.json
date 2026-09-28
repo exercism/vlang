@@ -793,6 +793,14 @@
         "difficulty": 5
       },
       {
+        "slug": "tree-building",
+        "name": "Tree Building",
+        "uuid": "d1e6acd0-d218-49bd-86a9-4027480dc60c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "two-bucket",
         "name": "Two Bucket",
         "uuid": "8793305d-820f-4ae6-92e0-43cb6d9cfbd8",
