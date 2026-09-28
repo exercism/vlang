@@ -873,6 +873,14 @@
         "difficulty": 6
       },
       {
+        "slug": "sgf-parsing",
+        "name": "SGF Parsing",
+        "uuid": "a795ed22-71c1-4f3f-bc27-36f65a64e0c1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
+      },
+      {
         "slug": "wordy",
         "name": "Wordy",
         "uuid": "a8449f36-4860-4934-9b32-8ce38faac5de",
