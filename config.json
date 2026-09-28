@@ -897,6 +897,14 @@
         "difficulty": 6
       },
       {
+        "slug": "alphametics",
+        "name": "Alphametics",
+        "uuid": "6bc81316-fcb8-4fa3-b77c-4b711b0e1fc0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "book-store",
         "name": "Book Store",
         "uuid": "e78129ce-83a8-4df6-89c0-48f3ab2a1d00",
