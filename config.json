@@ -913,6 +913,14 @@
         "difficulty": 8
       },
       {
+        "slug": "poker",
+        "name": "Poker",
+        "uuid": "ac2ef71d-d05e-4017-92f8-954212476a90",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "d229850d-421a-47bc-a8ff-df73a4c3b72b",
