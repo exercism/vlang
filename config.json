@@ -673,6 +673,14 @@
         "difficulty": 4
       },
       {
+        "slug": "zipper",
+        "name": "Zipper",
+        "uuid": "93ad4c89-6928-43d6-b6b2-5297ee7b9f10",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "binary-search-tree",
         "name": "Binary Search Tree",
         "uuid": "3d63421f-a752-4178-ab06-e0bdf27a6b05",
