@@ -913,6 +913,14 @@
         "difficulty": 8
       },
       {
+        "slug": "forth",
+        "name": "Forth",
+        "uuid": "9532108b-3b65-44ed-8d42-c746c4e5abda",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "queen-attack",
         "name": "Queen Attack",
         "uuid": "d229850d-421a-47bc-a8ff-df73a4c3b72b",
