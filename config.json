@@ -673,6 +673,14 @@
         "difficulty": 4
       },
       {
+        "slug": "bank-account",
+        "name": "Bank Account",
+        "uuid": "d77bfeb5-8b04-4623-88d3-70def6737724",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "binary-search-tree",
         "name": "Binary Search Tree",
         "uuid": "3d63421f-a752-4178-ab06-e0bdf27a6b05",
