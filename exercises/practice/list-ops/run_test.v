@@ -160,8 +160,12 @@ fn test_reverse_empty_list() {
 	assert reverse[int](empty) == empty
 }
 
-fn test_reverse_non_empty_list() {
+fn test_reverse_non_empty_even_length_list() {
 	assert reverse[int]([1, 3, 5, 7]) == [7, 5, 3, 1]
+}
+
+fn test_reverse_non_empty_odd_length_list() {
+	assert reverse[int]([1, 3, 5, 7, 9, 11, 13]) == [13, 11, 9, 7, 5, 3, 1]
 }
 
 fn test_reverse_list_of_lists_not_flattened() {
