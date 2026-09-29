@@ -96,7 +96,7 @@ fn parse(md string) []string {
 					break
 				}
 				plain += rest[..open]
-				if plain.len > 0 {
+				if plain != '' {
 					element << 'text'
 					element << plain
 					plain = ''
@@ -113,7 +113,7 @@ fn parse(md string) []string {
 			// TODO: whether the text is plain or not is decided twice, at the
 			// TODO: end of the scan above and right here. Let the scan hand
 			// TODO: back the runs it found and make that decision once.
-			if emphasised && plain.len > 0 {
+			if emphasised && plain != '' {
 				element << 'text'
 				element << plain
 			}

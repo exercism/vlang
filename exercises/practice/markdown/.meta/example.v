@@ -103,7 +103,7 @@ fn parse_inline(text string) []string {
 			break
 		}
 		plain += rest[..open]
-		if plain.len > 0 {
+		if plain != '' {
 			tokens << text_tag
 			tokens << plain
 			plain = ''
@@ -113,7 +113,7 @@ fn parse_inline(text string) []string {
 		emphasised = true
 		rest = body[close + delimiter.len..]
 	}
-	if emphasised && plain.len > 0 {
+	if emphasised && plain != '' {
 		tokens << text_tag
 		tokens << plain
 	}
