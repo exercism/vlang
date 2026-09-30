@@ -3,3 +3,6 @@
 bin/configlet
 bin/configlet.exe
 temp/
+
+__pycache__/
+*.pyc

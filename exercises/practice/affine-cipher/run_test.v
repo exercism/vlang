@@ -53,7 +53,7 @@ fn test_encode_with_a_not_coprime_to_m() {
 	if res := encode(phrase, Key{ a: 6, b: 17 }) {
 		assert false, 'encode with a not coprime to m should return an error'
 	} else {
-		assert typeof(err).name == 'IError'
+		assert err.msg() == 'a and m must be coprime.'
 	}
 }
 
@@ -98,6 +98,6 @@ fn test_decode_with_a_not_coprime_to_m() {
 	if res := decode(phrase, Key{ a: 13, b: 5 }) {
 		assert false, 'decode with a not coprime to m should return an error'
 	} else {
-		assert typeof(err).name == 'IError'
+		assert err.msg() == 'a and m must be coprime.'
 	}
 }

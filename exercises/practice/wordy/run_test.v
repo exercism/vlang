@@ -174,7 +174,7 @@ fn test_multiple_division() {
 fn test_unknown_operation() {
 	question := 'What is 52 cubed?'
 	if res := answer(question) {
-		assert false, 'unknown operation should be rejected'
+		assert false, 'unknown operation should return an error'
 	} else {
 		assert true
 	}
@@ -183,7 +183,7 @@ fn test_unknown_operation() {
 fn test_non_math_question() {
 	question := 'Who is the President of the United States?'
 	if res := answer(question) {
-		assert false, 'Non math question should be rejected'
+		assert false, 'Non math question should return an error'
 	} else {
 		assert true
 	}
@@ -192,7 +192,7 @@ fn test_non_math_question() {
 fn test_reject_problem_missing_an_operand() {
 	question := 'What is 1 plus?'
 	if res := answer(question) {
-		assert false, 'problem missing an operand should be rejected'
+		assert false, 'problem missing an operand should return an error'
 	} else {
 		assert true
 	}
@@ -201,7 +201,7 @@ fn test_reject_problem_missing_an_operand() {
 fn test_reject_problem_with_no_operands_or_operators() {
 	question := 'What is?'
 	if res := answer(question) {
-		assert false, 'problem with no operands or operators should be rejected'
+		assert false, 'problem with no operands or operators should return an error'
 	} else {
 		assert true
 	}
@@ -210,7 +210,7 @@ fn test_reject_problem_with_no_operands_or_operators() {
 fn test_reject_two_operations_in_a_row() {
 	question := 'What is 1 plus plus 2?'
 	if res := answer(question) {
-		assert false, 'two operations in a row should be rejected'
+		assert false, 'two operations in a row should return an error'
 	} else {
 		assert true
 	}
@@ -219,7 +219,7 @@ fn test_reject_two_operations_in_a_row() {
 fn test_reject_two_numbers_in_a_row() {
 	question := 'What is 1 plus 2 1?'
 	if res := answer(question) {
-		assert false, 'two numbers in a row should be rejected'
+		assert false, 'two numbers in a row should return an error'
 	} else {
 		assert true
 	}
@@ -228,7 +228,7 @@ fn test_reject_two_numbers_in_a_row() {
 fn test_reject_postfix_notation() {
 	question := 'What is 1 2 plus?'
 	if res := answer(question) {
-		assert false, 'postfix notation should be rejected'
+		assert false, 'postfix notation should return an error'
 	} else {
 		assert true
 	}
@@ -237,7 +237,7 @@ fn test_reject_postfix_notation() {
 fn test_reject_prefix_notation() {
 	question := 'What is plus 1 2?'
 	if res := answer(question) {
-		assert false, 'prefix notation should be rejected'
+		assert false, 'prefix notation should return an error'
 	} else {
 		assert true
 	}
