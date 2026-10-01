@@ -90,7 +90,7 @@ There are two ways to implement a practice exercise. You can follow all the 14 s
   - `.meta/test_generator.py`
 5. Write an example implementation in `[SLUG].v`
 6. Write a test generator in `.meta/test_generator.py`. It will receive the canonical data in [problem-specifications](https://github.com/exercism/problem-specifications/tree/main/exercises). Here's an example of [canonical data](https://github.com/exercism/problem-specifications/blob/main/exercises/grade-school/canonical-data.json).
-7. Generate `run_test.v` by running `generators/generate [SLUG]`
+7. Generate `run_test.v` by running `generators/generate.py [SLUG]`
 8. Run the test suite with `v -stats test run_test.v`
 9. Once all tests pass, make sure code is formatted properly with `v fmt -w [V_FILE]` on all the v files (example and test files)
 10. Copypaste everything in `[SLUG].v` into `.meta/example.v`
