@@ -2,8 +2,8 @@
 
 # Synopsis:
 # Test the track's exercises.
-# 
-# At a minimum, this file must check if the example/exemplar solution of each 
+#
+# At a minimum, this file must check if the example/exemplar solution of each
 # Practice/Concept Exercise passes the exercise's tests.
 #
 # To check this, you usually have to (temporarily) replace the exercise's solution files

@@ -1,0 +1,18 @@
+[
+  {
+    "description": "root of 0",
+    "property": "squareRoot",
+    "input": {
+      "radicand": 0
+    },
+    "expected": 0
+  },
+  {
+    "description": "root of 5764801",
+    "property": "squareRoot",
+    "input": {
+      "radicand": 5764801
+    },
+    "expected": 2401
+  }
+]
