@@ -1,5 +1,19 @@
 module main
 
+fn played(word string, guesses string) Game {
+	mut game := new_game(word)
+	for letter in guesses.bytes() {
+		game.guess(letter) or { panic(err) }
+	}
+	return game
+}
+
+fn guess_failure(mut game Game, letter u8) string {
+	mut message := 'guessing did not fail'
+	game.guess(letter) or { message = err.msg() }
+	return message
+}
+
 fn test_initially_9_failures_are_allowed_and_no_letters_are_guessed() {
 	game := new_game('loot')
 	assert game.state == State.ongoing
@@ -72,18 +86,4 @@ fn test_guessing_after_a_win_is_error() {
 	}
 	failure := guess_failure(mut game, `l`)
 	assert failure == 'cannot guess after the game is won'
-}
-
-fn played(word string, guesses string) Game {
-	mut game := new_game(word)
-	for letter in guesses.bytes() {
-		game.guess(letter) or { panic(err) }
-	}
-	return game
-}
-
-fn guess_failure(mut game Game, letter u8) string {
-	mut message := 'guessing did not fail'
-	game.guess(letter) or { message = err.msg() }
-	return message
 }
