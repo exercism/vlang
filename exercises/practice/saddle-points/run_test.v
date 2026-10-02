@@ -8,7 +8,7 @@ fn test_can_identify_single_saddle_point() {
 	]
 	expected := [
 		Point{
-			row: 2
+			row:    2
 			column: 1
 		},
 	]
@@ -41,15 +41,15 @@ fn test_can_identify_multiple_saddle_points_in_a_column() {
 	]
 	expected := [
 		Point{
-			row: 1
+			row:    1
 			column: 2
 		},
 		Point{
-			row: 2
+			row:    2
 			column: 2
 		},
 		Point{
-			row: 3
+			row:    3
 			column: 2
 		},
 	]
@@ -64,15 +64,15 @@ fn test_can_identify_multiple_saddle_points_in_a_row() {
 	]
 	expected := [
 		Point{
-			row: 2
+			row:    2
 			column: 1
 		},
 		Point{
-			row: 2
+			row:    2
 			column: 2
 		},
 		Point{
-			row: 2
+			row:    2
 			column: 3
 		},
 	]
@@ -87,7 +87,7 @@ fn test_can_identify_saddle_point_in_bottom_right_corner() {
 	]
 	expected := [
 		Point{
-			row: 3
+			row:    3
 			column: 3
 		},
 	]
@@ -101,11 +101,11 @@ fn test_can_identify_saddle_points_in_a_non_square_matrix() {
 	]
 	expected := [
 		Point{
-			row: 1
+			row:    1
 			column: 1
 		},
 		Point{
-			row: 1
+			row:    1
 			column: 3
 		},
 	]
@@ -121,11 +121,11 @@ fn test_can_identify_that_saddle_points_in_a_single_column_matrix_are_those_with
 	]
 	expected := [
 		Point{
-			row: 2
+			row:    2
 			column: 1
 		},
 		Point{
-			row: 4
+			row:    4
 			column: 1
 		},
 	]
@@ -138,11 +138,11 @@ fn test_can_identify_that_saddle_points_in_a_single_row_matrix_are_those_with_th
 	]
 	expected := [
 		Point{
-			row: 1
+			row:    1
 			column: 2
 		},
 		Point{
-			row: 1
+			row:    1
 			column: 4
 		},
 	]
