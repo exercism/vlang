@@ -248,6 +248,14 @@
         "difficulty": 2
       },
       {
+        "slug": "save-the-cow",
+        "name": "Save the Cow",
+        "uuid": "caa092c5-9690-4e42-8cce-50354f73ec70",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "18b7fc26-c45b-41a0-a1b4-4dc82766d2df",
