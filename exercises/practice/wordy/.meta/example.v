@@ -46,6 +46,7 @@ fn answer(question string) ?int {
 			'divided' { divide }
 			else { return none }
 		}
+
 		index++
 
 		if operation == multiply || operation == divide {

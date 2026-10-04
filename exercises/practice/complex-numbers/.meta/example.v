@@ -56,6 +56,7 @@ pub fn (c Complex) exp() Complex {
 
 pub fn (c Complex) mul(other Complex) Complex {
 	return Complex.new(c.real * other.real - c.imaginary * other.imaginary,
+
 		c.imaginary * other.real + c.real * other.imaginary)
 }
 

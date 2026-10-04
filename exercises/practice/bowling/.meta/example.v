@@ -3,8 +3,8 @@ module main
 enum State {
 	double // Previous two frames were strikes.
 	strike // Previous frame was a strike.
-	spare // Previous frame was a spare.
-	open // Previous frame was not a strike or a spare.
+	spare  // Previous frame was a spare.
+	open   // Previous frame was not a strike or a spare.
 }
 
 struct Game {

@@ -44,7 +44,7 @@ fn saddle_points(matrix [][]int) []Point {
 			element := matrix[row][column]
 			if element == row_maximums[row] && element == column_minimums[column] {
 				result << Point{
-					row: row + 1
+					row:    row + 1
 					column: column + 1
 				}
 			}

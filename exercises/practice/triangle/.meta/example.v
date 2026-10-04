@@ -19,7 +19,7 @@ fn is_scalene(a f64, b f64, c f64) bool {
 }
 
 fn is_valid_triangle(sides []f64) bool {
-	if sides[0] <= 0 || sides[0]+sides[1] < sides[2] {
+	if sides[0] <= 0 || sides[0] + sides[1] < sides[2] {
 		return false
 	}
 	return true

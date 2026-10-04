@@ -24,7 +24,7 @@ const translation = {
 fn proteins(strand string) ![]string {
 	mut result := []string{}
 	mut iter := ChunkIterator{
-		str: strand
+		str:        strand
 		chunk_size: 3
 	}
 	for codon in iter {

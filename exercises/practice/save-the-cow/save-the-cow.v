@@ -18,7 +18,6 @@ mut:
 	remaining int
 	// Whether the game is still going, won or lost.
 	state State
-
 	// Please define the rest of the `Game` struct
 }
 

@@ -9,7 +9,7 @@ mut:
 pub fn create_buffer[T](capacity int) CircularBuffer[T] {
 	return CircularBuffer[T]{
 		capacity: capacity
-		content: []T{}
+		content:  []T{}
 	}
 }
 
