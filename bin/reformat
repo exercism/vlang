@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Reformat every V source file in the track with `v fmt -w`
+
+# Example: reformat using the published test runner image
+# bin/reformat
+
+# Example: reformat using a different image
+# bin/reformat -i exercism/vlang-test-runner:local
+
+set -eo pipefail
+
+die() { echo "$*" >&2; exit 1; }
+
+required_tool() {
+    command -v "${1}" >/dev/null 2>&1 ||
+        die "${1} is required but not installed. Please install it and make sure it's in your PATH."
+}
+
+required_tool docker
+
+pull_docker_image() {
+    docker pull "${image}" ||
+        die $'Could not find the `'"${image}"$'` Docker image.\nCheck the test runner docs at https://exercism.org/docs/building/tooling/test-runners for more information.'
+}
+
+# Collect all *.v files (hidden directories such as .meta included, .git excluded).
+# Stub files containing the <TYPE> placeholder are intentionally not valid V,
+# so they cannot be formatted and are skipped.
+collect_source_files() {
+    files=()
+    skipped=()
+    while IFS= read -r -d '' file; do
+        if grep -q '<TYPE>' "${file}"; then
+            skipped+=("${file}")
+        else
+            files+=("${file}")
+        fi
+    done < <(find . -path ./.git -prune -o -type f -name '*.v' -print0 | sort -z)
+    ((${#files[@]} > 0)) || die 'no *.v files found!'
+}
+
+checksums() {
+    cksum "${files[@]}"
+}
+
+reformat() {
+    # The container runs as the host user so that rewritten files keep their
+    # ownership. HOME is pointed at the tmpfs because v needs a writable
+    # ~/.vmodules directory, and the rest of the filesystem is read-only.
+    docker run \
+        --rm \
+        --network none \
+        --read-only \
+        --user "$(id -u):$(id -g)" \
+        --env HOME=/tmp \
+        --tmpfs /tmp:exec \
+        --mount type=bind,src="${PWD}",dst=/solution \
+        --workdir /solution \
+        --entrypoint v \
+        "${image}" fmt -w "${files[@]}"
+}
+
+image=''
+while getopts :i: opt; do
+    case $opt in
+        i) image=$OPTARG ;;
+        ?) echo >&2 "Unknown option: -$OPTARG"; exit 1 ;;
+    esac
+done
+shift "$((OPTIND - 1))"
+
+if [[ -z "${image}" ]]; then
+    image="exercism/vlang-test-runner"
+    pull_docker_image
+fi
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+collect_source_files
+for file in "${skipped[@]}"; do
+    echo "Skipping ${file} (contains the <TYPE> placeholder)"
+done
+
+before=$(checksums)
+fmt_status=0
+reformat || fmt_status=$?
+after=$(checksums)
+
+# diff exits 1 when there are differences; that is not an error here.
+changed=$({ diff <(echo "${before}") <(echo "${after}") || true; } | awk '/^>/ { print $NF }')
+
+if [[ -n "${changed}" ]]; then
+    echo >&2 "The following files were reformatted:"
+    echo >&2 "${changed}"
+fi
+
+((fmt_status == 0)) || die "v fmt failed with exit code ${fmt_status}."
+[[ -z "${changed}" ]] || die "$(wc -l <<< "${changed}") file(s) were reformatted."
+
+echo "All ${#files[@]} files were already formatted."
