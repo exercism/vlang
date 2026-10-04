@@ -14,14 +14,12 @@ enum State {
 
 struct Game {
 mut:
-	// The word that has to be guessed.
-	word string
-	// Every letter that has been guessed so far.
-	guessed []u8
 	// How many wrong guesses are left before the game is lost.
 	remaining int
 	// Whether the game is still going, won or lost.
 	state State
+
+	// Please define the rest of the `Game` struct
 }
 
 fn new_game(word string) Game {
