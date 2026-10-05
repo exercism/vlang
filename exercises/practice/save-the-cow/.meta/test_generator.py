@@ -1,42 +1,52 @@
-from lib import assert_eq, is_error, v_string
+import re
 
-HEADER = """fn played(word string, guesses string) Game {
-\tmut game := new_game(word)
-\tfor letter in guesses.bytes() {
-\t\tgame.guess(letter) or { panic(err) }
-\t}
-\treturn game
-}
-
-fn guess_failure(mut game Game, letter u8) string {
-\tmut message := 'guessing did not fail'
-\tgame.guess(letter) or { message = err.msg() }
-\treturn message
-}"""
+from lib import INDENT, assert_eq, assert_error, assert_some, is_error, v_string
 
 
-def replay(case):
-    word = case["input"]["word"]
-    guesses = "".join(case["input"]["guesses"])
-    if not guesses:
-        return f"new_game({v_string(word)})"
-    return f"played({v_string(word)}, {v_string(guesses)})"
+def v_letter(letter):
+    return f"`{letter}`"
+
+
+def guess(letter):
+    return f"game.guess({v_letter(letter)})"
+
+
+def play(word, letters):
+    """Start a game and guess each of the letters, none of which may fail."""
+    lines = [f"mut game := new_game({v_string(word)})"]
+    if letters:
+        lines += [
+            f"for letter in {v_string(letters)} {{",
+            f"{INDENT}game.guess(letter) or {{ assert false, 'guessing `${{letter.ascii_str()}}` should not fail' }}",
+            "}",
+        ]
+    return lines
 
 
 def gen_case(case):
+    word = case["input"]["word"]
     guesses = "".join(case["input"]["guesses"])
-    if is_error(case["expected"]):
-        return [
-            f"mut game := new_game({v_string(case['input']['word'])})",
-            f"for letter in {v_string(guesses[:-1])} {{",
-            "\tgame.guess(letter)!",
-            "}",
-            f"failure := guess_failure(mut game, `{guesses[-1]}`)",
-            assert_eq("failure", v_string(case["expected"]["error"])),
-        ]
     expected = case["expected"]
-    return [
-        f"game := {replay(case)}",
+
+    if not guesses:
+        lines = [f"game := new_game({v_string(word)})"]
+    else:
+        lines = play(word, guesses[:-1])
+        last = guesses[-1]
+        if is_error(expected):
+            subject = re.sub(r" is error$", "", case["description"])
+            lines.append(assert_error(guess(last), case, subject, binding="_"))
+            return lines
+        lines.append(
+            assert_some(
+                guess(last),
+                f"State.{expected['state'].lower()}",
+                f"guessing {v_letter(last)} should not fail",
+                binding="state",
+            )
+        )
+
+    return lines + [
         assert_eq("game.state", f"State.{expected['state'].lower()}"),
         assert_eq("game.masked_word()", v_string(expected["maskedWord"])),
         assert_eq("game.remaining", str(expected["remainingFailures"])),
