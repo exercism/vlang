@@ -51,7 +51,9 @@ See [INSTALLATION.md](./docs/INSTALLATION.md)
 
 #### Style Guide:
 
-Before committing, please run `v fmt -w [FILE_NAME]` on whatever file you're committing to ensure it is formatted properly. More info on V formatting can be found [in the docs](https://github.com/vlang/v/blob/master/doc/docs.md#v-fmt)
+Before committing, please run `bin/reformat` to ensure every V file is formatted properly.
+It runs `v fmt -w [FILE_NAME]` using the same version of V as the test runner.
+More info on V formatting can be found [in the docs](https://github.com/vlang/v/blob/master/doc/docs.md#v-fmt)
 
 #### In the comments section anywhere
 
@@ -92,7 +94,7 @@ There are two ways to implement a practice exercise. You can follow all the 14 s
 6. Write a test generator in `.meta/test_generator.py`. It will receive the canonical data in [problem-specifications](https://github.com/exercism/problem-specifications/tree/main/exercises). Here's an example of [canonical data](https://github.com/exercism/problem-specifications/blob/main/exercises/grade-school/canonical-data.json).
 7. Generate `run_test.v` by running `generators/generate.py [SLUG]`
 8. Run the test suite with `v -stats test run_test.v`
-9. Once all tests pass, make sure code is formatted properly with `v fmt -w [V_FILE]` on all the v files (example and test files)
+9. Once all tests pass, make sure code is formatted properly by running `bin/reformat`, or `v fmt -w [V_FILE]` on all the v files (example and test files)
 10. Copypaste everything in `[SLUG].v` into `.meta/example.v`
 11. Remove everything from `[SLUG].v` except the stub of the needed function, the `module main` at the top, and make a stub of a struct or two.
 12. Add needed info to the `...[SLUG]/.meta/config.json` file:
