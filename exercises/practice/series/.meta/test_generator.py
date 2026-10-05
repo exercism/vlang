@@ -1,4 +1,4 @@
-from lib import assert_eq, assert_error, is_error, v_int, v_string, v_value
+from lib import assert_error, assert_some, is_error, v_int, v_string, v_value
 
 
 def gen_case(case):
@@ -9,5 +9,5 @@ def gen_case(case):
         return assert_error(call, case, subject)
     return [
         f"expected := {v_value(case['expected'])}",
-        assert_eq(f"{call}!", "expected"),
+        assert_some(call, "expected", f"{call} should not return an error"),
     ]

@@ -6,7 +6,11 @@ fn test_won_games__finished_game_where_x_won_via_left_column_victory() {
 		'X  ',
 		'X  ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_middle_column_victory() {
@@ -15,7 +19,11 @@ fn test_won_games__finished_game_where_x_won_via_middle_column_victory() {
 		' X ',
 		' X ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_right_column_victory() {
@@ -24,7 +32,11 @@ fn test_won_games__finished_game_where_x_won_via_right_column_victory() {
 		'  X',
 		'  X',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_left_column_victory() {
@@ -33,7 +45,11 @@ fn test_won_games__finished_game_where_o_won_via_left_column_victory() {
 		'OX ',
 		'O  ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_middle_column_victory() {
@@ -42,7 +58,11 @@ fn test_won_games__finished_game_where_o_won_via_middle_column_victory() {
 		' OX',
 		' O ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_right_column_victory() {
@@ -51,7 +71,11 @@ fn test_won_games__finished_game_where_o_won_via_right_column_victory() {
 		' XO',
 		'  O',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_top_row_victory() {
@@ -60,7 +84,11 @@ fn test_won_games__finished_game_where_x_won_via_top_row_victory() {
 		'XOO',
 		'O  ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_middle_row_victory() {
@@ -69,7 +97,11 @@ fn test_won_games__finished_game_where_x_won_via_middle_row_victory() {
 		'XXX',
 		' O ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_bottom_row_victory() {
@@ -78,7 +110,11 @@ fn test_won_games__finished_game_where_x_won_via_bottom_row_victory() {
 		'O X',
 		'XXX',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_top_row_victory() {
@@ -87,7 +123,11 @@ fn test_won_games__finished_game_where_o_won_via_top_row_victory() {
 		'XXO',
 		'XX ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_middle_row_victory() {
@@ -96,7 +136,11 @@ fn test_won_games__finished_game_where_o_won_via_middle_row_victory() {
 		'OOO',
 		'X  ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_bottom_row_victory() {
@@ -105,7 +149,11 @@ fn test_won_games__finished_game_where_o_won_via_bottom_row_victory() {
 		' XX',
 		'OOO',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_falling_diagonal_victory() {
@@ -114,7 +162,11 @@ fn test_won_games__finished_game_where_x_won_via_falling_diagonal_victory() {
 		' X ',
 		'  X',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_rising_diagonal_victory() {
@@ -123,7 +175,11 @@ fn test_won_games__finished_game_where_x_won_via_rising_diagonal_victory() {
 		'OX ',
 		'X  ',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_falling_diagonal_victory() {
@@ -132,7 +188,11 @@ fn test_won_games__finished_game_where_o_won_via_falling_diagonal_victory() {
 		'OOX',
 		'X O',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_o_won_via_rising_diagonal_victory() {
@@ -141,7 +201,11 @@ fn test_won_games__finished_game_where_o_won_via_rising_diagonal_victory() {
 		' OX',
 		'OXX',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_a_row_and_a_column_victory() {
@@ -150,7 +214,11 @@ fn test_won_games__finished_game_where_x_won_via_a_row_and_a_column_victory() {
 		'XOO',
 		'XOO',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_won_games__finished_game_where_x_won_via_two_diagonal_victories() {
@@ -159,7 +227,11 @@ fn test_won_games__finished_game_where_x_won_via_two_diagonal_victories() {
 		'OXO',
 		'XOX',
 	]
-	assert gamestate(board)! == .win
+	if res := gamestate(board) {
+		assert res == .win
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_drawn_games__draw() {
@@ -168,7 +240,11 @@ fn test_drawn_games__draw() {
 		'XXO',
 		'OXO',
 	]
-	assert gamestate(board)! == .draw
+	if res := gamestate(board) {
+		assert res == .draw
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_drawn_games__another_draw() {
@@ -177,7 +253,11 @@ fn test_drawn_games__another_draw() {
 		'OXX',
 		'XOO',
 	]
-	assert gamestate(board)! == .draw
+	if res := gamestate(board) {
+		assert res == .draw
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_ongoing_games__ongoing_game__one_move_in() {
@@ -186,7 +266,11 @@ fn test_ongoing_games__ongoing_game__one_move_in() {
 		'X  ',
 		'   ',
 	]
-	assert gamestate(board)! == .ongoing
+	if res := gamestate(board) {
+		assert res == .ongoing
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_ongoing_games__ongoing_game__two_moves_in() {
@@ -195,7 +279,11 @@ fn test_ongoing_games__ongoing_game__two_moves_in() {
 		' X ',
 		'   ',
 	]
-	assert gamestate(board)! == .ongoing
+	if res := gamestate(board) {
+		assert res == .ongoing
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_ongoing_games__ongoing_game__five_moves_in() {
@@ -204,7 +292,11 @@ fn test_ongoing_games__ongoing_game__five_moves_in() {
 		' XO',
 		'OX ',
 	]
-	assert gamestate(board)! == .ongoing
+	if res := gamestate(board) {
+		assert res == .ongoing
+	} else {
+		assert false, 'gamestate(board) should not return an error'
+	}
 }
 
 fn test_invalid_boards__invalid_board__x_went_twice() {

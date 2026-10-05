@@ -6,7 +6,11 @@ fn test_empty_tree() {
 	expected := fn () Tree {
 		return Empty{}
 	}
-	assert tree_from_traversals(preorder, inorder)! == expected()
+	if res := tree_from_traversals(preorder, inorder) {
+		assert res == expected()
+	} else {
+		assert false, 'tree_from_traversals(preorder, inorder) should not return an error'
+	}
 }
 
 fn test_tree_with_one_item() {
@@ -17,7 +21,11 @@ fn test_tree_with_one_item() {
 			value: `a`
 		}
 	}
-	assert tree_from_traversals(preorder, inorder)! == expected()
+	if res := tree_from_traversals(preorder, inorder) {
+		assert res == expected()
+	} else {
+		assert false, 'tree_from_traversals(preorder, inorder) should not return an error'
+	}
 }
 
 fn test_tree_with_many_items() {
@@ -40,7 +48,11 @@ fn test_tree_with_many_items() {
 			value: `a`
 		}
 	}
-	assert tree_from_traversals(preorder, inorder)! == expected()
+	if res := tree_from_traversals(preorder, inorder) {
+		assert res == expected()
+	} else {
+		assert false, 'tree_from_traversals(preorder, inorder) should not return an error'
+	}
 }
 
 fn test_reject_traversals_of_different_length() {
@@ -90,7 +102,11 @@ fn test_a_degenerate_binary_tree() {
 			value: `a`
 		}
 	}
-	assert tree_from_traversals(preorder, inorder)! == expected()
+	if res := tree_from_traversals(preorder, inorder) {
+		assert res == expected()
+	} else {
+		assert false, 'tree_from_traversals(preorder, inorder) should not return an error'
+	}
 }
 
 fn test_another_degenerate_binary_tree() {
@@ -110,7 +126,11 @@ fn test_another_degenerate_binary_tree() {
 			value: `a`
 		}
 	}
-	assert tree_from_traversals(preorder, inorder)! == expected()
+	if res := tree_from_traversals(preorder, inorder) {
+		assert res == expected()
+	} else {
+		assert false, 'tree_from_traversals(preorder, inorder) should not return an error'
+	}
 }
 
 fn test_tree_with_many_more_items() {
@@ -145,5 +165,9 @@ fn test_tree_with_many_more_items() {
 			value: `a`
 		}
 	}
-	assert tree_from_traversals(preorder, inorder)! == expected()
+	if res := tree_from_traversals(preorder, inorder) {
+		assert res == expected()
+	} else {
+		assert false, 'tree_from_traversals(preorder, inorder) should not return an error'
+	}
 }
