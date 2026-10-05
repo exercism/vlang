@@ -186,6 +186,11 @@ def assert_some(call: str, expected: str, failure: str, binding: str = "res") ->
     )
 
 
+def assert_ok(call: str, failure: str) -> str:
+    """Assert that a call does not return an error, discarding any value."""
+    return f"{call} or {{ assert false, {v_string(failure)} }}"
+
+
 def _assert_fails(call: str, failure: str, check: str, binding: str) -> str:
     return "\n".join(
         [

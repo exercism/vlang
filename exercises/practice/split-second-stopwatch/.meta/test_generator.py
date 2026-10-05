@@ -1,6 +1,6 @@
 import re
 
-from lib import assert_eq, assert_error, is_error, v_inline_array, v_string
+from lib import assert_eq, assert_error, assert_ok, is_error, v_inline_array, v_string
 
 
 def gen_command(command):
@@ -12,7 +12,7 @@ def gen_command(command):
     call = f"stopwatch.{name}()"
     expected = command.get("expected")
     if expected is None:
-        return f"{call}!"
+        return assert_ok(call, f"{name}() should not return an error")
     if is_error(expected):
         return assert_error(call, command, f"{name}()", binding="_")
     if name == "state":

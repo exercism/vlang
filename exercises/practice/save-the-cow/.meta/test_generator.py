@@ -1,6 +1,14 @@
 import re
 
-from lib import INDENT, assert_eq, assert_error, assert_some, is_error, v_string
+from lib import (
+    INDENT,
+    assert_eq,
+    assert_error,
+    assert_ok,
+    assert_some,
+    is_error,
+    v_string,
+)
 
 
 def v_letter(letter):
@@ -17,7 +25,7 @@ def play(word, letters):
     if letters:
         lines += [
             f"for letter in {v_string(letters)} {{",
-            f"{INDENT}game.guess(letter) or {{ assert false, 'guessing `${{letter.ascii_str()}}` should not fail' }}",
+            INDENT + assert_ok("game.guess(letter)", "guessing should not fail"),
             "}",
         ]
     return lines
