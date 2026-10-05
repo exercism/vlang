@@ -1,0 +1,9 @@
+fn egcd(a, b int) (int, int, int) {
+	if b == 0 { return (a, 1, 0) }
+	g, x1, y1 := egcd(b, a % b); return (g, y1, x1 - (a/b)*y1)
+}
+
+g, x, y := egcd(cap1, cap2)
+if goal % g != 0 { return error('impossible') }
+x *= goal/g; y *= goal/g
+for x < 0 { x += cap2/g; y -= cap1/g }; for y < 0 { y += cap1/g; x -= cap2/g }

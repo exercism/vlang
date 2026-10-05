@@ -1,0 +1,21 @@
+{
+  "introduction": {
+    "authors": ["haaeppyy"]
+  },
+  "approaches": [
+    {
+      "uuid": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "slug": "bfs",
+      "title": "Breadth-First Search",
+      "blurb": "Explore all possible states level by level until the goal is reached.",
+      "authors": ["haaeppyy"]
+    },
+    {
+      "uuid": "b2c3d4e5-f6a7-8901-bcde-f23456789012",
+      "slug": "egcd",
+      "title": "Extended GCD",
+      "blurb": "Use the Extended Euclidean Algorithm to find the solution mathematically.",
+      "authors": ["haaeppyy"]
+    }
+  ]
+}
