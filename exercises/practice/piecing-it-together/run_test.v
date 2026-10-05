@@ -14,7 +14,11 @@ fn test_1000_pieces_puzzle_with_1_6_aspect_ratio() {
 		aspect_ratio: 1.6
 		format:       'landscape'
 	}
-	assert jigsaw_data(puzzle)! == expect
+	if res := jigsaw_data(puzzle) {
+		assert res == expect
+	} else {
+		assert false, 'jigsaw_data(puzzle) should not return an error'
+	}
 }
 
 fn test_square_puzzle_with_32_rows() {
@@ -31,7 +35,11 @@ fn test_square_puzzle_with_32_rows() {
 		aspect_ratio: 1.0
 		format:       'square'
 	}
-	assert jigsaw_data(puzzle)! == expect
+	if res := jigsaw_data(puzzle) {
+		assert res == expect
+	} else {
+		assert false, 'jigsaw_data(puzzle) should not return an error'
+	}
 }
 
 fn test_400_pieces_square_puzzle_with_only_inside_pieces_and_aspect_ratio() {
@@ -48,7 +56,11 @@ fn test_400_pieces_square_puzzle_with_only_inside_pieces_and_aspect_ratio() {
 		aspect_ratio: 1.0
 		format:       'square'
 	}
-	assert jigsaw_data(puzzle)! == expect
+	if res := jigsaw_data(puzzle) {
+		assert res == expect
+	} else {
+		assert false, 'jigsaw_data(puzzle) should not return an error'
+	}
 }
 
 fn test_1500_pieces_landscape_puzzle_with_30_rows_and_1_6_aspect_ratio() {
@@ -65,7 +77,11 @@ fn test_1500_pieces_landscape_puzzle_with_30_rows_and_1_6_aspect_ratio() {
 		aspect_ratio: 1.6666666666666667
 		format:       'landscape'
 	}
-	assert jigsaw_data(puzzle)! == expect
+	if res := jigsaw_data(puzzle) {
+		assert res == expect
+	} else {
+		assert false, 'jigsaw_data(puzzle) should not return an error'
+	}
 }
 
 fn test_300_pieces_portrait_puzzle_with_70_border_pieces() {
@@ -83,7 +99,11 @@ fn test_300_pieces_portrait_puzzle_with_70_border_pieces() {
 		aspect_ratio: 0.48
 		format:       'portrait'
 	}
-	assert jigsaw_data(puzzle)! == expect
+	if res := jigsaw_data(puzzle) {
+		assert res == expect
+	} else {
+		assert false, 'jigsaw_data(puzzle) should not return an error'
+	}
 }
 
 fn test_puzzle_with_insufficient_data() {

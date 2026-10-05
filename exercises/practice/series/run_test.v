@@ -2,32 +2,56 @@ module main
 
 fn test_slices_of_one_from_one() {
 	expected := ['1']
-	assert slices('1', 1)! == expected
+	if res := slices('1', 1) {
+		assert res == expected
+	} else {
+		assert false, "slices('1', 1) should not return an error"
+	}
 }
 
 fn test_slices_of_one_from_two() {
 	expected := ['1', '2']
-	assert slices('12', 1)! == expected
+	if res := slices('12', 1) {
+		assert res == expected
+	} else {
+		assert false, "slices('12', 1) should not return an error"
+	}
 }
 
 fn test_slices_of_two() {
 	expected := ['35']
-	assert slices('35', 2)! == expected
+	if res := slices('35', 2) {
+		assert res == expected
+	} else {
+		assert false, "slices('35', 2) should not return an error"
+	}
 }
 
 fn test_slices_of_two_overlap() {
 	expected := ['91', '14', '42']
-	assert slices('9142', 2)! == expected
+	if res := slices('9142', 2) {
+		assert res == expected
+	} else {
+		assert false, "slices('9142', 2) should not return an error"
+	}
 }
 
 fn test_slices_can_include_duplicates() {
 	expected := ['777', '777', '777', '777']
-	assert slices('777777', 3)! == expected
+	if res := slices('777777', 3) {
+		assert res == expected
+	} else {
+		assert false, "slices('777777', 3) should not return an error"
+	}
 }
 
 fn test_slices_of_a_long_series() {
 	expected := ['91849', '18493', '84939', '49390', '93904', '39042', '90424', '04243']
-	assert slices('918493904243', 5)! == expected
+	if res := slices('918493904243', 5) {
+		assert res == expected
+	} else {
+		assert false, "slices('918493904243', 5) should not return an error"
+	}
 }
 
 fn test_slice_length_is_too_large() {

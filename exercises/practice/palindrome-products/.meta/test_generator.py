@@ -1,4 +1,4 @@
-from lib import INDENT, assert_eq, assert_error, is_error, v_int, v_value
+from lib import INDENT, assert_error, assert_some, is_error, v_int, v_value
 
 
 def gen_case(case):
@@ -10,8 +10,8 @@ def gen_case(case):
     value = "none" if expected["value"] is None else v_int(expected["value"])
     return [
         "expected := Palindrome{",
-        f"{INDENT}value: {value}",
+        f"{INDENT}value:   {value}",
         f"{INDENT}factors: {v_value(expected['factors'])}",
         "}",
-        assert_eq(f"{call}!", "expected"),
+        assert_some(call, "expected", f"{call} should not return an error"),
     ]

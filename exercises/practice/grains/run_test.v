@@ -1,57 +1,85 @@
 module main
 
-fn test_grains_sq_1() {
-	assert grains_on_square(1)! == 1
+fn test_grains_on_square_1() {
+	if res := grains_on_square(1) {
+		assert res == 1
+	} else {
+		assert false, 'grains_on_square(1) should not return an error'
+	}
 }
 
-fn test_grains_sq_2() {
-	assert grains_on_square(2)! == 2
+fn test_grains_on_square_2() {
+	if res := grains_on_square(2) {
+		assert res == 2
+	} else {
+		assert false, 'grains_on_square(2) should not return an error'
+	}
 }
 
-fn test_grains_sq_3() {
-	assert grains_on_square(3)! == 4
+fn test_grains_on_square_3() {
+	if res := grains_on_square(3) {
+		assert res == 4
+	} else {
+		assert false, 'grains_on_square(3) should not return an error'
+	}
 }
 
-fn test_grains_sq_4() {
-	assert grains_on_square(4)! == 8
+fn test_grains_on_square_4() {
+	if res := grains_on_square(4) {
+		assert res == 8
+	} else {
+		assert false, 'grains_on_square(4) should not return an error'
+	}
 }
 
-fn test_grains_sq_16() {
-	assert grains_on_square(16)! == 32768
+fn test_grains_on_square_16() {
+	if res := grains_on_square(16) {
+		assert res == 32768
+	} else {
+		assert false, 'grains_on_square(16) should not return an error'
+	}
 }
 
-fn test_grains_sq_32() {
-	assert grains_on_square(32)! == 2147483648
+fn test_grains_on_square_32() {
+	if res := grains_on_square(32) {
+		assert res == 2147483648
+	} else {
+		assert false, 'grains_on_square(32) should not return an error'
+	}
 }
 
-fn test_grains_sq_64() {
-	assert grains_on_square(64)! == 9223372036854775808
+fn test_grains_on_square_64() {
+	if res := grains_on_square(64) {
+		assert res == 9223372036854775808
+	} else {
+		assert false, 'grains_on_square(64) should not return an error'
+	}
 }
 
-fn test_error_0() {
+fn test_square_0_is_invalid() {
 	if res := grains_on_square(0) {
-		assert false, 'invalid square number should return error'
+		assert false, 'square 0 is invalid should return an error'
 	} else {
 		assert true
 	}
 }
 
-fn test_error_1() {
+fn test_negative_square_is_invalid() {
 	if res := grains_on_square(-1) {
-		assert false, 'invalid square number should return error'
+		assert false, 'negative square is invalid should return an error'
 	} else {
 		assert true
 	}
 }
 
-fn test_error_65() {
+fn test_square_greater_than_64_is_invalid() {
 	if res := grains_on_square(65) {
-		assert false, 'invalid square number should return error'
+		assert false, 'square greater than 64 is invalid should return an error'
 	} else {
 		assert true
 	}
 }
 
-fn test_total_grains() {
+fn test_returns_the_total_number_of_grains_on_the_board() {
 	assert total_grains_on_board() == 18446744073709551615
 }

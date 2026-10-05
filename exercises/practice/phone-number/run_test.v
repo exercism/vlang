@@ -2,17 +2,29 @@ module main
 
 fn test_cleans_the_number() {
 	phrase := '(223) 456-7890'
-	assert clean(phrase)! == '2234567890'
+	if res := clean(phrase) {
+		assert res == '2234567890'
+	} else {
+		assert false, 'clean(phrase) should not return an error'
+	}
 }
 
 fn test_cleans_numbers_with_dots() {
 	phrase := '223.456.7890'
-	assert clean(phrase)! == '2234567890'
+	if res := clean(phrase) {
+		assert res == '2234567890'
+	} else {
+		assert false, 'clean(phrase) should not return an error'
+	}
 }
 
 fn test_cleans_numbers_with_multiple_spaces() {
 	phrase := '223 456   7890   '
-	assert clean(phrase)! == '2234567890'
+	if res := clean(phrase) {
+		assert res == '2234567890'
+	} else {
+		assert false, 'clean(phrase) should not return an error'
+	}
 }
 
 fn test_invalid_when_9_digits() {
@@ -35,12 +47,20 @@ fn test_invalid_when_11_digits_does_not_start_with_a_1() {
 
 fn test_valid_when_11_digits_and_starting_with_1() {
 	phrase := '12234567890'
-	assert clean(phrase)! == '2234567890'
+	if res := clean(phrase) {
+		assert res == '2234567890'
+	} else {
+		assert false, 'clean(phrase) should not return an error'
+	}
 }
 
 fn test_valid_when_11_digits_and_starting_with_1_even_with_punctuation() {
 	phrase := '+1 (223) 456-7890'
-	assert clean(phrase)! == '2234567890'
+	if res := clean(phrase) {
+		assert res == '2234567890'
+	} else {
+		assert false, 'clean(phrase) should not return an error'
+	}
 }
 
 fn test_invalid_when_more_than_11_digits() {

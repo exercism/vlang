@@ -1,4 +1,4 @@
-from lib import assert_eq, assert_error, indent, is_error, v_string
+from lib import assert_error, assert_some, indent, is_error, v_string
 
 
 def v_tree(tree):
@@ -24,5 +24,7 @@ def gen_case(case):
     else:
         tree = indent(f"return {v_tree(case['expected'])}")
         lines.append(f"expected := fn () Tree {{\n{tree}\n}}")
-        lines.append(assert_eq(f"{call}!", "expected()"))
+        lines.append(
+            assert_some(call, "expected()", f"{call} should not return an error")
+        )
     return lines

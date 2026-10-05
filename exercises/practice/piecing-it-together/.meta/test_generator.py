@@ -1,6 +1,6 @@
 import re
 
-from lib import assert_eq, assert_error, is_error, v_value
+from lib import assert_error, assert_some, is_error, v_value
 
 
 def v_struct(name, fields):
@@ -14,11 +14,12 @@ def v_struct(name, fields):
 
 
 def gen_case(case):
+    call = "jigsaw_data(puzzle)"
     expected = case["expected"]
     lines = [f"puzzle := {v_struct('PartialInformation', case['input'])}"]
     if is_error(expected):
-        lines.append(assert_error("jigsaw_data(puzzle)", case))
+        lines.append(assert_error(call, case))
     else:
         lines.append(f"expect := {v_struct('FullInformation', expected)}")
-        lines.append(assert_eq("jigsaw_data(puzzle)!", "expect"))
+        lines.append(assert_some(call, "expect", f"{call} should not return an error"))
     return lines

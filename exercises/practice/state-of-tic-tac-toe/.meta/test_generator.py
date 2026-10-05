@@ -1,4 +1,4 @@
-from lib import assert_eq, assert_error, is_error, snake_case, v_array
+from lib import assert_error, assert_some, is_error, snake_case, v_array
 
 
 def test_name(case):
@@ -7,9 +7,11 @@ def test_name(case):
 
 
 def gen_case(case):
+    call = "gamestate(board)"
     lines = [f"board := {v_array(case['input']['board'])}"]
     if is_error(case["expected"]):
-        lines.append(assert_error("gamestate(board)", case))
+        lines.append(assert_error(call, case))
     else:
-        lines.append(assert_eq("gamestate(board)!", f".{case['expected']}"))
+        expected = f".{case['expected']}"
+        lines.append(assert_some(call, expected, f"{call} should not return an error"))
     return lines

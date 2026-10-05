@@ -1,6 +1,6 @@
 import re
 
-from lib import assert_eq, assert_error, is_error, v_int, v_value
+from lib import assert_error, assert_some, is_error, v_int, v_value
 
 
 def gen_case(case):
@@ -10,4 +10,6 @@ def gen_case(case):
     if is_error(case["expected"]):
         subject = re.sub(r" (is|are) ", " ", case["description"])
         return assert_error(call, case, subject)
-    return assert_eq(f"{call}!", v_value(case["expected"]))
+    return assert_some(
+        call, v_value(case["expected"]), f"{call} should not return an error"
+    )
