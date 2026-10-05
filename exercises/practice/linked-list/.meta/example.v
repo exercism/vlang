@@ -20,7 +20,7 @@ mut:
 pub fn (mut l LinkedList) push(value int) {
 	node := &Node{
 		value: value
-		prev: l.tail
+		prev:  l.tail
 	}
 	if l.head == unsafe { nil } {
 		l.head = node
@@ -47,7 +47,7 @@ pub fn (mut l LinkedList) pop() int {
 pub fn (mut l LinkedList) unshift(value int) {
 	node := &Node{
 		value: value
-		next: l.head
+		next:  l.head
 	}
 	if l.tail == unsafe { nil } {
 		l.tail = node

@@ -2,9 +2,9 @@ module main
 
 fn grains_on_square(square int) !u64 {
 	if !error_if_bad_square(square) {
-		return pow(2, square-1)
+		return pow(2, square - 1)
 	}
-	return error("square must be between 1 and 64")
+	return error('square must be between 1 and 64')
 }
 
 fn total_grains_on_board() u64 {

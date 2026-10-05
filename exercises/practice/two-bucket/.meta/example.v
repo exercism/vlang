@@ -102,15 +102,15 @@ pub fn measure(capacity_one int, capacity_two int, goal int, start_bucket Bucket
 
 		if contents_one == goal {
 			return Solution{
-				moves: moves
-				goal_bucket: .one
+				moves:        moves
+				goal_bucket:  .one
 				other_bucket: contents_two
 			}
 		}
 		if contents_two == goal {
 			return Solution{
-				moves: moves
-				goal_bucket: .two
+				moves:        moves
+				goal_bucket:  .two
 				other_bucket: contents_one
 			}
 		}

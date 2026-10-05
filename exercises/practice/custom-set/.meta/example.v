@@ -14,15 +14,15 @@ mut:
 
 // build a new CustomSet
 pub fn CustomSet.new[T](elements []T) CustomSet[T] {
-  return CustomSet[T] {
-    items: distinct(elements)
-  }
+	return CustomSet[T]{
+		items: distinct(elements)
+	}
 }
 
 pub fn (mut s CustomSet[T]) add[T](element T) {
-	if !(element in s.items) {
-    s.items << element
-  }
+	if element !in s.items {
+		s.items << element
+	}
 }
 
 pub fn (s CustomSet[T]) contains[T](element T) bool {
@@ -39,7 +39,7 @@ pub fn (s CustomSet[T]) is_empty[T]() bool {
 
 // @union to avoid conflict with reserved word 'union'
 pub fn (s CustomSet[T]) @union(other CustomSet[T]) CustomSet[T] {
-  return CustomSet.new[T](append(s.items, other.items))
+	return CustomSet.new[T](append(s.items, other.items))
 }
 
 pub fn (s CustomSet[T]) intersection(other CustomSet[T]) CustomSet[T] {

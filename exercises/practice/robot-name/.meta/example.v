@@ -44,9 +44,9 @@ fn generate_unused_name(mut robots []bool) !string {
 
 fn generate_any_valid_name() string {
 	mut new_name := rand.string(2).to_upper()
-	d1 := rand.intn(10) or {0}
-	d2 := rand.intn(10) or {0}
-	d3 := rand.intn(10) or {0}
+	d1 := rand.intn(10) or { 0 }
+	d2 := rand.intn(10) or { 0 }
+	d3 := rand.intn(10) or { 0 }
 	new_name += d1.str()
 	new_name += d2.str()
 	new_name += d3.str()

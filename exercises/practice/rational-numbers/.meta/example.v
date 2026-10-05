@@ -1,6 +1,6 @@
 module main
 
-import math { gcd, pow, powi, signi }
+import math { gcd, pow, powi }
 
 struct Rational {
 	numerator   i64
