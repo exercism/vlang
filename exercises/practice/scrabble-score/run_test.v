@@ -40,6 +40,6 @@ fn test_empty_input() {
 	assert score('') == 0
 }
 
-fn test_entire_alphabet() {
+fn test_entire_alphabet_available() {
 	assert score('abcdefghijklmnopqrstuvwxyz') == 87
 }

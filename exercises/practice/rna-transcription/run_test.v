@@ -1,22 +1,22 @@
 module main
 
-fn test_empty_rna() {
+fn test_empty_rna_sequence() {
 	assert to_rna('') == ''
 }
 
-fn test_cytosine_to_guanine() {
+fn test_rna_complement_of_cytosine_is_guanine() {
 	assert to_rna('C') == 'G'
 }
 
-fn test_guanine_to_cytosine() {
+fn test_rna_complement_of_guanine_is_cytosine() {
 	assert to_rna('G') == 'C'
 }
 
-fn test_thymine_to_adenine() {
+fn test_rna_complement_of_thymine_is_adenine() {
 	assert to_rna('T') == 'A'
 }
 
-fn test_adenine_to_uracial() {
+fn test_rna_complement_of_adenine_is_uracil() {
 	assert to_rna('A') == 'U'
 }
 

@@ -4,11 +4,11 @@ fn test_zero_is_an_armstrong_number() {
 	assert is_armstrong_number(0)
 }
 
-fn test_single_digit_numbers_are_armstrong_mumbers() {
+fn test_single_digit_numbers_are_armstrong_numbers() {
 	assert is_armstrong_number(5)
 }
 
-fn test_there_are_no_2_digit_armstrong_numbers() {
+fn test_there_are_no_two_digit_armstrong_numbers() {
 	assert !is_armstrong_number(10)
 }
 

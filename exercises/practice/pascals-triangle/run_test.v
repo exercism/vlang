@@ -1,7 +1,7 @@
 module main
 
 fn test_zero_rows() {
-	assert rows(0) == []
+	assert rows(0) == [][]int{}
 }
 
 fn test_single_row() {

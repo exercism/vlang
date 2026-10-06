@@ -9,7 +9,7 @@ fn test_square_of_sum_5() {
 }
 
 fn test_square_of_sum_100() {
-	assert square_of_sum(100) == 25_502_500
+	assert square_of_sum(100) == 25502500
 }
 
 fn test_sum_of_squares_1() {
@@ -21,17 +21,17 @@ fn test_sum_of_squares_5() {
 }
 
 fn test_sum_of_squares_100() {
-	assert sum_of_squares(100) == 338_350
+	assert sum_of_squares(100) == 338350
 }
 
-fn test_difference_1() {
+fn test_difference_of_squares_1() {
 	assert difference(1) == 0
 }
 
-fn test_difference_5() {
+fn test_difference_of_squares_5() {
 	assert difference(5) == 170
 }
 
-fn test_difference_100() {
-	assert difference(100) == 25_164_150
+fn test_difference_of_squares_100() {
+	assert difference(100) == 25164150
 }

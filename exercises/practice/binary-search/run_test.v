@@ -25,40 +25,40 @@ fn test_finds_a_value_in_an_array_of_even_length() {
 }
 
 fn test_identifies_that_a_value_is_not_included_in_the_array() {
-	if found_index := find([1, 3, 4, 6, 8, 9, 11], 7) {
-		assert false, 'should return an error'
+	if res := find([1, 3, 4, 6, 8, 9, 11], 7) {
+		assert false, 'identifies that a value is not included in the array should return an error'
 	} else {
 		assert err.msg() == 'value not in array'
 	}
 }
 
-fn test_a_value_smaller_than_the_array_s_smallest_value_is_not_found() {
-	if found_index := find([1, 3, 4, 6, 8, 9, 11], 0) {
-		assert false, 'should return an error'
+fn test_a_value_smaller_than_the_arrays_smallest_value_is_not_found() {
+	if res := find([1, 3, 4, 6, 8, 9, 11], 0) {
+		assert false, "a value smaller than the array's smallest value is not found should return an error"
 	} else {
 		assert err.msg() == 'value not in array'
 	}
 }
 
-fn test_a_value_larger_than_the_array_s_largest_value_is_not_found() {
-	if found_index := find([1, 3, 4, 6, 8, 9, 11], 13) {
-		assert false, 'should return an error'
+fn test_a_value_larger_than_the_arrays_largest_value_is_not_found() {
+	if res := find([1, 3, 4, 6, 8, 9, 11], 13) {
+		assert false, "a value larger than the array's largest value is not found should return an error"
 	} else {
 		assert err.msg() == 'value not in array'
 	}
 }
 
 fn test_nothing_is_found_in_an_empty_array() {
-	if found_index := find([], 1) {
-		assert false, 'should return an error'
+	if res := find([]int{}, 1) {
+		assert false, 'nothing is found in an empty array should return an error'
 	} else {
 		assert err.msg() == 'value not in array'
 	}
 }
 
 fn test_nothing_is_found_when_the_left_and_right_bounds_cross() {
-	if found_index := find([1, 2], 0) {
-		assert false, 'should return an error'
+	if res := find([1, 2], 0) {
+		assert false, 'nothing is found when the left and right bounds cross should return an error'
 	} else {
 		assert err.msg() == 'value not in array'
 	}

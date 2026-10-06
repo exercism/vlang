@@ -34,7 +34,7 @@ fn test_large_number_of_even_and_odd_steps() {
 
 fn test_zero_is_an_error() {
 	if res := collatz(0) {
-		assert false, 'collatz(0) should return an error, not ${res}'
+		assert false, 'zero is an error should return an error'
 	} else {
 		assert true
 	}
@@ -42,7 +42,7 @@ fn test_zero_is_an_error() {
 
 fn test_negative_value_is_an_error() {
 	if res := collatz(-15) {
-		assert false, 'collatz(-15) should return an error, not ${res}'
+		assert false, 'negative value is an error should return an error'
 	} else {
 		assert true
 	}

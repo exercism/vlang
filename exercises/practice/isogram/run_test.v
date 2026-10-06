@@ -4,54 +4,54 @@ fn test_empty_string() {
 	assert is_isogram('')
 }
 
-fn test_isogram() {
+fn test_isogram_with_only_lower_case_characters() {
 	assert is_isogram('isogram')
 }
 
-fn test_eleven() {
+fn test_word_with_one_duplicated_character() {
 	assert !is_isogram('eleven')
 }
 
-fn test_duplicate_z() {
+fn test_word_with_one_duplicated_character_from_the_end_of_the_alphabet() {
 	assert !is_isogram('zzyzx')
 }
 
-fn test_longest_english_isogram() {
+fn test_longest_reported_english_isogram() {
 	assert is_isogram('subdermatoglyphic')
 }
 
-fn test_duplicate_mixed_case() {
+fn test_word_with_duplicated_character_in_mixed_case() {
 	assert !is_isogram('Alphabet')
 }
 
-fn test_duplicate_mixed_case_2() {
+fn test_word_with_duplicated_character_in_mixed_case_lowercase_first() {
 	assert !is_isogram('alphAbet')
 }
 
-fn test_with_hyphen() {
+fn test_hypothetical_isogrammic_word_with_hyphen() {
 	assert is_isogram('thumbscrew-japingly')
 }
 
-fn test_with_hyphen_double_p() {
+fn test_hypothetical_word_with_duplicated_character_following_hyphen() {
 	assert !is_isogram('thumbscrew-jappingly')
 }
 
-fn test_with_double_hyphen() {
+fn test_isogram_with_duplicated_hyphen() {
 	assert is_isogram('six-year-old')
 }
 
-fn test_with_name() {
+fn test_made_up_name_that_is_an_isogram() {
 	assert is_isogram('Emily Jung Schwartzkopf')
 }
 
-fn test_duplicate_in_middle() {
+fn test_duplicated_character_in_the_middle() {
 	assert !is_isogram('accentor')
 }
 
-fn test_first_and_last_same() {
+fn test_same_first_and_last_characters() {
 	assert !is_isogram('angola')
 }
 
-fn test_with_duplicated_char_and_hypens() {
+fn test_word_with_duplicated_character_and_with_two_hyphens() {
 	assert !is_isogram('up-to-date')
 }
