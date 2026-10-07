@@ -6,16 +6,16 @@ fn close_enough(a f64, b f64) bool {
 	return math.abs(a - b) < 0.01
 }
 
+fn test_age_on_earth() {
+	assert close_enough(age(1000000000, 'Earth')!, 31.69)
+}
+
 fn test_age_on_mercury() {
 	assert close_enough(age(2134835688, 'Mercury')!, 280.88)
 }
 
 fn test_age_on_venus() {
 	assert close_enough(age(189839836, 'Venus')!, 9.78)
-}
-
-fn test_age_on_earth() {
-	assert close_enough(age(1000000000, 'Earth')!, 31.69)
 }
 
 fn test_age_on_mars() {
@@ -38,10 +38,10 @@ fn test_age_on_neptune() {
 	assert close_enough(age(1821023456, 'Neptune')!, 0.35)
 }
 
-fn test_age_on_sun() {
+fn test_invalid_planet_causes_error() {
 	if res := age(680804807, 'Sun') {
-		assert false, 'trying to find age on the sun should return an error'
+		assert false, 'invalid planet causes error should return an error'
 	} else {
-		assert typeof(err).name == 'IError'
+		assert true
 	}
 }

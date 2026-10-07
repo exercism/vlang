@@ -29,7 +29,7 @@ fn test_reversing_one_action_gives_the_same_action() {
 }
 
 fn test_reversing_no_actions_still_gives_no_actions() {
-	assert commands(16) == []
+	assert commands(16) == []Command{}
 }
 
 fn test_all_possible_actions() {
@@ -41,5 +41,5 @@ fn test_reverse_all_possible_actions() {
 }
 
 fn test_do_nothing_for_zero() {
-	assert commands(0) == []
+	assert commands(0) == []Command{}
 }

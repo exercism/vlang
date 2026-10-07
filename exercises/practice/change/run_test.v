@@ -1,44 +1,130 @@
 module main
 
 fn test_change_for_1_cent() {
-	assert find_fewest_coins([1, 5, 10, 25], 1)! == [1]
+	if res := find_fewest_coins([1, 5, 10, 25], 1) {
+		assert res == [
+			1,
+		]
+	} else {
+		assert false, 'find_fewest_coins([1, 5, 10, 25], 1) should not return an error'
+	}
 }
 
 fn test_single_coin_change() {
-	assert find_fewest_coins([1, 5, 10, 25, 100], 25)! == [25]
+	if res := find_fewest_coins([1, 5, 10, 25, 100], 25) {
+		assert res == [
+			25,
+		]
+	} else {
+		assert false, 'find_fewest_coins([1, 5, 10, 25, 100], 25) should not return an error'
+	}
 }
 
 fn test_multiple_coin_change() {
-	assert find_fewest_coins([1, 5, 10, 25, 100], 15)! == [5, 10]
+	if res := find_fewest_coins([1, 5, 10, 25, 100], 15) {
+		assert res == [
+			5,
+			10,
+		]
+	} else {
+		assert false, 'find_fewest_coins([1, 5, 10, 25, 100], 15) should not return an error'
+	}
 }
 
 fn test_change_with_lilliputian_coins() {
-	assert find_fewest_coins([1, 4, 15, 20, 50], 23)! == [4, 4, 15]
+	if res := find_fewest_coins([1, 4, 15, 20, 50], 23) {
+		assert res == [
+			4,
+			4,
+			15,
+		]
+	} else {
+		assert false, 'find_fewest_coins([1, 4, 15, 20, 50], 23) should not return an error'
+	}
 }
 
 fn test_change_with_lower_elbonia_coins() {
-	assert find_fewest_coins([1, 5, 10, 21, 25], 63)! == [21, 21, 21]
+	if res := find_fewest_coins([1, 5, 10, 21, 25], 63) {
+		assert res == [
+			21,
+			21,
+			21,
+		]
+	} else {
+		assert false, 'find_fewest_coins([1, 5, 10, 21, 25], 63) should not return an error'
+	}
 }
 
 fn test_large_target_values() {
-	assert find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999)! == [2, 2, 5, 20, 20, 50, 100, 100,
-		100, 100, 100, 100, 100, 100, 100]
+	if res := find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999) {
+		assert res == [
+			2,
+			2,
+			5,
+			20,
+			20,
+			50,
+			100,
+			100,
+			100,
+			100,
+			100,
+			100,
+			100,
+			100,
+			100,
+		]
+	} else {
+		assert false, 'find_fewest_coins([1, 2, 5, 10, 20, 50, 100], 999) should not return an error'
+	}
 }
 
 fn test_possible_change_without_unit_coins_available() {
-	assert find_fewest_coins([2, 5, 10, 20, 50], 21)! == [2, 2, 2, 5, 10]
+	if res := find_fewest_coins([2, 5, 10, 20, 50], 21) {
+		assert res == [
+			2,
+			2,
+			2,
+			5,
+			10,
+		]
+	} else {
+		assert false, 'find_fewest_coins([2, 5, 10, 20, 50], 21) should not return an error'
+	}
 }
 
 fn test_another_possible_change_without_unit_coins_available() {
-	assert find_fewest_coins([4, 5], 27)! == [4, 4, 4, 5, 5, 5]
+	if res := find_fewest_coins([4, 5], 27) {
+		assert res == [
+			4,
+			4,
+			4,
+			5,
+			5,
+			5,
+		]
+	} else {
+		assert false, 'find_fewest_coins([4, 5], 27) should not return an error'
+	}
 }
 
 fn test_a_greedy_approach_is_not_optimal() {
-	assert find_fewest_coins([1, 10, 11], 20)! == [10, 10]
+	if res := find_fewest_coins([1, 10, 11], 20) {
+		assert res == [
+			10,
+			10,
+		]
+	} else {
+		assert false, 'find_fewest_coins([1, 10, 11], 20) should not return an error'
+	}
 }
 
 fn test_no_coins_make_0_change() {
-	assert find_fewest_coins([1, 5, 10, 21, 25], 0)! == []
+	if res := find_fewest_coins([1, 5, 10, 21, 25], 0) {
+		assert res == []int{}
+	} else {
+		assert false, 'find_fewest_coins([1, 5, 10, 21, 25], 0) should not return an error'
+	}
 }
 
 fn test_error_testing_for_change_smaller_than_the_smallest_of_coins() {

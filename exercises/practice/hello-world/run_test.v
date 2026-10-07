@@ -1,5 +1,5 @@
 module main
 
-fn test_hello() {
+fn test_say_hi() {
 	assert hello() == 'Hello, World!'
 }

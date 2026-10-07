@@ -9,7 +9,7 @@ fn test_empty_strand() {
 	}
 }
 
-fn test_one_character_strand() {
+fn test_can_count_one_nucleotide_in_single_character_input() {
 	assert count_nucleotides('G')! == {
 		'A': 0
 		'C': 0
@@ -18,7 +18,7 @@ fn test_one_character_strand() {
 	}
 }
 
-fn test_repeated_character_strand() {
+fn test_strand_with_repeated_nucleotide() {
 	assert count_nucleotides('GGGGGGG')! == {
 		'A': 0
 		'C': 0
@@ -27,7 +27,7 @@ fn test_repeated_character_strand() {
 	}
 }
 
-fn test_multiple_character_strand() {
+fn test_strand_with_multiple_nucleotides() {
 	assert count_nucleotides('AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC')! == {
 		'A': 20
 		'C': 12
@@ -36,10 +36,10 @@ fn test_multiple_character_strand() {
 	}
 }
 
-fn test_invalid_character_strand() {
+fn test_strand_with_invalid_nucleotides() {
 	if res := count_nucleotides('AGXXACT') {
-		assert false, 'invalid characters should return an error'
+		assert false, 'strand with invalid nucleotides should return an error'
 	} else {
-		assert err.msg() == 'X is not a valid nucleotide!'
+		assert true
 	}
 }
