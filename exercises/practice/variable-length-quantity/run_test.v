@@ -142,37 +142,57 @@ fn test_many_multi_byte_values() {
 fn test_one_byte() {
 	integers := [u8(0x7f)]
 	expected := [u32(0x7f)]
-	assert decode(integers)! == expected
+	if res := decode(integers) {
+		assert res == expected
+	} else {
+		assert false, 'decode(integers) should not return an error'
+	}
 }
 
 fn test_two_bytes() {
 	integers := [u8(0xc0), 0x0]
 	expected := [u32(0x2000)]
-	assert decode(integers)! == expected
+	if res := decode(integers) {
+		assert res == expected
+	} else {
+		assert false, 'decode(integers) should not return an error'
+	}
 }
 
 fn test_three_bytes() {
 	integers := [u8(0xff), 0xff, 0x7f]
 	expected := [u32(0x1fffff)]
-	assert decode(integers)! == expected
+	if res := decode(integers) {
+		assert res == expected
+	} else {
+		assert false, 'decode(integers) should not return an error'
+	}
 }
 
 fn test_four_bytes() {
 	integers := [u8(0x81), 0x80, 0x80, 0x0]
 	expected := [u32(0x200000)]
-	assert decode(integers)! == expected
+	if res := decode(integers) {
+		assert res == expected
+	} else {
+		assert false, 'decode(integers) should not return an error'
+	}
 }
 
 fn test_maximum_32_bit_integer() {
 	integers := [u8(0x8f), 0xff, 0xff, 0xff, 0x7f]
 	expected := [u32(0xffffffff)]
-	assert decode(integers)! == expected
+	if res := decode(integers) {
+		assert res == expected
+	} else {
+		assert false, 'decode(integers) should not return an error'
+	}
 }
 
 fn test_incomplete_sequence_causes_error() {
 	integers := [u8(0xff)]
 	if res := decode(integers) {
-		assert false, 'incomplete sequence should return an error'
+		assert false, 'decode(integers) should return an error'
 	} else {
 		assert err.msg() == 'incomplete sequence'
 	}
@@ -181,7 +201,7 @@ fn test_incomplete_sequence_causes_error() {
 fn test_incomplete_sequence_causes_error_even_if_value_is_zero() {
 	integers := [u8(0x80)]
 	if res := decode(integers) {
-		assert false, 'incomplete sequence, even if value zero, should return an error'
+		assert false, 'decode(integers) should return an error'
 	} else {
 		assert err.msg() == 'incomplete sequence'
 	}
@@ -191,5 +211,9 @@ fn test_multiple_values() {
 	integers := [u8(0xc0), 0x0, 0xc8, 0xe8, 0x56, 0xff, 0xff, 0xff, 0x7f, 0x0, 0xff, 0x7f, 0x81,
 		0x80, 0x0]
 	expected := [u32(0x2000), 0x123456, 0xfffffff, 0x0, 0x3fff, 0x4000]
-	assert decode(integers)! == expected
+	if res := decode(integers) {
+		assert res == expected
+	} else {
+		assert false, 'decode(integers) should not return an error'
+	}
 }

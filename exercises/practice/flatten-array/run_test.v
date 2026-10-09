@@ -1,12 +1,14 @@
 module main
 
 fn test_empty() {
-	mut box := None{}
+	box := Many[int]{
+		boxes: []
+	}
 	assert flatten[int](box) == []
 }
 
 fn test_no_nesting() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			One[int]{
 				value: 0
@@ -23,7 +25,7 @@ fn test_no_nesting() {
 }
 
 fn test_flattens_a_nested_array() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			Many[int]{
 				boxes: [
@@ -38,7 +40,7 @@ fn test_flattens_a_nested_array() {
 }
 
 fn test_flattens_array_with_just_integers_present() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			One[int]{
 				value: 1
@@ -74,7 +76,7 @@ fn test_flattens_array_with_just_integers_present() {
 }
 
 fn test_5_level_nesting() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			One[int]{
 				value: 0
@@ -129,7 +131,7 @@ fn test_5_level_nesting() {
 }
 
 fn test_6_level_nesting() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			One[int]{
 				value: 1
@@ -185,7 +187,7 @@ fn test_6_level_nesting() {
 }
 
 fn test_null_values_are_omitted_from_the_final_result() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			One[int]{
 				value: 1
@@ -200,7 +202,7 @@ fn test_null_values_are_omitted_from_the_final_result() {
 }
 
 fn test_consecutive_null_values_at_the_front_of_the_array_are_omitted_from_the_final_result() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			None{},
 			None{},
@@ -213,7 +215,7 @@ fn test_consecutive_null_values_at_the_front_of_the_array_are_omitted_from_the_f
 }
 
 fn test_consecutive_null_values_in_the_middle_of_the_array_are_omitted_from_the_final_result() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			One[int]{
 				value: 1
@@ -229,7 +231,7 @@ fn test_consecutive_null_values_in_the_middle_of_the_array_are_omitted_from_the_
 }
 
 fn test_6_level_nested_array_with_null_values() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			One[int]{
 				value: 0
@@ -284,7 +286,7 @@ fn test_6_level_nested_array_with_null_values() {
 }
 
 fn test_all_values_in_nested_array_are_null() {
-	mut box := Many[int]{
+	box := Many[int]{
 		boxes: [
 			None{},
 			Many[int]{
