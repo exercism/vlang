@@ -352,6 +352,14 @@
         "difficulty": 3
       },
       {
+        "slug": "relative-distance",
+        "name": "Relative Distance",
+        "uuid": "04c78500-ba2a-44e1-a91a-0525fa4dd438",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "rna-transcription",
         "name": "RNA Transcription",
         "uuid": "8c01dab7-daae-4ad6-adcc-f023296bda33",
