@@ -28,8 +28,11 @@ fn test_unrelated_individuals() {
 		'Priya': ['Rami']
 		'Kaito': ['Elif']
 	}
-	separation := degree_of_separation(tree, 'Priya', 'Kaito') or { -1 }
-	assert separation == -1
+	if res := degree_of_separation(tree, 'Priya', 'Kaito') {
+		assert false, 'Unrelated individuals should return an error'
+	} else {
+		assert true
+	}
 }
 
 fn test_complex_graph_cousins() {

@@ -1,4 +1,4 @@
-from lib import assert_eq, v_inline_array, v_string
+from lib import assert_eq, assert_error, v_inline_array, v_string
 
 
 def v_tree(tree):
@@ -17,8 +17,7 @@ def gen_case(case):
         f"{v_string(case['input']['personA'])}, {v_string(case['input']['personB'])})"
     )
     if expected is None:
-        lines.append(f"separation := {call} or {{ -1 }}")
-        lines.append(assert_eq("separation", "-1"))
+        lines.append(assert_error(call, case, check_message=False))
     else:
         lines.append(assert_eq(f"{call}!", str(expected)))
     return lines
