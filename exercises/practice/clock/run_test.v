@@ -15,17 +15,17 @@ fn test_midnight_is_zero_hours() {
 	assert c.string() == '00:00'
 }
 
-fn test_hours_roll_over() {
+fn test_hour_rolls_over() {
 	c := new_clock(25, 0)
 	assert c.string() == '01:00'
 }
 
-fn test_hours_roll_over_continuously() {
+fn test_hour_rolls_over_continuously() {
 	c := new_clock(100, 0)
 	assert c.string() == '04:00'
 }
 
-fn test_60_minutes_is_next_hour() {
+fn test_sixty_minutes_is_next_hour() {
 	c := new_clock(1, 60)
 	assert c.string() == '02:00'
 }
@@ -50,7 +50,7 @@ fn test_hour_and_minutes_roll_over_continuously() {
 	assert c.string() == '11:01'
 }
 
-fn test_hour_and_minutes_roll_over_to_midnight() {
+fn test_hour_and_minutes_roll_over_to_exactly_midnight() {
 	c := new_clock(72, 8640)
 	assert c.string() == '00:00'
 }
@@ -85,17 +85,17 @@ fn test_negative_minutes_roll_over_continuously() {
 	assert c.string() == '16:40'
 }
 
-fn test_negative_60_minutes_previous_hour() {
+fn test_negative_sixty_minutes_is_previous_hour() {
 	c := new_clock(2, -60)
 	assert c.string() == '01:00'
 }
 
-fn test_negative_hour_and_minute_roll_over() {
+fn test_negative_hour_and_minutes_both_roll_over() {
 	c := new_clock(-25, -160)
 	assert c.string() == '20:20'
 }
 
-fn test_negative_hour_and_minute_roll_over_continuously() {
+fn test_negative_hour_and_minutes_both_roll_over_continuously() {
 	c := new_clock(-121, -5810)
 	assert c.string() == '22:10'
 }
@@ -136,7 +136,7 @@ fn test_add_across_midnight() {
 	assert c.string() == '00:01'
 }
 
-fn test_add_more_than_one_day() {
+fn test_add_more_than_one_day_1500_min_25_hrs() {
 	mut c := new_clock(5, 32)
 	c.add_time(1500)
 	assert c.string() == '06:32'
@@ -172,19 +172,19 @@ fn test_subtract_across_midnight() {
 	assert c.string() == '23:59'
 }
 
-fn test_subtract_more_than_2_hours() {
+fn test_subtract_more_than_two_hours() {
 	mut c := new_clock(0, 0)
 	c.subtract_time(160)
 	assert c.string() == '21:20'
 }
 
-fn test_subtract_more_than_2_hours_with_borrow() {
+fn test_subtract_more_than_two_hours_with_borrow() {
 	mut c := new_clock(6, 15)
 	c.subtract_time(160)
 	assert c.string() == '03:35'
 }
 
-fn test_subtract_more_than_one_day() {
+fn test_subtract_more_than_one_day_1500_min_25_hrs() {
 	mut c := new_clock(5, 32)
 	c.subtract_time(1500)
 	assert c.string() == '04:32'
@@ -196,7 +196,7 @@ fn test_subtract_more_than_two_days() {
 	assert c.string() == '00:20'
 }
 
-fn test_two_clocks_same_time() {
+fn test_clocks_with_same_time() {
 	c1 := new_clock(15, 37)
 	c2 := new_clock(15, 37)
 	assert c1 == c2
@@ -220,7 +220,7 @@ fn test_clocks_with_hour_overflow() {
 	assert c1 == c2
 }
 
-fn test_clocks_with_hour_overflow_by_days() {
+fn test_clocks_with_hour_overflow_by_several_days() {
 	c1 := new_clock(3, 11)
 	c2 := new_clock(99, 11)
 	assert c1 == c2
@@ -250,7 +250,7 @@ fn test_clocks_with_minute_overflow() {
 	assert c1 == c2
 }
 
-fn test_clocks_with_minute_overflow_by_days() {
+fn test_clocks_with_minute_overflow_by_several_days() {
 	c1 := new_clock(2, 2)
 	c2 := new_clock(2, 4322)
 	assert c1 == c2
@@ -274,13 +274,13 @@ fn test_clocks_with_negative_minute_that_wraps_multiple_times() {
 	assert c1 == c2
 }
 
-fn test_clocks_with_negative_hour_and_minute() {
+fn test_clocks_with_negative_hours_and_minutes() {
 	c1 := new_clock(7, 32)
 	c2 := new_clock(-12, -268)
 	assert c1 == c2
 }
 
-fn test_clocks_with_negative_hour_and_minute_that_wrap() {
+fn test_clocks_with_negative_hours_and_minutes_that_wrap() {
 	c1 := new_clock(18, 7)
 	c2 := new_clock(-54, -11513)
 	assert c1 == c2
