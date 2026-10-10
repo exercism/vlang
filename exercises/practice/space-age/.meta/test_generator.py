@@ -1,4 +1,4 @@
-from lib import assert_error, assert_true, is_error, v_float, v_string
+from lib import INDENT, assert_error, assert_true, is_error, v_float, v_string
 
 HEADER = """import math
 
@@ -11,4 +11,10 @@ def gen_case(case):
     call = f"age({case['input']['seconds']}, {v_string(case['input']['planet'])})"
     if is_error(case["expected"]):
         return assert_error(call, case, check_message=False)
-    return assert_true(f"close_enough({call}!, {v_float(case['expected'])})")
+    return [
+        f"if res := {call} {{",
+        INDENT + assert_true(f"close_enough(res, {v_float(case['expected'])})"),
+        "} else {",
+        INDENT + f"assert false, {v_string(call + ' should not return an error')}",
+        "}",
+    ]

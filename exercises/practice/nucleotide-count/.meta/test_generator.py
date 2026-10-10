@@ -1,4 +1,4 @@
-from lib import assert_eq, assert_error, is_error, v_string
+from lib import assert_error, assert_some, is_error, v_string
 
 
 def gen_case(case):
@@ -9,4 +9,5 @@ def gen_case(case):
         f"\n\t{v_string(nucleotide)}: {count}"
         for nucleotide, count in case["expected"].items()
     )
-    return assert_eq(f"{call}!", f"{{{counts}\n}}")
+    failure = f"{call} should not return an error"
+    return assert_some(call, f"{{{counts}\n}}", failure)

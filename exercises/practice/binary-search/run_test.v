@@ -1,27 +1,51 @@
 module main
 
 fn test_finds_a_value_in_an_array_with_one_element() {
-	assert find([6], 6)! == 0
+	if res := find([6], 6) {
+		assert res == 0
+	} else {
+		assert false, 'find([6], 6) should not return an error'
+	}
 }
 
 fn test_finds_a_value_in_the_middle_of_an_array() {
-	assert find([1, 3, 4, 6, 8, 9, 11], 6)! == 3
+	if res := find([1, 3, 4, 6, 8, 9, 11], 6) {
+		assert res == 3
+	} else {
+		assert false, 'find([1, 3, 4, 6, 8, 9, 11], 6) should not return an error'
+	}
 }
 
 fn test_finds_a_value_at_the_beginning_of_an_array() {
-	assert find([1, 3, 4, 6, 8, 9, 11], 1)! == 0
+	if res := find([1, 3, 4, 6, 8, 9, 11], 1) {
+		assert res == 0
+	} else {
+		assert false, 'find([1, 3, 4, 6, 8, 9, 11], 1) should not return an error'
+	}
 }
 
 fn test_finds_a_value_at_the_end_of_an_array() {
-	assert find([1, 3, 4, 6, 8, 9, 11], 11)! == 6
+	if res := find([1, 3, 4, 6, 8, 9, 11], 11) {
+		assert res == 6
+	} else {
+		assert false, 'find([1, 3, 4, 6, 8, 9, 11], 11) should not return an error'
+	}
 }
 
 fn test_finds_a_value_in_an_array_of_odd_length() {
-	assert find([1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 634], 144)! == 9
+	if res := find([1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 634], 144) {
+		assert res == 9
+	} else {
+		assert false, 'find([1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 634], 144) should not return an error'
+	}
 }
 
 fn test_finds_a_value_in_an_array_of_even_length() {
-	assert find([1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377], 21)! == 5
+	if res := find([1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377], 21) {
+		assert res == 5
+	} else {
+		assert false, 'find([1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377], 21) should not return an error'
+	}
 }
 
 fn test_identifies_that_a_value_is_not_included_in_the_array() {

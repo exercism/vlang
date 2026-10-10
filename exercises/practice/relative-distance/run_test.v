@@ -5,14 +5,22 @@ fn test_direct_parent_child_relation() {
 		'Vera':   ['Tomoko']
 		'Tomoko': ['Aditi']
 	}
-	assert degree_of_separation(tree, 'Vera', 'Tomoko')! == 1
+	if res := degree_of_separation(tree, 'Vera', 'Tomoko') {
+		assert res == 1
+	} else {
+		assert false, "degree_of_separation(tree, 'Vera', 'Tomoko') should not return an error"
+	}
 }
 
 fn test_sibling_relationship() {
 	tree := {
 		'Dalia': ['Olga', 'Yassin']
 	}
-	assert degree_of_separation(tree, 'Olga', 'Yassin')! == 1
+	if res := degree_of_separation(tree, 'Olga', 'Yassin') {
+		assert res == 1
+	} else {
+		assert false, "degree_of_separation(tree, 'Olga', 'Yassin') should not return an error"
+	}
 }
 
 fn test_two_degrees_of_separation_grandchild() {
@@ -20,7 +28,11 @@ fn test_two_degrees_of_separation_grandchild() {
 		'Khadija': ['Mateo']
 		'Mateo':   ['Rami']
 	}
-	assert degree_of_separation(tree, 'Khadija', 'Rami')! == 2
+	if res := degree_of_separation(tree, 'Khadija', 'Rami') {
+		assert res == 2
+	} else {
+		assert false, "degree_of_separation(tree, 'Khadija', 'Rami') should not return an error"
+	}
 }
 
 fn test_unrelated_individuals() {
@@ -90,7 +102,11 @@ fn test_complex_graph_cousins() {
 		'Yassin':  ['Lucia']
 		'Zara':    ['Mohammed']
 	}
-	assert degree_of_separation(tree, 'Dimitri', 'Fabio')! == 9
+	if res := degree_of_separation(tree, 'Dimitri', 'Fabio') {
+		assert res == 9
+	} else {
+		assert false, "degree_of_separation(tree, 'Dimitri', 'Fabio') should not return an error"
+	}
 }
 
 fn test_complex_graph_no_shortcut_far_removed_nephew() {
@@ -148,7 +164,11 @@ fn test_complex_graph_no_shortcut_far_removed_nephew() {
 		'Yassin':  ['Lucia']
 		'Zara':    ['Mohammed']
 	}
-	assert degree_of_separation(tree, 'Lucia', 'Jun')! == 14
+	if res := degree_of_separation(tree, 'Lucia', 'Jun') {
+		assert res == 14
+	} else {
+		assert false, "degree_of_separation(tree, 'Lucia', 'Jun') should not return an error"
+	}
 }
 
 fn test_complex_graph_some_shortcuts_cross_down_and_cross_up_cousins_several_times_removed_with_unrelated_family_tree() {
@@ -205,5 +225,9 @@ fn test_complex_graph_some_shortcuts_cross_down_and_cross_up_cousins_several_tim
 		'Yassin':  ['Lucia']
 		'Zara':    ['Mohammed']
 	}
-	assert degree_of_separation(tree, 'Wyatt', 'Xia')! == 12
+	if res := degree_of_separation(tree, 'Wyatt', 'Xia') {
+		assert res == 12
+	} else {
+		assert false, "degree_of_separation(tree, 'Wyatt', 'Xia') should not return an error"
+	}
 }
