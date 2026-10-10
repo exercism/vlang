@@ -2,7 +2,6 @@ fn (mut s Search) enqueue(c1, c2 int) {
 	if s.seen[s.id_for_state(c1, c2)] { return }
 	s.queue << State{c1, c2}; s.seen[s.id_for_state(c1, c2)] = true
 }
-
 for front < s.queue.len {
 	if s.queue[front].contents_one == goal { return Solution{moves, .one, ...} }
 	s.enqueue(...); front++

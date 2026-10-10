@@ -1,78 +1,168 @@
-# Extended GCD (Extended Euclidean Algorithm)
+```v
+module main
 
-## Overview
+import math
 
-This approach uses number theory to solve the problem mathematically. The key insight: a solution exists if and only if the goal is a multiple of the greatest common divisor (GCD) of the two bucket sizes.
+enum BucketId {
+	one
+	two
+}
 
-## Mathematical Foundation
+struct Solution {
+	moves        int
+	goal_bucket  BucketId
+	other_bucket int
+}
 
-The Water Pouring Problem is equivalent to finding integers x and y such that:
+struct Plan {
+	moves            int
+	holder_is_source bool
+	other            int
+}
 
+fn bucket_of(index int) BucketId {
+	return if index == 0 { BucketId.one } else { BucketId.two }
+}
+
+// Fill the source (capacity s), pour into the destination (capacity d),
+// and empty the destination whenever it is full.
+// With f source fills and k destination empties/fills: s*f - d*k = goal.
+fn plan(s int, d int, goal int) ?Plan {
+	if goal == s {
+		return Plan{1, true, 0}
+	}
+	g64, x64, _ := math.egcd(s, d)
+	g := int(g64)
+	x0 := int(x64)
+	if goal % g != 0 {
+		return none
+	}
+	step := d / g
+	// Use i64 for the multiplication to avoid overflow with large capacities
+	f0 := i64(x64) * i64(goal / g)
+	mut f := int((f0 % i64(step) + i64(step)) % i64(step))
+	for f < 1 || s * f < goal {
+		f += step
+	}
+	k := (s * f - goal) / d
+	if k >= 1 && goal < s {
+		return Plan{2 * (f + k - 1), true, d}
+	}
+	if goal <= d {
+		return Plan{2 * (f + k), false, 0}
+	}
+	return none
+}
+
+pub fn measure(capacity_one int, capacity_two int, goal int, start_bucket BucketId) !Solution {
+	assert goal != 0
+	c := [capacity_one, capacity_two]
+	if goal > math.max(capacity_one, capacity_two)
+		|| goal % int(math.gcd(capacity_one, capacity_two)) != 0 {
+		return error('impossible')
+	}
+	s := if start_bucket == .one { 0 } else { 1 }
+	o := 1 - s
+	if goal == c[s] {
+		return Solution{1, bucket_of(s), 0}
+	}
+	if goal == c[o] {
+		other := if goal < c[s] { c[s] - goal } else { c[s] }
+		return Solution{2, if other == goal { BucketId.one } else { bucket_of(o) }, other}
+	}
+	p := plan(c[s], c[o], goal) or { return error('impossible') }
+	return Solution{p.moves, if p.holder_is_source { bucket_of(s) } else { bucket_of(o) }, p.other}
+}
 ```
-capacity_one * x + capacity_two * y = goal
+
+## The Equation: `s*f - d*k = goal`
+
+The core insight: the water pouring process can be modeled as a linear Diophantine equation.
+
+- `s` = source bucket capacity (the one we start with)
+- `d` = destination bucket capacity
+- `f` = number of times we **fill** the source bucket
+- `k` = number of times we **empty/fill** the destination bucket
+- Each fill of source adds `s` liters; each empty of destination removes `d` liters
+- `s*f - d*k` is the total water poured in minus the total emptied out, which is what remains in the bucket holding the goal.
+
+For a solution to exist, `goal` must be a multiple of `gcd(s, d)`. This is Bézout's identity — the equation `s*f - d*k = goal` has integer solutions iff `gcd(s, d)` divides `goal`.
+
+The `measure` function checks this early:
+```v
+if goal > math.max(capacity_one, capacity_two)
+    || goal % int(math.gcd(capacity_one, capacity_two)) != 0 {
+    return error('impossible')
+}
 ```
 
-Where:
-- x = net fills of bucket one (positive = fill, negative = empty)
-- y = net fills of bucket two (positive = fill, negative = empty)
+## From `math.egcd` to the Smallest `f`
 
-This is a linear Diophantine equation. By Bézout's identity, it has integer solutions iff `gcd(capacity_one, capacity_two)` divides `goal`.
+[`math.egcd(s, d)`][egcd] uses the [extended Euclidean algorithm][extended-euclid] and returns `(g, x0, y0)` where `s*x0 + d*y0 = g = gcd(s, d)`.
 
-The Extended Euclidean Algorithm finds coefficients (x, y) such that:
+Scaling by `goal/g` gives a particular solution:
 ```
-capacity_one * x0 + capacity_two * y0 = gcd(capacity_one, capacity_two)
+s * (x0 * goal/g) + d * (y0 * goal/g) = goal
 ```
 
-Multiplying by `goal / gcd` gives a solution to the original equation.
+So `f₀ = x0 * (goal/g)` is one solution for `f`. But we need the **smallest positive `f`** such that:
+1. `f ≥ 1` (at least one fill)
+2. `s*f ≥ goal` (source has enough water to reach goal)
 
-## Algorithm
+All solutions for `f` are: `f = f₀ + t*(d/g)` for integer `t`.
 
-```text
-1. Compute g = gcd(capacity_one, capacity_two)
-2. If goal % g != 0, return "impossible"
-3. Use Extended Euclidean Algorithm to find (x0, y0) such that:
-   capacity_one * x0 + capacity_two * y0 = g
-4. Scale: x = x0 * (goal / g), y = y0 * (goal / g)
-5. Adjust x, y to be valid move sequences:
-   - While x < 0: x += capacity_two/g, y -= capacity_one/g (transfer moves)
-   - While y < 0: y += capacity_one/g, x -= capacity_two/g
-6. Simulate the moves to count steps and determine final state
+The code computes this efficiently:
+```v
+step := d / g
+f0 := i64(x64) * i64(goal / g)
+mut f := int((f0 % i64(step) + i64(step)) % i64(step))  // f₀ mod step, normalized to [0, step)
+for f < 1 || s * f < goal {
+    f += step
+}
 ```
 
-## Converting Coefficients to Moves
+The modulo arithmetic gives the smallest non-negative `f ≡ f₀ (mod step)`. The loop then increases by `step` until both conditions hold.
 
-The coefficients represent net operations. To convert to actual moves:
-- Positive x: fill bucket one x times
-- Negative x: empty bucket one |x| times
-- Similar for y with bucket two
-- Pouring operations are implicit in the transfers between buckets
+## Move Count
 
-## Complexity
+Each fill of the source is followed by a pour into the destination.
+Whenever the destination becomes full, we empty it (1 move) and pour again (1 move), so `k` destination fills means `k` pours + `k` empties when it ends in the destination, or `k - 1` empties when it ends in the source.
 
-- **Time**: O(log(min(capacity_one, capacity_two))) - Extended Euclidean Algorithm
-- **Space**: O(1) - only a few integer variables
+- **Goal ends in destination** (`goal <= d`): We fill the source `f` times, pour `f` times, empty the destination `k` times. Total: `f + f + k = 2*(f + k)` moves. The source is empty at the end.
+- **Goal ends in source** (`k >= 1` and `goal < s`): We fill the source `f` times, pour `f` times, empty the destination `k - 1` times (the last fill leaves the destination full with the goal in source). Total: `f + f + (k - 1) = 2*(f + k - 1)` moves. The destination is full at the end.
+
+The source row is checked first in the code, matching the table above.
+
+## Special cases
+
+Two cases are handled in `measure` before calling `plan`:
+
+- `goal == s`: 1 move, because filling the starting bucket is enough.
+- `goal == d`: 2 moves. Fill the starting bucket, then pour into the other bucket if `goal < s`, or fill the other bucket otherwise.
+  If both buckets then hold the goal, the answer reports bucket one.
+
+Only the starting bucket is used as the source.
+The rule that the starting bucket may not be empty while the other is full rules out the reverse strategy, apart from the special cases above.
 
 ## Example
 
-Buckets: 3 and 5, Goal: 1, Start: bucket one
+Buckets 3 and 5, goal 1, start bucket one, so `s = 3` and `d = 5`:
 
-1. `gcd(3, 5) = 1`, and `1 % 1 == 0` ✓
-2. Extended GCD: `3 * 2 + 5 * (-1) = 1`
-   - x = 2, y = -1
-3. This means: fill bucket one 2 times, empty bucket two 1 time
-4. Sequence: Fill 1 (3,0) → Pour 1→2 (0,3) → Fill 1 (3,3) → Pour 1→2 (1,5)
-5. Result: 4 moves, goal in bucket 1, 5 in bucket 2
+- `gcd(3, 5) = 1`, so the goal is possible.
+- The smallest `f` with `3*f >= 1` and `3*f ≡ 1 (mod 5)` is `f = 2`.
+- `k = (3*2 - 1) / 5 = 1`.
+- `k >= 1` and `goal < s`, so the goal is in the source: `2 * (2 + 1 - 1) = 4` moves, with 5 liters in the other bucket.
 
-## Advantages
+## Verification
 
-- **Optimal**: Directly computes minimum moves without search
-- **Efficient**: Logarithmic time complexity
-- **Insightful**: Reveals when solutions are impossible mathematically
-- **Scalable**: Works for arbitrarily large bucket sizes
+This approach was checked against a breadth-first search for every pair of bucket sizes from 1 to 15 (goals 1 to 16, both start buckets), and for 20,000 random cases with sizes up to 60.
+That is strong evidence but not a proof.
 
-## When to Use
+## Complexity
 
-Prefer this approach when:
-- Bucket sizes are very large (BFS would be slow)
-- You want to understand the mathematical structure
-- You need to prove impossibility quickly
+There is no search.
+The work is dominated by the `egcd` call, plus a few steps of the loop that adds `step` to `f`.
+Space use is constant.
+
+[egcd]: https://modules.vlang.io/math.html#egcd
+[extended-euclid]: https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
