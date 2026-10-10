@@ -1,4 +1,4 @@
-from lib import assert_eq, assert_error, is_error, v_inline_array
+from lib import assert_error, assert_some, is_error, v_inline_array
 
 
 def gen_case(case):
@@ -6,4 +6,5 @@ def gen_case(case):
     call = f"find({array}, {case['input']['value']})"
     if is_error(case["expected"]):
         return assert_error(call, case)
-    return assert_eq(f"{call}!", str(case["expected"]))
+    failure = f"{call} should not return an error"
+    return assert_some(call, str(case["expected"]), failure)

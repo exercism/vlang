@@ -7,35 +7,67 @@ fn close_enough(a f64, b f64) bool {
 }
 
 fn test_age_on_earth() {
-	assert close_enough(age(1000000000, 'Earth')!, 31.69)
+	if res := age(1000000000, 'Earth') {
+		assert close_enough(res, 31.69)
+	} else {
+		assert false, "age(1000000000, 'Earth') should not return an error"
+	}
 }
 
 fn test_age_on_mercury() {
-	assert close_enough(age(2134835688, 'Mercury')!, 280.88)
+	if res := age(2134835688, 'Mercury') {
+		assert close_enough(res, 280.88)
+	} else {
+		assert false, "age(2134835688, 'Mercury') should not return an error"
+	}
 }
 
 fn test_age_on_venus() {
-	assert close_enough(age(189839836, 'Venus')!, 9.78)
+	if res := age(189839836, 'Venus') {
+		assert close_enough(res, 9.78)
+	} else {
+		assert false, "age(189839836, 'Venus') should not return an error"
+	}
 }
 
 fn test_age_on_mars() {
-	assert close_enough(age(2129871239, 'Mars')!, 35.88)
+	if res := age(2129871239, 'Mars') {
+		assert close_enough(res, 35.88)
+	} else {
+		assert false, "age(2129871239, 'Mars') should not return an error"
+	}
 }
 
 fn test_age_on_jupiter() {
-	assert close_enough(age(901876382, 'Jupiter')!, 2.41)
+	if res := age(901876382, 'Jupiter') {
+		assert close_enough(res, 2.41)
+	} else {
+		assert false, "age(901876382, 'Jupiter') should not return an error"
+	}
 }
 
 fn test_age_on_saturn() {
-	assert close_enough(age(2000000000, 'Saturn')!, 2.15)
+	if res := age(2000000000, 'Saturn') {
+		assert close_enough(res, 2.15)
+	} else {
+		assert false, "age(2000000000, 'Saturn') should not return an error"
+	}
 }
 
 fn test_age_on_uranus() {
-	assert close_enough(age(1210123456, 'Uranus')!, 0.46)
+	if res := age(1210123456, 'Uranus') {
+		assert close_enough(res, 0.46)
+	} else {
+		assert false, "age(1210123456, 'Uranus') should not return an error"
+	}
 }
 
 fn test_age_on_neptune() {
-	assert close_enough(age(1821023456, 'Neptune')!, 0.35)
+	if res := age(1821023456, 'Neptune') {
+		assert close_enough(res, 0.35)
+	} else {
+		assert false, "age(1821023456, 'Neptune') should not return an error"
+	}
 }
 
 fn test_invalid_planet_causes_error() {

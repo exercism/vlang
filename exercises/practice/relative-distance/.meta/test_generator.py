@@ -1,4 +1,4 @@
-from lib import assert_eq, assert_error, v_inline_array, v_string
+from lib import assert_error, assert_some, v_inline_array, v_string
 
 
 def v_tree(tree):
@@ -19,5 +19,6 @@ def gen_case(case):
     if expected is None:
         lines.append(assert_error(call, case, check_message=False))
     else:
-        lines.append(assert_eq(f"{call}!", str(expected)))
+        failure = f"{call} should not return an error"
+        lines.append(assert_some(call, str(expected), failure))
     return lines
