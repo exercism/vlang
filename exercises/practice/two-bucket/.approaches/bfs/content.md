@@ -1,3 +1,5 @@
+# Breadth First Search (BFS)
+
 ```v
 module main
 
@@ -149,8 +151,6 @@ pub fn measure(capacity_one int, capacity_two int, goal int, start_bucket Bucket
 	return error('impossible')
 }
 ```
-
-# Breadth First Search (BFS)
 
 This approach models the two-bucket problem as a **state space search** using **Breadth-First Search (BFS)**.
 Each state represents the amount of water in both buckets.

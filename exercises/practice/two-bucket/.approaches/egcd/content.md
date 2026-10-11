@@ -1,3 +1,5 @@
+# Extended GCD (Mathematical Approach)
+
 ```v
 module main
 
@@ -74,8 +76,6 @@ pub fn measure(capacity_one int, capacity_two int, goal int, start_bucket Bucket
 	return Solution{p.moves, if p.holder_is_source { bucket_of(s) } else { bucket_of(o) }, p.other}
 }
 ```
-
-# Extended GCD (Mathematical Approach)
 
 ## The Equation: `s*f - d*k = goal`
 
