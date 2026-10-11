@@ -8,7 +8,7 @@ There are two main approaches to solve this:
 
 Model the problem as a state space search. Each state represents the amount of water in each bucket. BFS explores all possible states level by level, guaranteeing the shortest path (minimum moves) to the goal.
 
-This is the approach used in the example solution. It's intuitive and works well for the problem constraints.
+It's intuitive and works well for the problem constraints.
 
 Key idea: After every move, at least one bucket is empty or full. This bounds the state space to `2 * (capacity_one + capacity_two)` valid states, each mapped to a unique ID for O(1) visited checks. The `capacity_one`, `capacity_two`, and `combined_capacity` values come from the `Search` struct.
 
@@ -57,7 +57,7 @@ For more information, check the [Extended GCD approach][approach-egcd].
 | **Scalability** | Slows down with large buckets | Fast for large buckets |
 | **Insight** | Shows the pouring sequence | Reveals *when* solutions exist |
 
-- **BFS**: Simpler to understand and implement. Good for learning state space search. The example solution uses this.
+- **BFS**: Simpler to understand and implement. Good for learning state space search.
 - **Extended GCD**: More elegant mathematically. Better performance for very large buckets. Recommended if you're comfortable with number theory.
 
 [approach-bfs]: https://exercism.org/tracks/vlang/exercises/two-bucket/approaches/bfs
