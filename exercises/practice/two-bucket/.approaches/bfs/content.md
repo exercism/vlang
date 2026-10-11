@@ -150,30 +150,42 @@ pub fn measure(capacity_one int, capacity_two int, goal int, start_bucket Bucket
 }
 ```
 
-This approach models the two-bucket problem as a **state space search** using **Breadth-First Search (BFS)**. Each state represents the amount of water in both buckets. BFS explores states level by level, guaranteeing the minimum number of moves to reach the goal.
+# Breadth First Search (BFS)
+
+This approach models the two-bucket problem as a **state space search** using **Breadth-First Search (BFS)**.
+Each state represents the amount of water in both buckets.
+BFS explores states level by level, guaranteeing the minimum number of moves to reach the goal.
 
 ## Data Structures
 
 ### `State`
-Represents a single configuration: `(contents_one, contents_two)` -- liters in each bucket. See [structs][structs].
+
+Represents a single configuration: `(contents_one, contents_two)` -- liters in each bucket.
+See [structs][structs].
 
 ### `Search`
+
 Holds the search state:
 - `capacity_one`, `capacity_two` -- bucket sizes
 - `seen` -- boolean [array][arrays] tracking visited states (indexed by `id_for_state`)
 - `queue` -- slice of `State` for BFS frontier
 
 ### `Solution`
-Return value: `moves`, `goal_bucket` (which bucket has the goal), `other_bucket` (liters in the other bucket). The function returns `!Solution` -- see [error handling][error-handling].
+
+Return value: `moves`, `goal_bucket` (which bucket has the goal), `other_bucket` (liters in the other bucket).
+The function returns `!Solution` -- see [error handling][error-handling].
 
 ## Key Functions
 
 ### `id_for_state`
+
 Maps each valid state to a unique integer ID for O(1) visited checks.
 
-**Insight**: After every move, at least one bucket is empty or full. Valid states form a bounded set of size `2 * (capacity_one + capacity_two)`.
+**Insight**: After every move, at least one bucket is empty or full.
+Valid states form a bounded set of size `2 * (capacity_one + capacity_two)`.
 
 The mapping:
+
 | Condition | ID Range | Meaning |
 |-----------|----------|---------|
 | `contents_one == 0` | `0 .. capacity_two` | Bucket 1 empty, bucket 2 varies |
@@ -181,15 +193,21 @@ The mapping:
 | `contents_one == capacity_one` | `combined_capacity .. combined_capacity + capacity_two` | Bucket 1 full, bucket 2 decreases |
 | `contents_two == 0` | `combined_capacity + capacity_two .. 2*combined_capacity` | Bucket 2 empty, bucket 1 decreases |
 
-The `panic('invalid state')` is unreachable during the search, because every state the search creates has at least one bucket empty or full. Note that `(0,0)` is a valid state the search can visit (both buckets empty).
+The `panic('invalid state')` is unreachable during the search, because every state the search creates has at least one bucket empty or full.
+Note that `(0,0)` is a valid state the search can visit (both buckets empty).
 
 ### `enqueue`
-Adds a state to the BFS queue if not already visited. Uses `id_for_state` for deduplication.
+
+Adds a state to the BFS queue if not already visited.
+Uses `id_for_state` for deduplication.
 
 ### `exclude`
-Marks a state as visited without enqueueing. Used to **exclude the invalid starting state** where the non-starting bucket is full while the starting bucket is empty (per problem rules).
+
+Marks a state as visited without enqueueing.
+Used to **exclude the invalid starting state** where the non-starting bucket is full while the starting bucket is empty (per problem rules).
 
 ### `new_search`
+
 Initializes `seen` array (size `2*(c1+c2)`) and `queue` with capacity for all possible states.
 
 ## Algorithm: `measure`

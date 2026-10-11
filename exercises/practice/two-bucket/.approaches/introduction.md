@@ -1,16 +1,22 @@
 # Introduction
 
-The Two Bucket problem asks you to measure an exact amount of water using two buckets of different sizes. You can fill, empty, and pour between buckets. The challenge is to find the minimum number of moves.
+The Two Bucket problem asks you to measure an exact amount of water using two buckets of different sizes.
+You can fill, empty, and pour between buckets.
+The challenge is to find the minimum number of moves.
 
 There are two main approaches to solve this:
 
 ## Breadth-First Search (BFS)
 
-Model the problem as a state space search. Each state represents the amount of water in each bucket. BFS explores all possible states level by level, guaranteeing the shortest path (minimum moves) to the goal.
+Model the problem as a state space search.
+Each state represents the amount of water in each bucket.
+BFS explores all possible states level by level, guaranteeing the shortest path (minimum moves) to the goal.
 
 It's intuitive and works well for the problem constraints.
 
-Key idea: After every move, at least one bucket is empty or full. This bounds the state space to `2 * (capacity_one + capacity_two)` valid states, each mapped to a unique ID for O(1) visited checks. The `capacity_one`, `capacity_two`, and `combined_capacity` values come from the `Search` struct.
+Key idea: After every move, at least one bucket is empty or full.
+This bounds the state space to `2 * (capacity_one + capacity_two)` valid states, each mapped to a unique ID for O(1) visited checks.
+The `capacity_one`, `capacity_two`, and `combined_capacity` values come from the `Search` struct.
 
 ```v
 fn (search Search) id_for_state(contents_one int, contents_two int) int {
@@ -26,7 +32,8 @@ For more information, check the [BFS approach][approach-bfs].
 
 ## Extended GCD (Mathematical Approach)
 
-Use number theory: a solution exists if and only if the goal is a multiple of the GCD of the two bucket sizes. The Extended Euclidean Algorithm finds the coefficients to express the GCD as a linear combination of the bucket sizes, which directly gives the solution without searching.
+Use number theory: a solution exists if and only if the goal is a multiple of the GCD of the two bucket sizes.
+The Extended Euclidean Algorithm finds the coefficients to express the GCD as a linear combination of the bucket sizes, which directly gives the solution without searching.
 
 Core equation: `s*f - d*k = goal` where `s` = source bucket capacity, `d` = destination bucket capacity, `f` = source fills, `k` = destination empties/fills.
 
@@ -43,7 +50,8 @@ for f < 1 || s * f < goal {
 k := (s * f - goal) / d
 ```
 
-**Note**: The multiplications can overflow V's 32-bit `int` once capacity₁ × capacity₂ exceeds about 2 billion. For typical exercise inputs this is not an issue.
+**Note**: The multiplications can overflow V's 32-bit `int` once capacity₁ × capacity₂ exceeds about 2 billion.
+For typical exercise inputs this is not an issue.
 
 For more information, check the [Extended GCD approach][approach-egcd].
 

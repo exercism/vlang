@@ -75,6 +75,8 @@ pub fn measure(capacity_one int, capacity_two int, goal int, start_bucket Bucket
 }
 ```
 
+# Extended GCD (Mathematical Approach)
+
 ## The Equation: `s*f - d*k = goal`
 
 The core insight: the water pouring process can be modeled as a linear Diophantine equation.
@@ -86,7 +88,8 @@ The core insight: the water pouring process can be modeled as a linear Diophanti
 - Each fill of source adds `s` liters; each empty of destination removes `d` liters
 - `s*f - d*k` is the total water poured in minus the total emptied out, which is what remains in the bucket holding the goal.
 
-For a solution to exist, `goal` must be a multiple of `gcd(s, d)`. This is Bézout's identity — the equation `s*f - d*k = goal` has integer solutions iff `gcd(s, d)` divides `goal`.
+For a solution to exist, `goal` must be a multiple of `gcd(s, d)`.
+This is Bézout's identity — the equation `s*f - d*k = goal` has integer solutions iff `gcd(s, d)` divides `goal`.
 
 The `measure` function checks this early:
 ```v
@@ -105,7 +108,8 @@ Scaling by `goal/g` gives a particular solution:
 s * (x0 * goal/g) + d * (y0 * goal/g) = goal
 ```
 
-So `f₀ = x0 * (goal/g)` is one solution for `f`. But we need the **smallest positive `f`** such that:
+So `f₀ = x0 * (goal/g)` is one solution for `f`.
+But we need the **smallest positive `f`** such that:
 1. `f ≥ 1` (at least one fill)
 2. `s*f ≥ goal` (source has enough water to reach goal)
 
@@ -121,7 +125,8 @@ for f < 1 || s * f < goal {
 }
 ```
 
-The modulo arithmetic gives the smallest non-negative `f ≡ f₀ (mod step)`. The loop then increases by `step` until both conditions hold.
+The modulo arithmetic gives the smallest non-negative `f ≡ f₀ (mod step)`.
+The loop then increases by `step` until both conditions hold.
 
 ## Move Count
 
