@@ -1,8 +1,17 @@
 # Exercism V Track
 
-[![Configlet](https://github.com/exercism/vlang/actions/workflows/configlet.yml/badge.svg?branch=main)](https://github.com/exercism/vlang/actions/workflows/configlet.yml) [![V / Test](https://github.com/exercism/vlang/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/exercism/vlang/actions/workflows/test.yml)
+[![Configlet](https://github.com/exercism/vlang/actions/workflows/configlet.yml/badge.svg?branch=main)](https://github.com/exercism/vlang/actions/workflows/configlet.yml) [![V / Test](https://github.com/exercism/vlang/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/exercism/vlang/actions/workflows/test.yml) [![Contributions: PAUSED](https://img.shields.io/badge/PAUSED-C73D4E?labelColor=3D454D&label=Contributions)](https://exercism.org/blog/freeing-our-maintainers)
 
 Exercism exercises in V.
+
+> [!IMPORTANT]
+> **We are not accepting community contributions at this time.**
+>
+> We love our community, and we're grateful you are interested in improving the V track.
+> But our maintainers are not accepting community issues or pull requests at this time.
+> If you would like to suggest a change or discuss an issue, please open a thread in the [V section of the Exercism forum](https://forum.exercism.org/c/programming/vlang/168).
+>
+> This [community blog post](https://exercism.org/blog/freeing-our-maintainers) contains more details.
 
 ## Testing
 
@@ -43,6 +52,9 @@ Basic linting finished successfully:
 
 ## Contributing
 
+Community contributions are currently paused (see above).
+The information below is for the track maintainers.
+
 ### General Information (useful for all contributions)
 
 #### Setting up V
@@ -61,7 +73,7 @@ Use [conventional comments](https://conventionalcomments.org/)
 
 ### Issues
 
-Opening new issues is highly encouraged! To make the process as smooth as possible, please include as much information as possible about the issue. Better to have more information than not enough.
+Please raise problems and suggestions in the [V section of the Exercism forum](https://forum.exercism.org/c/programming/vlang/168) rather than opening issues here. To make the process as smooth as possible, please include as much information as possible about the issue.
 
 ### Pull requests
 
