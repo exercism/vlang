@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "metif12"
+  ],
+  "files": {
+    "solution": [
+      "alphametics.v"
+    ],
+    "test": [
+      "run_test.v"
+    ],
+    "example": [
+      ".meta/example.v"
+    ]
+  },
+  "blurb": "Given an alphametics puzzle, find the correct solution."
+}
