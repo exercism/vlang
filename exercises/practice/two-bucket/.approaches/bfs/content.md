@@ -160,20 +160,20 @@ BFS explores states level by level, guaranteeing the minimum number of moves to 
 
 ### `State`
 
-Represents a single configuration: `(contents_one, contents_two)` -- liters in each bucket.
+Represents a single configuration: `(contents_one, contents_two)` - liters in each bucket.
 See [structs][structs].
 
 ### `Search`
 
 Holds the search state:
-- `capacity_one`, `capacity_two` -- bucket sizes
-- `seen` -- boolean [array][arrays] tracking visited states (indexed by `id_for_state`)
-- `queue` -- slice of `State` for BFS frontier
+- `capacity_one`, `capacity_two` - bucket sizes
+- `seen` - boolean [array][arrays] tracking visited states (indexed by `id_for_state`)
+- `queue` - slice of `State` for BFS frontier
 
 ### `Solution`
 
 Return value: `moves`, `goal_bucket` (which bucket has the goal), `other_bucket` (liters in the other bucket).
-The function returns `!Solution` -- see [error handling][error-handling].
+The function returns `!Solution` - see [error handling][error-handling].
 
 ## Key Functions
 
@@ -212,7 +212,7 @@ Initializes `seen` array (size `2*(c1+c2)`) and `queue` with capacity for all po
 
 ## Algorithm: `measure`
 
-1. **Assert**: `goal != 0` -- see [assert][assert] (assertion, not an error return).
+1. **Assert**: `goal != 0` - see [assert][assert] (assertion, not an error return).
 2. **Initialize search** with capacities.
 3. **Set starting state**:
    - If `start_bucket == one`: enqueue `(capacity_one, 0)`, exclude `(0, capacity_two)`
@@ -243,8 +243,8 @@ Initializes `seen` array (size `2*(c1+c2)`) and `queue` with capacity for all po
 
 ## Complexity
 
-- **Time**: O(capacity_one + capacity_two) -- there are at most `2 * (capacity_one + capacity_two)` valid states and each generates up to 6 moves.
-- **Space**: O(capacity_one + capacity_two) -- `seen` array + queue.
+- **Time**: O(capacity_one + capacity_two) - there are at most `2 * (capacity_one + capacity_two)` valid states and each generates up to 6 moves.
+- **Space**: O(capacity_one + capacity_two) - `seen` array + queue.
 
 ## Example Walkthrough
 
@@ -261,9 +261,9 @@ Result: 4 moves, goal in bucket 1, 5 liters in bucket 2
 
 ## Why BFS?
 
-- **Guarantees optimal** (minimum moves) -- explores all states at distance N before N+1
-- **Simple to understand and implement** -- no advanced math required
-- **Works within problem constraints** -- the number of states grows with bucket sizes, so it's fine for exercise inputs
+- **Guarantees optimal** (minimum moves) - explores all states at distance N before N+1
+- **Simple to understand and implement** - no advanced math required
+- **Works within problem constraints** - the number of states grows with bucket sizes, so it's fine for exercise inputs
 
 [arrays]: https://github.com/vlang/v/blob/master/doc/docs.md#arrays
 [structs]: https://github.com/vlang/v/blob/master/doc/docs.md#structs
