@@ -248,14 +248,6 @@
         "difficulty": 2
       },
       {
-        "slug": "save-the-cow",
-        "name": "Save the Cow",
-        "uuid": "caa092c5-9690-4e42-8cce-50354f73ec70",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4
-      },
-      {
         "slug": "sum-of-multiples",
         "name": "Sum of Multiples",
         "uuid": "18b7fc26-c45b-41a0-a1b4-4dc82766d2df",
@@ -649,6 +641,14 @@
         "difficulty": 4
       },
       {
+        "slug": "save-the-cow",
+        "name": "Save the Cow",
+        "uuid": "caa092c5-9690-4e42-8cce-50354f73ec70",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "2f6e7c12-46f5-44aa-a448-b0126769eee7",
@@ -897,14 +897,6 @@
         "difficulty": 6
       },
       {
-        "slug": "alphametics",
-        "name": "Alphametics",
-        "uuid": "6bc81316-fcb8-4fa3-b77c-4b711b0e1fc0",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 7
-      },
-      {
         "slug": "book-store",
         "name": "Book Store",
         "uuid": "e78129ce-83a8-4df6-89c0-48f3ab2a1d00",
@@ -927,6 +919,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 7
+      },
+      {
+        "slug": "alphametics",
+        "name": "Alphametics",
+        "uuid": "6bc81316-fcb8-4fa3-b77c-4b711b0e1fc0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
       },
       {
         "slug": "connect",

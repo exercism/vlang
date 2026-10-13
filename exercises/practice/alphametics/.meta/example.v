@@ -2,7 +2,7 @@ module main
 
 // solve solves an alphametics puzzle such as `SEND + MORE == MONEY` and returns
 // the digit of every letter, or none when the puzzle has no solution.
-fn solve(puzzle string) ?map[string]int {
+fn solve(puzzle string) ?map[rune]int {
 	halves := puzzle.replace(' ', '').split('==')
 	if halves.len != 2 {
 		return none
@@ -55,10 +55,10 @@ fn (s &Solver) digit(letter u8) int {
 }
 
 // answer returns the solution keyed by the letters of the puzzle.
-fn (s &Solver) answer() map[string]int {
-	mut answer := map[string]int{}
+fn (s &Solver) answer() map[rune]int {
+	mut answer := map[rune]int{}
 	for letter, digit in s.values {
-		answer[letter.ascii_str()] = digit
+		answer[rune(letter)] = digit
 	}
 	return answer
 }

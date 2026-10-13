@@ -8,5 +8,5 @@ module main
 //
 // solve returns the digit of every letter of the puzzle, keyed by the letter,
 // or none when the puzzle has no solution at all.
-fn solve(puzzle string) ?map[string]int {
+fn solve(puzzle string) ?map[rune]int {
 }
