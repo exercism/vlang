@@ -160,7 +160,7 @@ BFS explores states level by level, guaranteeing the minimum number of moves to 
 
 ### `State`
 
-Represents a single configuration: `(contents_one, contents_two)` - liters in each bucket.
+Represents the number of liters in each bucket.
 See [structs][structs].
 
 ### `Search`
