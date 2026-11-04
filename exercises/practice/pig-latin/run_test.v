@@ -89,5 +89,5 @@ fn test_position_of_y_in_a_word_determines_if_it_is_a_consonant_or_a_vowel__y_as
 }
 
 fn test_phrases_are_translated__a_whole_phrase() {
-	assert translate('quick fast run') == 'ickquay astfay unray'
+	assert translate('why do squids enjoy xrays') == 'ywhay oday idssquay enjoyay xraysay'
 }
