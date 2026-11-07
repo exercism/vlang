@@ -1,0 +1,11 @@
+fn most_common_word(text string) string {
+	mut counts := map[string]int{}
+	mut best := ''
+	for word in text.to_lower().split(' ') {
+		counts[word]++
+		if counts[word] > counts[best] {
+			best = word
+		}
+	}
+	return '"${best}" appears ${counts[best]} times'
+}
