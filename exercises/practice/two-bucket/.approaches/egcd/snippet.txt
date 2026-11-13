@@ -1,0 +1,7 @@
+g64, x64, _ := math.egcd(s, d)
+g := int(g64)
+step := d / g
+f0 := i64(x64) * i64(goal / g)
+mut f := int((f0 % i64(step) + i64(step)) % i64(step))
+for f < 1 || s * f < goal { f += step }
+k := (s * f - goal) / d
