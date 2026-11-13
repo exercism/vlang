@@ -233,7 +233,7 @@ Initializes `seen` array (size `2*(c1+c2)`) and `queue` with capacity for all po
     Example with buckets 3 and 5, start bucket one, (0,5) excluded:
     ```
     Initial: queue=[(3,0)], front=0, old_back=1, moves=1
-    Process (3,0): adds (0,3), (0,0), (3,5) -- queue length is 4
+    Process (3,0): adds (0,3), (0,0), (3,5) -> queue length is 4
     front=1 == old_back=1 -> moves=2, old_back=4
     Process the 3 states at moves=2, then front=4 == old_back=4 -> moves=3
     ```
