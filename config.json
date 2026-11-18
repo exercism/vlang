@@ -777,6 +777,14 @@
         "difficulty": 5
       },
       {
+        "slug": "resistor-color-tolerance",
+        "name": "Resistor Color Tolerance",
+        "uuid": "69001975-2cfd-4478-bf51-34a583753ed7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "simple-linked-list",
         "name": "Simple Linked List",
         "uuid": "42b638fb-3ad1-4a0f-a26b-096ad583c997",
