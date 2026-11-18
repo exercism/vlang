@@ -5,8 +5,8 @@ type Tree = Empty | Node
 struct Empty {}
 
 struct Node {
-	left  Tree = Empty{}
-	right Tree = Empty{}
+	left  &Tree = &Tree(Empty{})
+	right &Tree = &Tree(Empty{})
 	value rune
 }
 
@@ -25,7 +25,7 @@ fn tree_from_traversals(preorder string, inorder string) !Tree {
 		return error('traversals must contain unique items')
 	}
 
-	return traverse(none, mut p, mut i)
+	return *traverse(none, mut p, mut i)!
 }
 
 fn repeats(r []rune) bool {
@@ -39,15 +39,15 @@ fn repeats(r []rune) bool {
 	return false
 }
 
-fn traverse(successor ?rune, mut preorder []rune, mut inorder []rune) !Tree {
+fn traverse(successor ?rune, mut preorder []rune, mut inorder []rune) !&Tree {
 	if s := successor {
 		if inorder.len > 0 && inorder[0] == s {
-			return Empty{}
+			return &Tree(Empty{})
 		}
 	}
 
 	if preorder.len == 0 {
-		return Empty{}
+		return &Tree(Empty{})
 	}
 
 	value := preorder[0]
@@ -63,5 +63,5 @@ fn traverse(successor ?rune, mut preorder []rune, mut inorder []rune) !Tree {
 
 	right := traverse(successor, mut preorder, mut inorder)!
 
-	return Node{left, right, value}
+	return &Tree(Node{left, right, value})
 }

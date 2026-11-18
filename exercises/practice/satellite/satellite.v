@@ -5,8 +5,8 @@ type Tree = Empty | Node
 struct Empty {}
 
 struct Node {
-	left  Tree = Empty{}
-	right Tree = Empty{}
+	left  &Tree = &Tree(Empty{})
+	right &Tree = &Tree(Empty{})
 	value rune
 }
 

@@ -1,5 +1,10 @@
 module main
 
+// Compare subtrees by value rather than by reference.
+fn (a Node) == (b Node) bool {
+	return a.value == b.value && *a.left == *b.left && *a.right == *b.right
+}
+
 fn test_empty_tree() {
 	preorder := ''
 	inorder := ''
@@ -33,18 +38,18 @@ fn test_tree_with_many_items() {
 	inorder := 'iafxr'
 	expected := fn () Tree {
 		return Node{
-			left:  Node{
+			left:  &Tree(Node{
 				value: `i`
-			}
-			right: Node{
-				left:  Node{
+			})
+			right: &Tree(Node{
+				left:  &Tree(Node{
 					value: `f`
-				}
-				right: Node{
+				})
+				right: &Tree(Node{
 					value: `r`
-				}
+				})
 				value: `x`
-			}
+			})
 			value: `a`
 		}
 	}
@@ -90,15 +95,15 @@ fn test_a_degenerate_binary_tree() {
 	inorder := 'dcba'
 	expected := fn () Tree {
 		return Node{
-			left:  Node{
-				left:  Node{
-					left:  Node{
+			left:  &Tree(Node{
+				left:  &Tree(Node{
+					left:  &Tree(Node{
 						value: `d`
-					}
+					})
 					value: `c`
-				}
+				})
 				value: `b`
-			}
+			})
 			value: `a`
 		}
 	}
@@ -114,15 +119,15 @@ fn test_another_degenerate_binary_tree() {
 	inorder := 'abcd'
 	expected := fn () Tree {
 		return Node{
-			right: Node{
-				right: Node{
-					right: Node{
+			right: &Tree(Node{
+				right: &Tree(Node{
+					right: &Tree(Node{
 						value: `d`
-					}
+					})
 					value: `c`
-				}
+				})
 				value: `b`
-			}
+			})
 			value: `a`
 		}
 	}
@@ -138,30 +143,30 @@ fn test_tree_with_many_more_items() {
 	inorder := 'gdhbaecif'
 	expected := fn () Tree {
 		return Node{
-			left:  Node{
-				left:  Node{
-					left:  Node{
+			left:  &Tree(Node{
+				left:  &Tree(Node{
+					left:  &Tree(Node{
 						value: `g`
-					}
-					right: Node{
+					})
+					right: &Tree(Node{
 						value: `h`
-					}
+					})
 					value: `d`
-				}
+				})
 				value: `b`
-			}
-			right: Node{
-				left:  Node{
+			})
+			right: &Tree(Node{
+				left:  &Tree(Node{
 					value: `e`
-				}
-				right: Node{
-					left:  Node{
+				})
+				right: &Tree(Node{
+					left:  &Tree(Node{
 						value: `i`
-					}
+					})
 					value: `f`
-				}
+				})
 				value: `c`
-			}
+			})
 			value: `a`
 		}
 	}
