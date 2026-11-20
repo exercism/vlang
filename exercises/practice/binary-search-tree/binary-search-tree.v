@@ -5,8 +5,8 @@ struct Empty {}
 struct Node {
 	data int
 mut:
-	left  Tree
-	right Tree
+	left  &Tree
+	right &Tree
 }
 
 type Tree = Empty | Node

@@ -5,8 +5,8 @@ struct Empty {}
 struct Node {
 	data int
 mut:
-	left  Tree
-	right Tree
+	left  &Tree
+	right &Tree
 }
 
 type Tree = Empty | Node
@@ -14,8 +14,8 @@ type Tree = Empty | Node
 pub fn Node.new(data int) Node {
 	return Node{
 		data:  data
-		left:  Empty{}
-		right: Empty{}
+		left:  &Tree(Empty{})
+		right: &Tree(Empty{})
 	}
 }
 
@@ -25,14 +25,14 @@ pub fn (mut n Node) insert(data int) {
 		if mut l is Node {
 			l.insert(data)
 		} else {
-			n.left = Node.new(data)
+			n.left = &Tree(Node.new(data))
 		}
 	} else {
 		mut r := n.right
 		if mut r is Node {
 			r.insert(data)
 		} else {
-			n.right = Node.new(data)
+			n.right = &Tree(Node.new(data))
 		}
 	}
 }

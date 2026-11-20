@@ -1,11 +1,18 @@
 from lib import assert_error, assert_some, indent, is_error, v_string
 
+HEADER = """
+// Compare subtrees by value rather than by reference.
+fn (a Node) == (b Node) bool {
+	return a.value == b.value && *a.left == *b.left && *a.right == *b.right
+}
+"""
+
 
 def v_tree(tree):
     if not tree:
         return "Empty{}"
     fields = [
-        f"{name}{v_tree(tree[key])}"
+        f"{name}&Tree({v_tree(tree[key])})"
         for name, key in (("left:  ", "l"), ("right: ", "r"))
         if tree[key]
     ]
