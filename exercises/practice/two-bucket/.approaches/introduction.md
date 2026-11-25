@@ -35,23 +35,17 @@ For more information, check the [BFS approach][approach-bfs].
 Use number theory: a solution exists if and only if the goal is a multiple of the GCD of the two bucket sizes.
 The Extended Euclidean Algorithm finds the coefficients to express the GCD as a linear combination of the bucket sizes, which directly gives the solution without searching.
 
-Core equation: `s*f - d*k = goal` where `s` = source bucket capacity, `d` = destination bucket capacity, `f` = source fills, `k` = destination empties/fills.
+Core equation: `s*f - d*k = goal` where `s` = starting bucket capacity, `d` = other bucket capacity, `f` = fills of the starting bucket, `k` = times the other bucket becomes full.
 
 ```v
-g64, x64, _ := math.egcd(s, d)
-g := int(g64)
+g, x, _ := math.egcd(s, d)
 step := d / g
-// Use i64 for the multiplication to avoid overflow with large buckets
-f0 := i64(x64) * i64(goal / g)
-mut f := int((f0 % i64(step) + i64(step)) % i64(step))
-for f < 1 || s * f < goal {
-	f += step
+mut f := int((x * (goal / g)) % step)
+if f <= 0 {
+	f += int(step)
 }
-k := (s * f - goal) / d
+k := int((i64(s) * f - goal) / d)
 ```
-
-**Note**: The multiplications can overflow V's 32-bit `int` once capacity₁ × capacity₂ exceeds about 2 billion.
-For typical exercise inputs this is not an issue.
 
 For more information, check the [Extended GCD approach][approach-egcd].
 

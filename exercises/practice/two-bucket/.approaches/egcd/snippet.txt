@@ -1,7 +1,8 @@
-g64, x64, _ := math.egcd(s, d)
-g := int(g64)
+// x is the inverse of s/g modulo d/g.
+g, x, _ := math.egcd(s, d)
 step := d / g
-f0 := i64(x64) * i64(goal / g)
-mut f := int((f0 % i64(step) + i64(step)) % i64(step))
-for f < 1 || s * f < goal { f += step }
-k := (s * f - goal) / d
+mut f := int((x * (goal / g)) % step)
+if f <= 0 {
+	f += int(step)
+}
+k := int((i64(s) * f - goal) / d)
